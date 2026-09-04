@@ -9,10 +9,12 @@ export const RECOMMENDATION_CONFIG = {
   // kept configurable until calibration; do not treat it as a final product decision.
   surprisePoolSize: 10 as number | null,
 
-  // Inclusive runtime boundaries (minutes) per RECOMMENDATION_SPEC.md §4.
+  // Runtime boundaries (minutes), mutually exclusive buckets per product
+  // decision (2026-09): under_90 <= 89, 90_to_120 = 90..120, over_120 >= 121.
+  // A runtime belongs to exactly one bucket.
   timeBoundaries: {
-    under_90: { max: 89 },
+    under_90: { min: 1, max: 89 },
     "90_to_120": { min: 90, max: 120 },
-    over_120: { min: 120 },
+    over_120: { min: 121 },
   } as const,
 } as const;

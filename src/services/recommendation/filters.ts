@@ -14,7 +14,7 @@ export function filterByTime(
   return candidates.filter((c) => {
     const r = c.runtimeMinutes;
     if (time === "under_90") return r < 90;
-    if (time === "over_120") return r >= 120;
+    if (time === "over_120") return r >= 121;
     return r >= 90 && r <= 120;
   });
 }

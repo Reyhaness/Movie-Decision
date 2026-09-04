@@ -1,69 +1,320 @@
-import Image from "next/image";
+"use client";
+
+import { useCallback, useState } from "react";
+import { Card, ChipGroup, PrimaryButton, SecondaryButton } from "@/components/ui";
+import { TIME_SELECTIONS, STANDARD_MOODS, SITUATION_SELECTIONS } from "@/services/recommendation/types";
+import type { StandardMood, SituationSelection, TimeSelection } from "@/services/recommendation/types";
+
+interface MoviePayload {
+  movieId: string;
+  title: string;
+  releaseYear: number | null;
+  runtimeMinutes: number;
+  overview: string;
+  genres: string[];
+}
+
+type MoodChoice = StandardMood | "surprise_me";
+
+type FlowState = "landing" | "preferences" | "loading" | "result" | "accepted" | "no_match" | "error";
+
+const MOOD_LABELS: Record<MoodChoice, string> = {
+  cozy_relax: "Cozy / Relax",
+  funny: "Fun",
+  thrill_tense: "Thrill / Tense",
+  emotional: "Emotional",
+  thoughtful_mind_bending: "Thoughtful / Mind-bending",
+  epic: "Epic",
+  surprise_me: "Surprise Me",
+};
+
+const MOOD_HINTS: Record<StandardMood, string> = {
+  cozy_relax: "Warm, comforting, low-stakes",
+  funny: "Playful, likely to create laughs",
+  thrill_tense: "Suspenseful, exciting, tense",
+  emotional: "Moving, emotionally engaging",
+  thoughtful_mind_bending: "Cerebral, ambiguous, discussion-provoking",
+  epic: "Grand, spectacular, immersive (scale, not length)",
+};
+
+const TIME_LABELS: Record<TimeSelection, string> = {
+  under_90: "Under 90 min",
+  "90_to_120": "90–120 min",
+  over_120: "Over 120 min",
+};
+
+const SITUATION_LABELS: Record<SituationSelection, string> = {
+  alone: "Alone",
+  partner: "With Partner",
+  friends: "With Friends",
+  family: "With Family",
+  kids: "Kids",
+};
+
+const RELAX_ORDER: TimeSelection[] = ["under_90", "90_to_120", "over_120"];
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+  const [state, setState] = useState<FlowState>("landing");
+  const [time, setTime] = useState<TimeSelection | null>(null);
+  const [mood, setMood] = useState<MoodChoice | null>(null);
+  const [situation, setSituation] = useState<SituationSelection | null>(null);
+  const [result, setResult] = useState<MoviePayload | null>(null);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [shownMovieIds, setShownMovieIds] = useState<string[]>([]);
+  const [busy, setBusy] = useState(false);
+
+  const fetchRecommendation = useCallback(async () => {
+    if (!time || !mood || !situation) return;
+    setBusy(true);
+    setState("loading");
+    try {
+      const res = await fetch("/api/recommendations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          time,
+          mood,
+          situation,
+          sessionId: sessionId ?? undefined,
+          excludedMovieIds: shownMovieIds,
+        }),
+      });
+      if (!res.ok) {
+        setState("error");
+        return;
+      }
+      const data = await res.json();
+      setSessionId(data.sessionId);
+      if (data.status === "success" && data.movie) {
+        setResult(data.movie);
+        setShownMovieIds((prev) =>
+          prev.includes(data.movie.movieId) ? prev : [...prev, data.movie.movieId]
+        );
+        setState("result");
+      } else if (data.status === "no_candidates" || data.status === "no_strong_match") {
+        setState("no_match");
+      } else {
+        setState("error");
+      }
+    } catch {
+      setState("error");
+    } finally {
+      setBusy(false);
+    }
+  }, [time, mood, situation, sessionId, shownMovieIds]);
+
+  const tryAnother = useCallback(async () => {
+    await fetch("/api/events", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ eventType: "try_another", sessionId }),
+    }).catch(() => undefined);
+    await fetchRecommendation();
+  }, [sessionId, fetchRecommendation]);
+
+  const accept = useCallback(async () => {
+    if (!result || !sessionId) return;
+    const done = () => setState("accepted");
+    try {
+      const res = await fetch("/api/accept", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId, movieId: result.movieId }),
+      });
+      if (res.ok) done();
+      else done();
+    } catch {
+      done();
+    }
+  }, [result, sessionId]);
+
+  const relaxTime = () => {
+    if (!time) return;
+    const idx = RELAX_ORDER.indexOf(time);
+    const next = RELAX_ORDER[Math.min(idx + 1, RELAX_ORDER.length - 1)];
+    setTime(next);
+  };
+
+  const backToPreferences = () => setState("preferences");
+
+  const startOver = () => {
+    setState("landing");
+    setResult(null);
+    setSessionId(null);
+    setShownMovieIds([]);
+  };
+
+  if (state === "landing") {
+    return (
+      <main className="min-h-screen flex items-center justify-center p-6">
+        <Card className="max-w-lg w-full p-10 text-center">
+          <div className="text-5xl mb-4" aria-hidden="true">
+            🎬
+          </div>
+          <h1 className="text-4xl font-extrabold tracking-tight mb-3">
+            Don&apos;t know what to watch?
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-muted mb-8">
+            Tell us how much time you have, your mood, and who&apos;s watching. We&apos;ll pick one.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <PrimaryButton onClick={() => setState("preferences")}>Help Me Pick</PrimaryButton>
+        </Card>
       </main>
+    );
+  }
+
+  if (state === "loading") {
+    return (
+      <main className="min-h-screen flex items-center justify-center p-6" aria-live="polite">
+        <Card className="max-w-md w-full p-10 text-center">
+          <p className="text-lg font-bold mb-2">Picking your movie…</p>
+          <p className="text-muted text-sm">Finding the best fit for right now.</p>
+        </Card>
+      </main>
+    );
+  }
+
+  if (state === "result" && result) {
+    return (
+      <main className="min-h-screen flex items-center justify-center p-6">
+        <Card className="max-w-lg w-full p-8">
+          <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Your pick</p>
+          <div className="flex gap-5">
+            <PosterFallback title={result.title} />
+            <div className="min-w-0">
+              <h1 className="text-2xl font-extrabold leading-tight mb-1">{result.title}</h1>
+              <p className="text-muted text-sm mb-3">
+                {result.releaseYear ?? "Year unknown"} · {result.runtimeMinutes} min
+              </p>
+              {result.genres.length > 0 && (
+                <p className="text-xs text-muted mb-3">{result.genres.join(" · ")}</p>
+              )}
+            </div>
+          </div>
+          {result.overview && <p className="text-sm leading-relaxed mt-4 mb-6">{result.overview}</p>}
+          <div className="flex flex-col gap-3">
+            <PrimaryButton onClick={accept}>This works</PrimaryButton>
+            <div className="flex gap-3 justify-center">
+              <SecondaryButton onClick={tryAnother} disabled={busy}>
+                Try Another
+              </SecondaryButton>
+              <SecondaryButton onClick={backToPreferences}>Change Preferences</SecondaryButton>
+            </div>
+          </div>
+        </Card>
+      </main>
+    );
+  }
+
+  if (state === "accepted") {
+    return (
+      <main className="min-h-screen flex items-center justify-center p-6">
+        <Card className="max-w-md w-full p-10 text-center">
+          <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Enjoy</p>
+          <h1 className="text-2xl font-extrabold mb-2">{result?.title}</h1>
+          <p className="text-muted mb-8">Good choice. Grab your snacks.</p>
+          <PrimaryButton onClick={startOver}>Start Over</PrimaryButton>
+        </Card>
+      </main>
+    );
+  }
+
+  if (state === "no_match") {
+    return (
+      <main className="min-h-screen flex items-center justify-center p-6">
+        <Card className="max-w-md w-full p-10 text-center">
+          <h1 className="text-2xl font-extrabold mb-2">Nothing is a great fit right now.</h1>
+          <p className="text-muted mb-8">We can loosen one of your preferences and try again.</p>
+          <div className="flex flex-col items-center gap-3">
+            {time !== "over_120" && (
+              <PrimaryButton
+                onClick={() => {
+                  relaxTime();
+                  setState("preferences");
+                }}
+              >
+                Relax Time
+              </PrimaryButton>
+            )}
+            <SecondaryButton onClick={backToPreferences}>Change Preferences</SecondaryButton>
+            <SecondaryButton onClick={tryAnother} disabled={busy}>
+              Try Another
+            </SecondaryButton>
+          </div>
+        </Card>
+      </main>
+    );
+  }
+
+  if (state === "error") {
+    return (
+      <main className="min-h-screen flex items-center justify-center p-6">
+        <Card className="max-w-md w-full p-10 text-center">
+          <h1 className="text-2xl font-extrabold mb-2">Something went wrong.</h1>
+          <p className="text-muted mb-8">Please try again.</p>
+          <div className="flex flex-col items-center gap-3">
+            <PrimaryButton onClick={fetchRecommendation}>Try Again</PrimaryButton>
+            <SecondaryButton onClick={backToPreferences}>Change Preferences</SecondaryButton>
+          </div>
+        </Card>
+      </main>
+    );
+  }
+
+  return (
+    <main className="min-h-screen flex items-center justify-center p-6">
+      <Card className="max-w-2xl w-full p-8">
+        <h1 className="text-3xl font-extrabold tracking-tight mb-1">Don&apos;t know what to watch?</h1>
+        <p className="text-muted mb-8">
+          We&apos;ll pick the best fit — not give you another list to scroll through.
+        </p>
+        <div className="space-y-7">
+          <ChipGroup
+            legend="Time"
+            options={TIME_SELECTIONS.map((t) => ({ value: t, label: TIME_LABELS[t] }))}
+            value={time}
+            onChange={(v) => setTime(v as TimeSelection)}
+          />
+          <ChipGroup
+            legend="Mood"
+            options={[
+              ...STANDARD_MOODS.map((m) => ({ value: m, label: MOOD_LABELS[m], hint: MOOD_HINTS[m] })),
+              { value: "surprise_me", label: MOOD_LABELS.surprise_me, hint: "Let the system choose the vibe" },
+            ]}
+            value={mood}
+            onChange={(v) => setMood(v as MoodChoice)}
+          />
+          <ChipGroup
+            legend="Situation"
+            options={SITUATION_SELECTIONS.map((s) => ({ value: s, label: SITUATION_LABELS[s] }))}
+            value={situation}
+            onChange={(v) => setSituation(v as SituationSelection)}
+          />
+          <div className="pt-2 flex items-center gap-4">
+            <PrimaryButton onClick={fetchRecommendation} disabled={!time || !mood || !situation}>
+              Help Me Pick
+            </PrimaryButton>
+            <SecondaryButton onClick={startOver}>Start Over</SecondaryButton>
+          </div>
+        </div>
+      </Card>
+    </main>
+  );
+}
+
+function PosterFallback({ title }: { title: string }) {
+  const initials = title
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0]?.toUpperCase())
+    .join("");
+  return (
+    <div
+      aria-hidden="true"
+      className="shrink-0 w-24 h-36 rounded-xl border-2 border-line bg-surface-raised flex items-center justify-center"
+    >
+      <span className="text-2xl font-extrabold text-muted">{initials}</span>
     </div>
   );
 }

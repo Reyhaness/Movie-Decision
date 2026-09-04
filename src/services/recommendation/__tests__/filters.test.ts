@@ -16,9 +16,18 @@ describe("time hard filter boundaries", () => {
     expect(filterByTime(candidates, "90_to_120").map((x) => x.movieId)).toEqual(["b", "c"]);
   });
 
-  it("over_120 includes 120 and above, excludes 119", () => {
-    const candidates = [c("a", 119), c("b", 120), c("c", 180)];
-    expect(filterByTime(candidates, "over_120").map((x) => x.movieId)).toEqual(["b", "c"]);
+  it("over_120 includes 121 and above, excludes 119 and 120", () => {
+    const candidates = [c("a", 119), c("b", 120), c("c", 121), c("d", 180)];
+    expect(filterByTime(candidates, "over_120").map((x) => x.movieId)).toEqual(["c", "d"]);
+  });
+
+  it("buckets are mutually exclusive (every runtime matches exactly one)", () => {
+    const runtimes = [1, 59, 89, 90, 105, 120, 121, 150, 240];
+    const buckets = ["under_90", "90_to_120", "over_120"] as const;
+    for (const r of runtimes) {
+      const matches = buckets.filter((b) => filterByTime([c("x", r)], b).length === 1);
+      expect(matches).toHaveLength(1);
+    }
   });
 
   it("returns empty array when nothing fits", () => {

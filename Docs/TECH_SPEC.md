@@ -591,7 +591,7 @@ The recommendation service must support a configurable threshold.
 Example configuration:
 
 ``` text
-MIN_RECOMMENDATION_FIT = TBD
+MIN_RECOMMENDATION_FIT = 5
 ```
 
 Do not freeze this value before testing.
