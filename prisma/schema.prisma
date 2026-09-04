@@ -1,0 +1,170 @@
+// Movie Decision MVP - data model
+// Source of truth: TECH_SPEC.md §5-10, RECOMMENDATION_SPEC.md §5
+// Approved decisions: isValidated (human-reviewed scores) and isActive (catalog-eligible)
+// are separate flags; only movies with both true participate in recommendations.
+// Note: MoodPreference includes "surprise_me" (a recommendation mode), but movies
+// never carry a "surprise_me" score - ScoredMood excludes it by design.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TimePreference {
+  under_90
+  time_90_120
+  over_120
+}
+
+enum MoodPreference {
+  cozy_relax
+  funny
+  thrill_tense
+  emotional
+  thoughtful_mind_bending
+  epic
+  surprise_me
+}
+
+enum ScoredMood {
+  cozy_relax
+  funny
+  thrill_tense
+  emotional
+  thoughtful_mind_bending
+  epic
+}
+
+enum SituationPreference {
+  alone
+  partner
+  friends
+  family
+  kids
+}
+
+// MVP event set per approved scope: no feedback_submitted (no feedback UI exists).
+enum EventType {
+  session_started
+  preferences_submitted
+  recommendation_shown
+  movie_accepted
+  try_another
+  watchlist_added
+}
+
+model Movie {
+  id             String    @id @default(cuid())
+  slug           String    @unique
+  tmdbId         Int?      @unique
+  title          String
+  originalTitle  String?
+  overview       String?
+  posterPath     String?
+  backdropPath   String?
+  releaseDate    DateTime?
+  releaseYear    Int?
+  runtimeMinutes Int
+  genres         String[]
+  isValidated    Boolean   @default(false)
+  isActive       Boolean   @default(false)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  moodScores      MovieMoodScore[]
+  situationScores MovieSituationScore[]
+  watchlistItems  WatchlistItem[]
+  attempts        RecommendationAttempt[]
+
+  @@index([isActive, isValidated])
+}
+
+model MovieMoodScore {
+  id      String     @id @default(cuid())
+  movieId String
+  movie   Movie      @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  mood    ScoredMood
+  score   Int
+
+  @@unique([movieId, mood])
+}
+
+model MovieSituationScore {
+  id        String              @id @default(cuid())
+  movieId   String
+  movie     Movie               @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  situation SituationPreference
+  score     Int
+
+  @@unique([movieId, situation])
+}
+
+model AnonymousUser {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  lastSeenAt DateTime @default(now()) @updatedAt
+
+  sessions  RecommendationSession[]
+  watchlist WatchlistItem[]
+  events    Event[]
+}
+
+model RecommendationSession {
+  id                   String               @id @default(cuid())
+  anonymousUserId      String
+  anonymousUser        AnonymousUser        @relation(fields: [anonymousUserId], references: [id], onDelete: Cascade)
+  timePreference       TimePreference
+  moodPreference       MoodPreference
+  situationPreference  SituationPreference
+  createdAt            DateTime             @default(now())
+  completedAt          DateTime?
+
+  attempts RecommendationAttempt[]
+
+  @@index([anonymousUserId])
+}
+
+model RecommendationAttempt {
+  id             String                @id @default(cuid())
+  sessionId      String
+  session        RecommendationSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  movieId        String
+  movie          Movie                 @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  attemptNumber  Int
+  moodScore      Int?
+  situationScore Int
+  distance       Int
+  accepted       Boolean               @default(false)
+  createdAt      DateTime              @default(now())
+
+  @@unique([sessionId, attemptNumber])
+}
+
+model WatchlistItem {
+  id              String        @id @default(cuid())
+  anonymousUserId String
+  anonymousUser   AnonymousUser @relation(fields: [anonymousUserId], references: [id], onDelete: Cascade)
+  movieId         String
+  movie           Movie         @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  createdAt       DateTime      @default(now())
+
+  @@unique([anonymousUserId, movieId])
+}
+
+model Event {
+  id              String        @id @default(cuid())
+  anonymousUserId String
+  anonymousUser   AnonymousUser @relation(fields: [anonymousUserId], references: [id], onDelete: Cascade)
+  sessionId       String?
+  eventType       EventType
+  movieId         String?
+  metadata        Json?
+  createdAt       DateTime      @default(now())
+
+  @@index([eventType])
+  @@index([anonymousUserId])
+}
