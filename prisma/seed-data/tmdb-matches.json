@@ -1,0 +1,3258 @@
+{
+  "generatedAt": "2026-09-06T19:31:46.958Z",
+  "matches": {
+    "paddington-2": {
+      "slug": "paddington-2",
+      "curatedTitle": "Paddington 2",
+      "curatedYear": 2017,
+      "curatedRuntime": 103,
+      "tmdbId": 346648,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Paddington 2",
+      "tmdbOriginalTitle": "Paddington 2",
+      "tmdbYear": 2017,
+      "tmdbRuntime": 104,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 346648,
+          "title": "Paddington 2",
+          "year": 2017,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-grand-budapest-hotel": {
+      "slug": "the-grand-budapest-hotel",
+      "curatedTitle": "The Grand Budapest Hotel",
+      "curatedYear": 2014,
+      "curatedRuntime": 99,
+      "tmdbId": 120467,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Grand Budapest Hotel",
+      "tmdbOriginalTitle": "The Grand Budapest Hotel",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 100,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 120467,
+          "title": "The Grand Budapest Hotel",
+          "year": 2014,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "superbad": {
+      "slug": "superbad",
+      "curatedTitle": "Superbad",
+      "curatedYear": 2007,
+      "curatedRuntime": 113,
+      "tmdbId": 8363,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Superbad",
+      "tmdbOriginalTitle": "Superbad",
+      "tmdbYear": 2007,
+      "tmdbRuntime": 113,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 8363,
+          "title": "Superbad",
+          "year": 2007,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "school-of-rock": {
+      "slug": "school-of-rock",
+      "curatedTitle": "School of Rock",
+      "curatedYear": 2003,
+      "curatedRuntime": 109,
+      "tmdbId": 1584,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The School of Rock",
+      "tmdbOriginalTitle": "The School of Rock",
+      "tmdbYear": 2003,
+      "tmdbRuntime": 110,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 1584,
+          "title": "The School of Rock",
+          "year": 2003,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "chef": {
+      "slug": "chef",
+      "curatedTitle": "Chef",
+      "curatedYear": 2014,
+      "curatedRuntime": 114,
+      "tmdbId": 212778,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Chef",
+      "tmdbOriginalTitle": "Chef",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 114,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 212778,
+          "title": "Chef",
+          "year": 2014,
+          "score": 15
+        },
+        {
+          "tmdbId": 85872,
+          "title": "Le Chef",
+          "year": 2012,
+          "score": 9
+        },
+        {
+          "tmdbId": 257246,
+          "title": "The Farmer and the Chef",
+          "year": 2014,
+          "score": 9
+        },
+        {
+          "tmdbId": 331765,
+          "title": "Flannel Chef \"Don't let your Meatloaf\"",
+          "year": 2014,
+          "score": 9
+        },
+        {
+          "tmdbId": 556672,
+          "title": "FARANG: The Story of Chef Andy Ricker of Pok Pok Thai Empire",
+          "year": 2014,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "little-miss-sunshine": {
+      "slug": "little-miss-sunshine",
+      "curatedTitle": "Little Miss Sunshine",
+      "curatedYear": 2006,
+      "curatedRuntime": 101,
+      "tmdbId": 773,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Little Miss Sunshine",
+      "tmdbOriginalTitle": "Little Miss Sunshine",
+      "tmdbYear": 2006,
+      "tmdbRuntime": 102,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 773,
+          "title": "Little Miss Sunshine",
+          "year": 2006,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "about-time": {
+      "slug": "about-time",
+      "curatedTitle": "About Time",
+      "curatedYear": 2013,
+      "curatedRuntime": 123,
+      "tmdbId": 122906,
+      "confidence": "exact",
+      "matchMethod": "manual_override",
+      "tmdbTitle": "About Time",
+      "tmdbOriginalTitle": "About Time",
+      "tmdbYear": 2013,
+      "tmdbRuntime": 123,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 122906,
+          "title": "About Time",
+          "year": 2013,
+          "score": 15
+        },
+        {
+          "tmdbId": 356591,
+          "title": "About Time",
+          "year": 2013,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": true
+    },
+    "before-sunrise": {
+      "slug": "before-sunrise",
+      "curatedTitle": "Before Sunrise",
+      "curatedYear": 1995,
+      "curatedRuntime": 101,
+      "tmdbId": 76,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Before Sunrise",
+      "tmdbOriginalTitle": "Before Sunrise",
+      "tmdbYear": 1995,
+      "tmdbRuntime": 101,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 76,
+          "title": "Before Sunrise",
+          "year": 1995,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-social-network": {
+      "slug": "the-social-network",
+      "curatedTitle": "The Social Network",
+      "curatedYear": 2010,
+      "curatedRuntime": 120,
+      "tmdbId": 37799,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Social Network",
+      "tmdbOriginalTitle": "The Social Network",
+      "tmdbYear": 2010,
+      "tmdbRuntime": 121,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 37799,
+          "title": "The Social Network",
+          "year": 2010,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "arrival": {
+      "slug": "arrival",
+      "curatedTitle": "Arrival",
+      "curatedYear": 2016,
+      "curatedRuntime": 116,
+      "tmdbId": 329865,
+      "confidence": "exact",
+      "matchMethod": "manual_override",
+      "tmdbTitle": "Arrival",
+      "tmdbOriginalTitle": "Arrival",
+      "tmdbYear": 2016,
+      "tmdbRuntime": 116,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 329865,
+          "title": "Arrival",
+          "year": 2016,
+          "score": 15
+        },
+        {
+          "tmdbId": 401867,
+          "title": "The Arrival",
+          "year": 2016,
+          "score": 15
+        },
+        {
+          "tmdbId": 472349,
+          "title": "Arrival",
+          "year": 2016,
+          "score": 15
+        },
+        {
+          "tmdbId": 457908,
+          "title": "Monument of Arrival and Return",
+          "year": 2016,
+          "score": 9
+        },
+        {
+          "tmdbId": 360799,
+          "title": "Arrowhead",
+          "year": 2017,
+          "score": 2
+        }
+      ],
+      "reviewedByHuman": true
+    },
+    "eternal-sunshine-of-the-spotless-mind": {
+      "slug": "eternal-sunshine-of-the-spotless-mind",
+      "curatedTitle": "Eternal Sunshine of the Spotless Mind",
+      "curatedYear": 2004,
+      "curatedRuntime": 108,
+      "tmdbId": 38,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Eternal Sunshine of the Spotless Mind",
+      "tmdbOriginalTitle": "Eternal Sunshine of the Spotless Mind",
+      "tmdbYear": 2004,
+      "tmdbRuntime": 108,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 38,
+          "title": "Eternal Sunshine of the Spotless Mind",
+          "year": 2004,
+          "score": 15
+        },
+        {
+          "tmdbId": 1635723,
+          "title": "A Look Inside Eternal Sunshine of the Spotless Mind",
+          "year": 2004,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "her": {
+      "slug": "her",
+      "curatedTitle": "Her",
+      "curatedYear": 2013,
+      "curatedRuntime": 126,
+      "tmdbId": 152601,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Her",
+      "tmdbOriginalTitle": "Her",
+      "tmdbYear": 2013,
+      "tmdbRuntime": 126,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 152601,
+          "title": "Her",
+          "year": 2013,
+          "score": 15
+        },
+        {
+          "tmdbId": 197584,
+          "title": "Her Aim Is True",
+          "year": 2013,
+          "score": 11
+        },
+        {
+          "tmdbId": 220490,
+          "title": "Her Cry: La Llorona Investigation",
+          "year": 2013,
+          "score": 11
+        },
+        {
+          "tmdbId": 225667,
+          "title": "Her Husband's Betrayal",
+          "year": 2013,
+          "score": 11
+        },
+        {
+          "tmdbId": 1391156,
+          "title": "Her Prey",
+          "year": 2013,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-truman-show": {
+      "slug": "the-truman-show",
+      "curatedTitle": "The Truman Show",
+      "curatedYear": 1998,
+      "curatedRuntime": 103,
+      "tmdbId": 37165,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Truman Show",
+      "tmdbOriginalTitle": "The Truman Show",
+      "tmdbYear": 1998,
+      "tmdbRuntime": 103,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 37165,
+          "title": "The Truman Show",
+          "year": 1998,
+          "score": 15
+        },
+        {
+          "tmdbId": 549475,
+          "title": "The Truman Show: Tru-Talk",
+          "year": 1998,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "get-out": {
+      "slug": "get-out",
+      "curatedTitle": "Get Out",
+      "curatedYear": 2017,
+      "curatedRuntime": 104,
+      "tmdbId": 419430,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Get Out",
+      "tmdbOriginalTitle": "Get Out",
+      "tmdbYear": 2017,
+      "tmdbRuntime": 104,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 419430,
+          "title": "Get Out",
+          "year": 2017,
+          "score": 15
+        },
+        {
+          "tmdbId": 497366,
+          "title": "Get Out Fast",
+          "year": 2017,
+          "score": 11
+        },
+        {
+          "tmdbId": 1276171,
+          "title": "Unveiling the Horror of Get Out",
+          "year": 2017,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "a-quiet-place": {
+      "slug": "a-quiet-place",
+      "curatedTitle": "A Quiet Place",
+      "curatedYear": 2018,
+      "curatedRuntime": 90,
+      "tmdbId": 447332,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "A Quiet Place",
+      "tmdbOriginalTitle": "A Quiet Place",
+      "tmdbYear": 2018,
+      "tmdbRuntime": 91,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 447332,
+          "title": "A Quiet Place",
+          "year": 2018,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "mad-max-fury-road": {
+      "slug": "mad-max-fury-road",
+      "curatedTitle": "Mad Max: Fury Road",
+      "curatedYear": 2015,
+      "curatedRuntime": 120,
+      "tmdbId": 76341,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Mad Max: Fury Road",
+      "tmdbOriginalTitle": "Mad Max: Fury Road",
+      "tmdbYear": 2015,
+      "tmdbRuntime": 121,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 76341,
+          "title": "Mad Max: Fury Road",
+          "year": 2015,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "edge-of-tomorrow": {
+      "slug": "edge-of-tomorrow",
+      "curatedTitle": "Edge of Tomorrow",
+      "curatedYear": 2014,
+      "curatedRuntime": 113,
+      "tmdbId": 137113,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Edge of Tomorrow",
+      "tmdbOriginalTitle": "Edge of Tomorrow",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 114,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 137113,
+          "title": "Edge of Tomorrow",
+          "year": 2014,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-dark-knight": {
+      "slug": "the-dark-knight",
+      "curatedTitle": "The Dark Knight",
+      "curatedYear": 2008,
+      "curatedRuntime": 152,
+      "tmdbId": 155,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Dark Knight",
+      "tmdbOriginalTitle": "The Dark Knight",
+      "tmdbYear": 2008,
+      "tmdbRuntime": 152,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 155,
+          "title": "The Dark Knight",
+          "year": 2008,
+          "score": 15
+        },
+        {
+          "tmdbId": 29751,
+          "title": "Batman Unmasked: The Psychology of The Dark Knight",
+          "year": 2008,
+          "score": 9
+        },
+        {
+          "tmdbId": 1406348,
+          "title": "Shadows of the Bat: The Cinematic Saga of the Dark Knight",
+          "year": 2008,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "interstellar": {
+      "slug": "interstellar",
+      "curatedTitle": "Interstellar",
+      "curatedYear": 2014,
+      "curatedRuntime": 169,
+      "tmdbId": 157336,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Interstellar",
+      "tmdbOriginalTitle": "Interstellar",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 169,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 157336,
+          "title": "Interstellar",
+          "year": 2014,
+          "score": 15
+        },
+        {
+          "tmdbId": 301959,
+          "title": "Interstellar: Nolan's Odyssey",
+          "year": 2014,
+          "score": 11
+        },
+        {
+          "tmdbId": 287954,
+          "title": "Lolita from Interstellar Space",
+          "year": 2014,
+          "score": 9
+        },
+        {
+          "tmdbId": 336592,
+          "title": "The Science of Interstellar",
+          "year": 2014,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-lord-of-the-rings-the-fellowship-of-the-ring": {
+      "slug": "the-lord-of-the-rings-the-fellowship-of-the-ring",
+      "curatedTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "curatedYear": 2001,
+      "curatedRuntime": 178,
+      "tmdbId": 120,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "tmdbOriginalTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "tmdbYear": 2001,
+      "tmdbRuntime": 179,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 120,
+          "title": "The Lord of the Rings: The Fellowship of the Ring",
+          "year": 2001,
+          "score": 15
+        },
+        {
+          "tmdbId": 192349,
+          "title": "Beyond the Movie: The Fellowship of the Ring",
+          "year": 2001,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "spirited-away": {
+      "slug": "spirited-away",
+      "curatedTitle": "Spirited Away",
+      "curatedYear": 2001,
+      "curatedRuntime": 125,
+      "tmdbId": 129,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Spirited Away",
+      "tmdbOriginalTitle": "千と千尋の神隠し",
+      "tmdbYear": 2001,
+      "tmdbRuntime": 125,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 129,
+          "title": "Spirited Away",
+          "year": 2001,
+          "score": 9
+        },
+        {
+          "tmdbId": 535075,
+          "title": "The Nippon Television Special of Spirited Away",
+          "year": 2001,
+          "score": 6
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-incredibles": {
+      "slug": "the-incredibles",
+      "curatedTitle": "The Incredibles",
+      "curatedYear": 2004,
+      "curatedRuntime": 115,
+      "tmdbId": 9806,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Incredibles",
+      "tmdbOriginalTitle": "The Incredibles",
+      "tmdbYear": 2004,
+      "tmdbRuntime": 115,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 9806,
+          "title": "The Incredibles",
+          "year": 2004,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-shawshank-redemption": {
+      "slug": "the-shawshank-redemption",
+      "curatedTitle": "The Shawshank Redemption",
+      "curatedYear": 1994,
+      "curatedRuntime": 142,
+      "tmdbId": 278,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Shawshank Redemption",
+      "tmdbOriginalTitle": "The Shawshank Redemption",
+      "tmdbYear": 1994,
+      "tmdbRuntime": 142,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 278,
+          "title": "The Shawshank Redemption",
+          "year": 1994,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-princess-bride": {
+      "slug": "the-princess-bride",
+      "curatedTitle": "The Princess Bride",
+      "curatedYear": 1987,
+      "curatedRuntime": 98,
+      "tmdbId": 2493,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Princess Bride",
+      "tmdbOriginalTitle": "The Princess Bride",
+      "tmdbYear": 1987,
+      "tmdbRuntime": 99,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 2493,
+          "title": "The Princess Bride",
+          "year": 1987,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "forrest-gump": {
+      "slug": "forrest-gump",
+      "curatedTitle": "Forrest Gump",
+      "curatedYear": 1994,
+      "curatedRuntime": 142,
+      "tmdbId": 13,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Forrest Gump",
+      "tmdbOriginalTitle": "Forrest Gump",
+      "tmdbYear": 1994,
+      "tmdbRuntime": 142,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 13,
+          "title": "Forrest Gump",
+          "year": 1994,
+          "score": 15
+        },
+        {
+          "tmdbId": 237353,
+          "title": "Through the Eyes of Forrest Gump",
+          "year": 1994,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "good-will-hunting": {
+      "slug": "good-will-hunting",
+      "curatedTitle": "Good Will Hunting",
+      "curatedYear": 1997,
+      "curatedRuntime": 126,
+      "tmdbId": 489,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Good Will Hunting",
+      "tmdbOriginalTitle": "Good Will Hunting",
+      "tmdbYear": 1997,
+      "tmdbRuntime": 127,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 489,
+          "title": "Good Will Hunting",
+          "year": 1997,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "dead-poets-society": {
+      "slug": "dead-poets-society",
+      "curatedTitle": "Dead Poets Society",
+      "curatedYear": 1989,
+      "curatedRuntime": 128,
+      "tmdbId": 207,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Dead Poets Society",
+      "tmdbOriginalTitle": "Dead Poets Society",
+      "tmdbYear": 1989,
+      "tmdbRuntime": 129,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 207,
+          "title": "Dead Poets Society",
+          "year": 1989,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-pursuit-of-happyness": {
+      "slug": "the-pursuit-of-happyness",
+      "curatedTitle": "The Pursuit of Happyness",
+      "curatedYear": 2006,
+      "curatedRuntime": 117,
+      "tmdbId": 1402,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Pursuit of Happyness",
+      "tmdbOriginalTitle": "The Pursuit of Happyness",
+      "tmdbYear": 2006,
+      "tmdbRuntime": 117,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 1402,
+          "title": "The Pursuit of Happyness",
+          "year": 2006,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-green-mile": {
+      "slug": "the-green-mile",
+      "curatedTitle": "The Green Mile",
+      "curatedYear": 1999,
+      "curatedRuntime": 189,
+      "tmdbId": 497,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Green Mile",
+      "tmdbOriginalTitle": "The Green Mile",
+      "tmdbYear": 1999,
+      "tmdbRuntime": 189,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 497,
+          "title": "The Green Mile",
+          "year": 1999,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "whiplash": {
+      "slug": "whiplash",
+      "curatedTitle": "Whiplash",
+      "curatedYear": 2014,
+      "curatedRuntime": 107,
+      "tmdbId": 244786,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Whiplash",
+      "tmdbOriginalTitle": "Whiplash",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 107,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 244786,
+          "title": "Whiplash",
+          "year": 2014,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "black-swan": {
+      "slug": "black-swan",
+      "curatedTitle": "Black Swan",
+      "curatedYear": 2010,
+      "curatedRuntime": 108,
+      "tmdbId": 44214,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Black Swan",
+      "tmdbOriginalTitle": "Black Swan",
+      "tmdbYear": 2010,
+      "tmdbRuntime": 108,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 44214,
+          "title": "Black Swan",
+          "year": 2010,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "gone-girl": {
+      "slug": "gone-girl",
+      "curatedTitle": "Gone Girl",
+      "curatedYear": 2014,
+      "curatedRuntime": 149,
+      "tmdbId": 210577,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Gone Girl",
+      "tmdbOriginalTitle": "Gone Girl",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 149,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 210577,
+          "title": "Gone Girl",
+          "year": 2014,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "prisoners": {
+      "slug": "prisoners",
+      "curatedTitle": "Prisoners",
+      "curatedYear": 2013,
+      "curatedRuntime": 153,
+      "tmdbId": 146233,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Prisoners",
+      "tmdbOriginalTitle": "Prisoners",
+      "tmdbYear": 2013,
+      "tmdbRuntime": 153,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 146233,
+          "title": "Prisoners",
+          "year": 2013,
+          "score": 15
+        },
+        {
+          "tmdbId": 241958,
+          "title": "Prisoners of the Sun",
+          "year": 2013,
+          "score": 11
+        },
+        {
+          "tmdbId": 294567,
+          "title": "Red Reign: The Bloody Harvest of China's Prisoners",
+          "year": 2013,
+          "score": 9
+        },
+        {
+          "tmdbId": 121983,
+          "title": "Free Angela and All Political Prisoners",
+          "year": 2012,
+          "score": 8
+        },
+        {
+          "tmdbId": 90767,
+          "title": "The Cruel History of Prisoners",
+          "year": 1976,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "se7en": {
+      "slug": "se7en",
+      "curatedTitle": "Se7en",
+      "curatedYear": 1995,
+      "curatedRuntime": 127,
+      "tmdbId": 807,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Se7en",
+      "tmdbOriginalTitle": "Se7en",
+      "tmdbYear": 1995,
+      "tmdbRuntime": 127,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 807,
+          "title": "Se7en",
+          "year": 1995,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "zodiac": {
+      "slug": "zodiac",
+      "curatedTitle": "Zodiac",
+      "curatedYear": 2007,
+      "curatedRuntime": 157,
+      "tmdbId": 1949,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Zodiac",
+      "tmdbOriginalTitle": "Zodiac",
+      "tmdbYear": 2007,
+      "tmdbRuntime": 157,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 1949,
+          "title": "Zodiac",
+          "year": 2007,
+          "score": 15
+        },
+        {
+          "tmdbId": 110523,
+          "title": "Curse of the Zodiac",
+          "year": 2007,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-prestige": {
+      "slug": "the-prestige",
+      "curatedTitle": "The Prestige",
+      "curatedYear": 2006,
+      "curatedRuntime": 130,
+      "tmdbId": 1124,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Prestige",
+      "tmdbOriginalTitle": "The Prestige",
+      "tmdbYear": 2006,
+      "tmdbRuntime": 130,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 1124,
+          "title": "The Prestige",
+          "year": 2006,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "inception": {
+      "slug": "inception",
+      "curatedTitle": "Inception",
+      "curatedYear": 2010,
+      "curatedRuntime": 148,
+      "tmdbId": 27205,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Inception",
+      "tmdbOriginalTitle": "Inception",
+      "tmdbYear": 2010,
+      "tmdbRuntime": 148,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 27205,
+          "title": "Inception",
+          "year": 2010,
+          "score": 15
+        },
+        {
+          "tmdbId": 64956,
+          "title": "Inception: The Cobol Job",
+          "year": 2010,
+          "score": 11
+        },
+        {
+          "tmdbId": 973484,
+          "title": "Inception: Music from the Motion Picture",
+          "year": 2010,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-matrix": {
+      "slug": "the-matrix",
+      "curatedTitle": "The Matrix",
+      "curatedYear": 1999,
+      "curatedRuntime": 136,
+      "tmdbId": 603,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Matrix",
+      "tmdbOriginalTitle": "The Matrix",
+      "tmdbYear": 1999,
+      "tmdbRuntime": 136,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 603,
+          "title": "The Matrix",
+          "year": 1999,
+          "score": 15
+        },
+        {
+          "tmdbId": 684428,
+          "title": "The Matrix: What Is Bullet-Time?",
+          "year": 1999,
+          "score": 11
+        },
+        {
+          "tmdbId": 684431,
+          "title": "Making \"The Matrix\"",
+          "year": 1999,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "blade-runner-2049": {
+      "slug": "blade-runner-2049",
+      "curatedTitle": "Blade Runner 2049",
+      "curatedYear": 2017,
+      "curatedRuntime": 164,
+      "tmdbId": 335984,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Blade Runner 2049",
+      "tmdbOriginalTitle": "Blade Runner 2049",
+      "tmdbYear": 2017,
+      "tmdbRuntime": 164,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 335984,
+          "title": "Blade Runner 2049",
+          "year": 2017,
+          "score": 15
+        },
+        {
+          "tmdbId": 473072,
+          "title": "2036: Nexus Dawn",
+          "year": 2017,
+          "score": 3
+        },
+        {
+          "tmdbId": 475759,
+          "title": "2048: Nowhere to Run",
+          "year": 2017,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "ex-machina": {
+      "slug": "ex-machina",
+      "curatedTitle": "Ex Machina",
+      "curatedYear": 2014,
+      "curatedRuntime": 108,
+      "tmdbId": 264660,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Ex Machina",
+      "tmdbOriginalTitle": "Ex Machina",
+      "tmdbYear": 2015,
+      "tmdbRuntime": 108,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 264660,
+          "title": "Ex Machina",
+          "year": 2015,
+          "score": 14
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "coherence": {
+      "slug": "coherence",
+      "curatedTitle": "Coherence",
+      "curatedYear": 2013,
+      "curatedRuntime": 89,
+      "tmdbId": 220289,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Coherence",
+      "tmdbOriginalTitle": "Coherence",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 89,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 220289,
+          "title": "Coherence",
+          "year": 2014,
+          "score": 14
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "moon": {
+      "slug": "moon",
+      "curatedTitle": "Moon",
+      "curatedYear": 2009,
+      "curatedRuntime": 97,
+      "tmdbId": 17431,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Moon",
+      "tmdbOriginalTitle": "Moon",
+      "tmdbYear": 2009,
+      "tmdbRuntime": 97,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 17431,
+          "title": "Moon",
+          "year": 2009,
+          "score": 15
+        },
+        {
+          "tmdbId": 18239,
+          "title": "The Twilight Saga: New Moon",
+          "year": 2009,
+          "score": 9
+        },
+        {
+          "tmdbId": 22046,
+          "title": "James May on the Moon",
+          "year": 2009,
+          "score": 9
+        },
+        {
+          "tmdbId": 39564,
+          "title": "Dark Moon Rising",
+          "year": 2009,
+          "score": 9
+        },
+        {
+          "tmdbId": 39700,
+          "title": "Blood Moon Rising",
+          "year": 2009,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-big-lebowski": {
+      "slug": "the-big-lebowski",
+      "curatedTitle": "The Big Lebowski",
+      "curatedYear": 1998,
+      "curatedRuntime": 117,
+      "tmdbId": 115,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Big Lebowski",
+      "tmdbOriginalTitle": "The Big Lebowski",
+      "tmdbYear": 1998,
+      "tmdbRuntime": 117,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 115,
+          "title": "The Big Lebowski",
+          "year": 1998,
+          "score": 15
+        },
+        {
+          "tmdbId": 763400,
+          "title": "The Making of 'The Big Lebowski'",
+          "year": 1998,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "groundhog-day": {
+      "slug": "groundhog-day",
+      "curatedTitle": "Groundhog Day",
+      "curatedYear": 1993,
+      "curatedRuntime": 101,
+      "tmdbId": 137,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Groundhog Day",
+      "tmdbOriginalTitle": "Groundhog Day",
+      "tmdbYear": 1993,
+      "tmdbRuntime": 101,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 137,
+          "title": "Groundhog Day",
+          "year": 1993,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "when-harry-met-sally": {
+      "slug": "when-harry-met-sally",
+      "curatedTitle": "When Harry Met Sally...",
+      "curatedYear": 1989,
+      "curatedRuntime": 96,
+      "tmdbId": 639,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "When Harry Met Sally...",
+      "tmdbOriginalTitle": "When Harry Met Sally...",
+      "tmdbYear": 1989,
+      "tmdbRuntime": 96,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 639,
+          "title": "When Harry Met Sally...",
+          "year": 1989,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "10-things-i-hate-about-you": {
+      "slug": "10-things-i-hate-about-you",
+      "curatedTitle": "10 Things I Hate About You",
+      "curatedYear": 1999,
+      "curatedRuntime": 97,
+      "tmdbId": 4951,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "10 Things I Hate About You",
+      "tmdbOriginalTitle": "10 Things I Hate About You",
+      "tmdbYear": 1999,
+      "tmdbRuntime": 97,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 4951,
+          "title": "10 Things I Hate About You",
+          "year": 1999,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "crazy-rich-asians": {
+      "slug": "crazy-rich-asians",
+      "curatedTitle": "Crazy Rich Asians",
+      "curatedYear": 2018,
+      "curatedRuntime": 121,
+      "tmdbId": 455207,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Crazy Rich Asians",
+      "tmdbOriginalTitle": "Crazy Rich Asians",
+      "tmdbYear": 2018,
+      "tmdbRuntime": 121,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 455207,
+          "title": "Crazy Rich Asians",
+          "year": 2018,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-holiday": {
+      "slug": "the-holiday",
+      "curatedTitle": "The Holiday",
+      "curatedYear": 2006,
+      "curatedRuntime": 136,
+      "tmdbId": 1581,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Holiday",
+      "tmdbOriginalTitle": "The Holiday",
+      "tmdbYear": 2006,
+      "tmdbRuntime": 136,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 1581,
+          "title": "The Holiday",
+          "year": 2006,
+          "score": 15
+        },
+        {
+          "tmdbId": 373011,
+          "title": "Záviš, the Prince of Pornofolk Under the Influence of Griffith's Intolerance and Tati's Monsieur Hulot's Holiday or the Establishment and Doom of Czechoslovakia (1918-1992)",
+          "year": 2006,
+          "score": 6
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "sing-street": {
+      "slug": "sing-street",
+      "curatedTitle": "Sing Street",
+      "curatedYear": 2016,
+      "curatedRuntime": 106,
+      "tmdbId": 369557,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Sing Street",
+      "tmdbOriginalTitle": "Sing Street",
+      "tmdbYear": 2016,
+      "tmdbRuntime": 105,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 369557,
+          "title": "Sing Street",
+          "year": 2016,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-secret-life-of-walter-mitty": {
+      "slug": "the-secret-life-of-walter-mitty",
+      "curatedTitle": "The Secret Life of Walter Mitty",
+      "curatedYear": 2013,
+      "curatedRuntime": 114,
+      "tmdbId": 116745,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Secret Life of Walter Mitty",
+      "tmdbOriginalTitle": "The Secret Life of Walter Mitty",
+      "tmdbYear": 2013,
+      "tmdbRuntime": 114,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 116745,
+          "title": "The Secret Life of Walter Mitty",
+          "year": 2013,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-terminal": {
+      "slug": "the-terminal",
+      "curatedTitle": "The Terminal",
+      "curatedYear": 2004,
+      "curatedRuntime": 128,
+      "tmdbId": 594,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Terminal",
+      "tmdbOriginalTitle": "The Terminal",
+      "tmdbYear": 2004,
+      "tmdbRuntime": 128,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 594,
+          "title": "The Terminal",
+          "year": 2004,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-intouchables": {
+      "slug": "the-intouchables",
+      "curatedTitle": "The Intouchables",
+      "curatedYear": 2011,
+      "curatedRuntime": 112,
+      "tmdbId": 77338,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Intouchables",
+      "tmdbOriginalTitle": "Intouchables",
+      "tmdbYear": 2011,
+      "tmdbRuntime": 113,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 77338,
+          "title": "The Intouchables",
+          "year": 2011,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "jojo-rabbit": {
+      "slug": "jojo-rabbit",
+      "curatedTitle": "Jojo Rabbit",
+      "curatedYear": 2019,
+      "curatedRuntime": 108,
+      "tmdbId": 515001,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Jojo Rabbit",
+      "tmdbOriginalTitle": "Jojo Rabbit",
+      "tmdbYear": 2019,
+      "tmdbRuntime": 108,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 515001,
+          "title": "Jojo Rabbit",
+          "year": 2019,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "knives-out": {
+      "slug": "knives-out",
+      "curatedTitle": "Knives Out",
+      "curatedYear": 2019,
+      "curatedRuntime": 130,
+      "tmdbId": 546554,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Knives Out",
+      "tmdbOriginalTitle": "Knives Out",
+      "tmdbYear": 2019,
+      "tmdbRuntime": 131,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 546554,
+          "title": "Knives Out",
+          "year": 2019,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "game-night": {
+      "slug": "game-night",
+      "curatedTitle": "Game Night",
+      "curatedYear": 2018,
+      "curatedRuntime": 100,
+      "tmdbId": 445571,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Game Night",
+      "tmdbOriginalTitle": "Game Night",
+      "tmdbYear": 2018,
+      "tmdbRuntime": 100,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 445571,
+          "title": "Game Night",
+          "year": 2018,
+          "score": 15
+        },
+        {
+          "tmdbId": 710003,
+          "title": "Family Game Night",
+          "year": 2018,
+          "score": 9
+        },
+        {
+          "tmdbId": 505058,
+          "title": "Unfriended: Dark Web",
+          "year": 2018,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "booksmart": {
+      "slug": "booksmart",
+      "curatedTitle": "Booksmart",
+      "curatedYear": 2019,
+      "curatedRuntime": 102,
+      "tmdbId": 505600,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Booksmart",
+      "tmdbOriginalTitle": "Booksmart",
+      "tmdbYear": 2019,
+      "tmdbRuntime": 102,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 505600,
+          "title": "Booksmart",
+          "year": 2019,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "hot-fuzz": {
+      "slug": "hot-fuzz",
+      "curatedTitle": "Hot Fuzz",
+      "curatedYear": 2007,
+      "curatedRuntime": 121,
+      "tmdbId": 4638,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Hot Fuzz",
+      "tmdbOriginalTitle": "Hot Fuzz",
+      "tmdbYear": 2007,
+      "tmdbRuntime": 121,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 4638,
+          "title": "Hot Fuzz",
+          "year": 2007,
+          "score": 15
+        },
+        {
+          "tmdbId": 1118964,
+          "title": "Conclusive: We Made Hot Fuzz",
+          "year": 2007,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "what-we-do-in-the-shadows": {
+      "slug": "what-we-do-in-the-shadows",
+      "curatedTitle": "What We Do in the Shadows",
+      "curatedYear": 2014,
+      "curatedRuntime": 86,
+      "tmdbId": 246741,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "What We Do in the Shadows",
+      "tmdbOriginalTitle": "What We Do in the Shadows",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 86,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 246741,
+          "title": "What We Do in the Shadows",
+          "year": 2014,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "airplane": {
+      "slug": "airplane",
+      "curatedTitle": "Airplane!",
+      "curatedYear": 1980,
+      "curatedRuntime": 88,
+      "tmdbId": 813,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Airplane!",
+      "tmdbOriginalTitle": "Airplane!",
+      "tmdbYear": 1980,
+      "tmdbRuntime": 88,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 813,
+          "title": "Airplane!",
+          "year": 1980,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "ferris-buellers-day-off": {
+      "slug": "ferris-buellers-day-off",
+      "curatedTitle": "Ferris Bueller's Day Off",
+      "curatedYear": 1986,
+      "curatedRuntime": 103,
+      "tmdbId": 9377,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Ferris Bueller's Day Off",
+      "tmdbOriginalTitle": "Ferris Bueller's Day Off",
+      "tmdbYear": 1986,
+      "tmdbRuntime": 103,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 9377,
+          "title": "Ferris Bueller's Day Off",
+          "year": 1986,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "home-alone": {
+      "slug": "home-alone",
+      "curatedTitle": "Home Alone",
+      "curatedYear": 1990,
+      "curatedRuntime": 103,
+      "tmdbId": 771,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Home Alone",
+      "tmdbOriginalTitle": "Home Alone",
+      "tmdbYear": 1990,
+      "tmdbRuntime": 103,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 771,
+          "title": "Home Alone",
+          "year": 1990,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "toy-story": {
+      "slug": "toy-story",
+      "curatedTitle": "Toy Story",
+      "curatedYear": 1995,
+      "curatedRuntime": 81,
+      "tmdbId": 862,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Toy Story",
+      "tmdbOriginalTitle": "Toy Story",
+      "tmdbYear": 1995,
+      "tmdbRuntime": 81,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 862,
+          "title": "Toy Story",
+          "year": 1995,
+          "score": 15
+        },
+        {
+          "tmdbId": 711704,
+          "title": "The Making of Toy Story",
+          "year": 1995,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "ratatouille": {
+      "slug": "ratatouille",
+      "curatedTitle": "Ratatouille",
+      "curatedYear": 2007,
+      "curatedRuntime": 111,
+      "tmdbId": 2062,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Ratatouille",
+      "tmdbOriginalTitle": "Ratatouille",
+      "tmdbYear": 2007,
+      "tmdbRuntime": 111,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 2062,
+          "title": "Ratatouille",
+          "year": 2007,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "up": {
+      "slug": "up",
+      "curatedTitle": "Up",
+      "curatedYear": 2009,
+      "curatedRuntime": 96,
+      "tmdbId": 14160,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Up",
+      "tmdbOriginalTitle": "Up",
+      "tmdbYear": 2009,
+      "tmdbRuntime": 96,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 14160,
+          "title": "Up",
+          "year": 2009,
+          "score": 15
+        },
+        {
+          "tmdbId": 22947,
+          "title": "Up in the Air",
+          "year": 2009,
+          "score": 11
+        },
+        {
+          "tmdbId": 17927,
+          "title": "Fired Up!",
+          "year": 2009,
+          "score": 9
+        },
+        {
+          "tmdbId": 19874,
+          "title": "What Goes Up",
+          "year": 2009,
+          "score": 9
+        },
+        {
+          "tmdbId": 20983,
+          "title": "Hooking Up",
+          "year": 2009,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "coco": {
+      "slug": "coco",
+      "curatedTitle": "Coco",
+      "curatedYear": 2017,
+      "curatedRuntime": 105,
+      "tmdbId": 354912,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Coco",
+      "tmdbOriginalTitle": "Coco",
+      "tmdbYear": 2017,
+      "tmdbRuntime": 105,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 354912,
+          "title": "Coco",
+          "year": 2017,
+          "score": 15
+        },
+        {
+          "tmdbId": 467398,
+          "title": "Cocote",
+          "year": 2017,
+          "score": 11
+        },
+        {
+          "tmdbId": 469057,
+          "title": "Cocoon",
+          "year": 2017,
+          "score": 11
+        },
+        {
+          "tmdbId": 469211,
+          "title": "Cocolors",
+          "year": 2017,
+          "score": 11
+        },
+        {
+          "tmdbId": 657123,
+          "title": "El Coco 2",
+          "year": 2017,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "wall-e": {
+      "slug": "wall-e",
+      "curatedTitle": "WALL-E",
+      "curatedYear": 2008,
+      "curatedRuntime": 98,
+      "tmdbId": 10681,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "WALL·E",
+      "tmdbOriginalTitle": "WALL·E",
+      "tmdbYear": 2008,
+      "tmdbRuntime": 98,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 10681,
+          "title": "WALL·E",
+          "year": 2008,
+          "score": 15
+        },
+        {
+          "tmdbId": 877268,
+          "title": "WALL·E's Treasures & Trinkets",
+          "year": 2008,
+          "score": 11
+        },
+        {
+          "tmdbId": 13413,
+          "title": "BURN·E",
+          "year": 2008,
+          "score": 3
+        },
+        {
+          "tmdbId": 45830,
+          "title": "Behind the Wall",
+          "year": 2008,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "how-to-train-your-dragon": {
+      "slug": "how-to-train-your-dragon",
+      "curatedTitle": "How to Train Your Dragon",
+      "curatedYear": 2010,
+      "curatedRuntime": 98,
+      "tmdbId": 10191,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "How to Train Your Dragon",
+      "tmdbOriginalTitle": "How to Train Your Dragon",
+      "tmdbYear": 2010,
+      "tmdbRuntime": 98,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 10191,
+          "title": "How to Train Your Dragon",
+          "year": 2010,
+          "score": 15
+        },
+        {
+          "tmdbId": 207516,
+          "title": "How to Train Your Dragon: Legends",
+          "year": 2010,
+          "score": 11
+        },
+        {
+          "tmdbId": 1437039,
+          "title": "How to Train Your Dragon: The Technical Artistry of Dragon",
+          "year": 2010,
+          "score": 11
+        },
+        {
+          "tmdbId": 47626,
+          "title": "Legend of the BoneKnapper Dragon",
+          "year": 2010,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-lion-king": {
+      "slug": "the-lion-king",
+      "curatedTitle": "The Lion King",
+      "curatedYear": 1994,
+      "curatedRuntime": 88,
+      "tmdbId": 8587,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Lion King",
+      "tmdbOriginalTitle": "The Lion King",
+      "tmdbYear": 1994,
+      "tmdbRuntime": 89,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 8587,
+          "title": "The Lion King",
+          "year": 1994,
+          "score": 15
+        },
+        {
+          "tmdbId": 256285,
+          "title": "Leo the Lion: King of the Jungle",
+          "year": 1994,
+          "score": 9
+        },
+        {
+          "tmdbId": 579080,
+          "title": "Disney Sing-Along-Songs: The Lion King - Circle of Life",
+          "year": 1994,
+          "score": 9
+        },
+        {
+          "tmdbId": 845969,
+          "title": "The Making of the Lion King",
+          "year": 1994,
+          "score": 9
+        },
+        {
+          "tmdbId": 574051,
+          "title": "King of the Animals",
+          "year": 1994,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "shrek": {
+      "slug": "shrek",
+      "curatedTitle": "Shrek",
+      "curatedYear": 2001,
+      "curatedRuntime": 90,
+      "tmdbId": 808,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Shrek",
+      "tmdbOriginalTitle": "Shrek",
+      "tmdbYear": 2001,
+      "tmdbRuntime": 90,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 808,
+          "title": "Shrek",
+          "year": 2001,
+          "score": 15
+        },
+        {
+          "tmdbId": 26840,
+          "title": "Shrek in the Swamp Karaoke Dance Party",
+          "year": 2001,
+          "score": 11
+        },
+        {
+          "tmdbId": 575506,
+          "title": "Creating a Fairy Tale World: The Making of Shrek",
+          "year": 2001,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "fantastic-mr-fox": {
+      "slug": "fantastic-mr-fox",
+      "curatedTitle": "Fantastic Mr. Fox",
+      "curatedYear": 2009,
+      "curatedRuntime": 87,
+      "tmdbId": 10315,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Fantastic Mr. Fox",
+      "tmdbOriginalTitle": "Fantastic Mr. Fox",
+      "tmdbYear": 2009,
+      "tmdbRuntime": 87,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 10315,
+          "title": "Fantastic Mr. Fox",
+          "year": 2009,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "jurassic-park": {
+      "slug": "jurassic-park",
+      "curatedTitle": "Jurassic Park",
+      "curatedYear": 1993,
+      "curatedRuntime": 127,
+      "tmdbId": 329,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Jurassic Park",
+      "tmdbOriginalTitle": "Jurassic Park",
+      "tmdbYear": 1993,
+      "tmdbRuntime": 127,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 329,
+          "title": "Jurassic Park",
+          "year": 1993,
+          "score": 15
+        },
+        {
+          "tmdbId": 331984,
+          "title": "The Real Jurassic Park",
+          "year": 1993,
+          "score": 9
+        },
+        {
+          "tmdbId": 79500,
+          "title": "Prehysteria!",
+          "year": 1993,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "pirates-of-the-caribbean-the-curse-of-the-black-pearl": {
+      "slug": "pirates-of-the-caribbean-the-curse-of-the-black-pearl",
+      "curatedTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "curatedYear": 2003,
+      "curatedRuntime": 143,
+      "tmdbId": 22,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "tmdbOriginalTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "tmdbYear": 2003,
+      "tmdbRuntime": 143,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 22,
+          "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "year": 2003,
+          "score": 15
+        },
+        {
+          "tmdbId": 1687059,
+          "title": "An Epic at Sea: The Making of 'Pirates of the Caribbean: The Curse of the Black Pearl'",
+          "year": 2003,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "top-gun-maverick": {
+      "slug": "top-gun-maverick",
+      "curatedTitle": "Top Gun: Maverick",
+      "curatedYear": 2022,
+      "curatedRuntime": 131,
+      "tmdbId": 361743,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Top Gun: Maverick",
+      "tmdbOriginalTitle": "Top Gun: Maverick",
+      "tmdbYear": 2022,
+      "tmdbRuntime": 131,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 361743,
+          "title": "Top Gun: Maverick",
+          "year": 2022,
+          "score": 15
+        },
+        {
+          "tmdbId": 1076135,
+          "title": "Top Gun Maverick : Le phénomène",
+          "year": 2022,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "mission-impossible-fallout": {
+      "slug": "mission-impossible-fallout",
+      "curatedTitle": "Mission: Impossible - Fallout",
+      "curatedYear": 2018,
+      "curatedRuntime": 147,
+      "tmdbId": 353081,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Mission: Impossible - Fallout",
+      "tmdbOriginalTitle": "Mission: Impossible - Fallout",
+      "tmdbYear": 2018,
+      "tmdbRuntime": 147,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 353081,
+          "title": "Mission: Impossible - Fallout",
+          "year": 2018,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "john-wick": {
+      "slug": "john-wick",
+      "curatedTitle": "John Wick",
+      "curatedYear": 2014,
+      "curatedRuntime": 101,
+      "tmdbId": 245891,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "John Wick",
+      "tmdbOriginalTitle": "John Wick",
+      "tmdbYear": 2014,
+      "tmdbRuntime": 101,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 245891,
+          "title": "John Wick",
+          "year": 2014,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "gladiator": {
+      "slug": "gladiator",
+      "curatedTitle": "Gladiator",
+      "curatedYear": 2000,
+      "curatedRuntime": 155,
+      "tmdbId": 98,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Gladiator",
+      "tmdbOriginalTitle": "Gladiator",
+      "tmdbYear": 2000,
+      "tmdbRuntime": 155,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 98,
+          "title": "Gladiator",
+          "year": 2000,
+          "score": 15
+        },
+        {
+          "tmdbId": 16219,
+          "title": "Gladiator",
+          "year": 1992,
+          "score": 12
+        },
+        {
+          "tmdbId": 441565,
+          "title": "The Gladiators - Live In Paris",
+          "year": 2000,
+          "score": 11
+        },
+        {
+          "tmdbId": 692304,
+          "title": "Gladiator Games: The Roman Bloodsport",
+          "year": 2000,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "braveheart": {
+      "slug": "braveheart",
+      "curatedTitle": "Braveheart",
+      "curatedYear": 1995,
+      "curatedRuntime": 178,
+      "tmdbId": 197,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Braveheart",
+      "tmdbOriginalTitle": "Braveheart",
+      "tmdbYear": 1995,
+      "tmdbRuntime": 178,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 197,
+          "title": "Braveheart",
+          "year": 1995,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "saving-private-ryan": {
+      "slug": "saving-private-ryan",
+      "curatedTitle": "Saving Private Ryan",
+      "curatedYear": 1998,
+      "curatedRuntime": 169,
+      "tmdbId": 857,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Saving Private Ryan",
+      "tmdbOriginalTitle": "Saving Private Ryan",
+      "tmdbYear": 1998,
+      "tmdbRuntime": 169,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 857,
+          "title": "Saving Private Ryan",
+          "year": 1998,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "dune": {
+      "slug": "dune",
+      "curatedTitle": "Dune",
+      "curatedYear": 2021,
+      "curatedRuntime": 155,
+      "tmdbId": 438631,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Dune",
+      "tmdbOriginalTitle": "Dune",
+      "tmdbYear": 2021,
+      "tmdbRuntime": 155,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 438631,
+          "title": "Dune",
+          "year": 2021,
+          "score": 15
+        },
+        {
+          "tmdbId": 697620,
+          "title": "Dune",
+          "year": 2020,
+          "score": 14
+        },
+        {
+          "tmdbId": 841,
+          "title": "Dune",
+          "year": 1984,
+          "score": 12
+        },
+        {
+          "tmdbId": 818926,
+          "title": "Dune Dreams",
+          "year": 2021,
+          "score": 11
+        },
+        {
+          "tmdbId": 843281,
+          "title": "Dune World",
+          "year": 2021,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "avatar": {
+      "slug": "avatar",
+      "curatedTitle": "Avatar",
+      "curatedYear": 2009,
+      "curatedRuntime": 162,
+      "tmdbId": 19995,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Avatar",
+      "tmdbOriginalTitle": "Avatar",
+      "tmdbYear": 2009,
+      "tmdbRuntime": 162,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 19995,
+          "title": "Avatar",
+          "year": 2009,
+          "score": 15
+        },
+        {
+          "tmdbId": 287003,
+          "title": "Avatar: Scene Deconstruction",
+          "year": 2009,
+          "score": 11
+        },
+        {
+          "tmdbId": 287004,
+          "title": "Avatar: Production Materials",
+          "year": 2009,
+          "score": 11
+        },
+        {
+          "tmdbId": 931019,
+          "title": "Avatar: Enter the World",
+          "year": 2009,
+          "score": 11
+        },
+        {
+          "tmdbId": 28524,
+          "title": "Princess of Mars",
+          "year": 2009,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "star-wars-a-new-hope": {
+      "slug": "star-wars-a-new-hope",
+      "curatedTitle": "Star Wars",
+      "curatedYear": 1977,
+      "curatedRuntime": 121,
+      "tmdbId": 11,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Star Wars",
+      "tmdbOriginalTitle": "Star Wars",
+      "tmdbYear": 1977,
+      "tmdbRuntime": 121,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 11,
+          "title": "Star Wars",
+          "year": 1977,
+          "score": 15
+        },
+        {
+          "tmdbId": 72694,
+          "title": "The Making of Star Wars",
+          "year": 1977,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "back-to-the-future": {
+      "slug": "back-to-the-future",
+      "curatedTitle": "Back to the Future",
+      "curatedYear": 1985,
+      "curatedRuntime": 116,
+      "tmdbId": 105,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Back to the Future",
+      "tmdbOriginalTitle": "Back to the Future",
+      "tmdbYear": 1985,
+      "tmdbRuntime": 116,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 105,
+          "title": "Back to the Future",
+          "year": 1985,
+          "score": 15
+        },
+        {
+          "tmdbId": 294145,
+          "title": "Looking Back to the Future: Raymond Loewy, Industrial Designer",
+          "year": 1985,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-fifth-element": {
+      "slug": "the-fifth-element",
+      "curatedTitle": "The Fifth Element",
+      "curatedYear": 1997,
+      "curatedRuntime": 126,
+      "tmdbId": 18,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Fifth Element",
+      "tmdbOriginalTitle": "Le Cinquième Élément",
+      "tmdbYear": 1997,
+      "tmdbRuntime": 126,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 18,
+          "title": "The Fifth Element",
+          "year": 1997,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-wolf-of-wall-street": {
+      "slug": "the-wolf-of-wall-street",
+      "curatedTitle": "The Wolf of Wall Street",
+      "curatedYear": 2013,
+      "curatedRuntime": 180,
+      "tmdbId": 106646,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Wolf of Wall Street",
+      "tmdbOriginalTitle": "The Wolf of Wall Street",
+      "tmdbYear": 2013,
+      "tmdbRuntime": 180,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 106646,
+          "title": "The Wolf of Wall Street",
+          "year": 2013,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-nice-guys": {
+      "slug": "the-nice-guys",
+      "curatedTitle": "The Nice Guys",
+      "curatedYear": 2016,
+      "curatedRuntime": 116,
+      "tmdbId": 290250,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Nice Guys",
+      "tmdbOriginalTitle": "The Nice Guys",
+      "tmdbYear": 2016,
+      "tmdbRuntime": 116,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 290250,
+          "title": "The Nice Guys",
+          "year": 2016,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-martian": {
+      "slug": "the-martian",
+      "curatedTitle": "The Martian",
+      "curatedYear": 2015,
+      "curatedRuntime": 144,
+      "tmdbId": 286217,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Martian",
+      "tmdbOriginalTitle": "The Martian",
+      "tmdbYear": 2015,
+      "tmdbRuntime": 141,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 286217,
+          "title": "The Martian",
+          "year": 2015,
+          "score": 15
+        },
+        {
+          "tmdbId": 355309,
+          "title": "Martian Land",
+          "year": 2015,
+          "score": 11
+        },
+        {
+          "tmdbId": 837912,
+          "title": "The Martians Are Coming!: The Making of 'Invaders from Mars'",
+          "year": 2015,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "cast-away": {
+      "slug": "cast-away",
+      "curatedTitle": "Cast Away",
+      "curatedYear": 2000,
+      "curatedRuntime": 143,
+      "tmdbId": 8358,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Cast Away",
+      "tmdbOriginalTitle": "Cast Away",
+      "tmdbYear": 2000,
+      "tmdbRuntime": 143,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 8358,
+          "title": "Cast Away",
+          "year": 2000,
+          "score": 15
+        },
+        {
+          "tmdbId": 56285,
+          "title": "Behind the Scenes: Cast Away",
+          "year": 2000,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "life-of-pi": {
+      "slug": "life-of-pi",
+      "curatedTitle": "Life of Pi",
+      "curatedYear": 2012,
+      "curatedRuntime": 127,
+      "tmdbId": 87827,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Life of Pi",
+      "tmdbOriginalTitle": "Life of Pi",
+      "tmdbYear": 2012,
+      "tmdbRuntime": 127,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 87827,
+          "title": "Life of Pi",
+          "year": 2012,
+          "score": 15
+        },
+        {
+          "tmdbId": 115709,
+          "title": "The Life & Times of Paul the Psychic Octopus",
+          "year": 2012,
+          "score": 3
+        },
+        {
+          "tmdbId": 90147,
+          "title": "Life Without Principle",
+          "year": 2011,
+          "score": 2
+        },
+        {
+          "tmdbId": 130694,
+          "title": "Life Is Not for Cowards",
+          "year": 2013,
+          "score": 2
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-revenant": {
+      "slug": "the-revenant",
+      "curatedTitle": "The Revenant",
+      "curatedYear": 2015,
+      "curatedRuntime": 156,
+      "tmdbId": 281957,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Revenant",
+      "tmdbOriginalTitle": "The Revenant",
+      "tmdbYear": 2015,
+      "tmdbRuntime": 157,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 281957,
+          "title": "The Revenant",
+          "year": 2015,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-shining": {
+      "slug": "the-shining",
+      "curatedTitle": "The Shining",
+      "curatedYear": 1980,
+      "curatedRuntime": 146,
+      "tmdbId": 694,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Shining",
+      "tmdbOriginalTitle": "The Shining",
+      "tmdbYear": 1980,
+      "tmdbRuntime": 144,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 694,
+          "title": "The Shining",
+          "year": 1980,
+          "score": 15
+        },
+        {
+          "tmdbId": 18875,
+          "title": "Making 'The Shining'",
+          "year": 1980,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "alien": {
+      "slug": "alien",
+      "curatedTitle": "Alien",
+      "curatedYear": 1979,
+      "curatedRuntime": 117,
+      "tmdbId": 348,
+      "confidence": "exact",
+      "matchMethod": "manual_override",
+      "tmdbTitle": "Alien",
+      "tmdbOriginalTitle": "Alien",
+      "tmdbYear": 1979,
+      "tmdbRuntime": 117,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 348,
+          "title": "Alien",
+          "year": 1979,
+          "score": 15
+        },
+        {
+          "tmdbId": 1309211,
+          "title": "The Alien",
+          "year": 1979,
+          "score": 15
+        },
+        {
+          "tmdbId": 98401,
+          "title": "The Alien Encounters",
+          "year": 1979,
+          "score": 11
+        },
+        {
+          "tmdbId": 820362,
+          "title": "Alien Portrait",
+          "year": 1979,
+          "score": 11
+        },
+        {
+          "tmdbId": 1167579,
+          "title": "Alien: Experience in Terror",
+          "year": 1979,
+          "score": 11
+        }
+      ],
+      "reviewedByHuman": true
+    },
+    "the-conjuring": {
+      "slug": "the-conjuring",
+      "curatedTitle": "The Conjuring",
+      "curatedYear": 2013,
+      "curatedRuntime": 112,
+      "tmdbId": 138843,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Conjuring",
+      "tmdbOriginalTitle": "The Conjuring",
+      "tmdbYear": 2013,
+      "tmdbRuntime": 112,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 138843,
+          "title": "The Conjuring",
+          "year": 2013,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "hereditary": {
+      "slug": "hereditary",
+      "curatedTitle": "Hereditary",
+      "curatedYear": 2018,
+      "curatedRuntime": 128,
+      "tmdbId": 493922,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Hereditary",
+      "tmdbOriginalTitle": "Hereditary",
+      "tmdbYear": 2018,
+      "tmdbRuntime": 128,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 493922,
+          "title": "Hereditary",
+          "year": 2018,
+          "score": 15
+        },
+        {
+          "tmdbId": 1284938,
+          "title": "Cursed: The True Nature of Hereditary",
+          "year": 2018,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "scream": {
+      "slug": "scream",
+      "curatedTitle": "Scream",
+      "curatedYear": 1996,
+      "curatedRuntime": 111,
+      "tmdbId": 4232,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Scream",
+      "tmdbOriginalTitle": "Scream",
+      "tmdbYear": 1996,
+      "tmdbRuntime": 112,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 4232,
+          "title": "Scream",
+          "year": 1996,
+          "score": 15
+        },
+        {
+          "tmdbId": 30401,
+          "title": "Scream Queens Naked Christmas",
+          "year": 1996,
+          "score": 11
+        },
+        {
+          "tmdbId": 463155,
+          "title": "Scream, Teen, Scream!",
+          "year": 1996,
+          "score": 11
+        },
+        {
+          "tmdbId": 965847,
+          "title": "Screaming Videotape #2",
+          "year": 1996,
+          "score": 11
+        },
+        {
+          "tmdbId": 9102,
+          "title": "Screamers",
+          "year": 1995,
+          "score": 10
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "train-to-busan": {
+      "slug": "train-to-busan",
+      "curatedTitle": "Train to Busan",
+      "curatedYear": 2016,
+      "curatedRuntime": 118,
+      "tmdbId": 396535,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Train to Busan",
+      "tmdbOriginalTitle": "부산행",
+      "tmdbYear": 2016,
+      "tmdbRuntime": 118,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 396535,
+          "title": "Train to Busan",
+          "year": 2016,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-father": {
+      "slug": "the-father",
+      "curatedTitle": "The Father",
+      "curatedYear": 2020,
+      "curatedRuntime": 97,
+      "tmdbId": 600354,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Father",
+      "tmdbOriginalTitle": "The Father",
+      "tmdbYear": 2020,
+      "tmdbRuntime": 97,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 600354,
+          "title": "The Father",
+          "year": 2020,
+          "score": 15
+        },
+        {
+          "tmdbId": 590280,
+          "title": "The Fathers Project",
+          "year": 2020,
+          "score": 11
+        },
+        {
+          "tmdbId": 689408,
+          "title": "Father of the Bride",
+          "year": 2020,
+          "score": 11
+        },
+        {
+          "tmdbId": 746358,
+          "title": "Father of the Bride Part 3 (ish)",
+          "year": 2020,
+          "score": 11
+        },
+        {
+          "tmdbId": 603170,
+          "title": "A Father's Legacy",
+          "year": 2021,
+          "score": 10
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "everything-everywhere-all-at-once": {
+      "slug": "everything-everywhere-all-at-once",
+      "curatedTitle": "Everything Everywhere All at Once",
+      "curatedYear": 2022,
+      "curatedRuntime": 140,
+      "tmdbId": 545611,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Everything Everywhere All at Once",
+      "tmdbOriginalTitle": "Everything Everywhere All at Once",
+      "tmdbYear": 2022,
+      "tmdbRuntime": 140,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 545611,
+          "title": "Everything Everywhere All at Once",
+          "year": 2022,
+          "score": 15
+        },
+        {
+          "tmdbId": 1258497,
+          "title": "Almost Everything You Ever Wanted to Know About Everything Everywhere All at Once",
+          "year": 2022,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "parasite": {
+      "slug": "parasite",
+      "curatedTitle": "Parasite",
+      "curatedYear": 2019,
+      "curatedRuntime": 133,
+      "tmdbId": 496243,
+      "confidence": "exact",
+      "matchMethod": "manual_override",
+      "tmdbTitle": "Parasite",
+      "tmdbOriginalTitle": "기생충",
+      "tmdbYear": 2019,
+      "tmdbRuntime": 133,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 1493942,
+          "title": "Parasites",
+          "year": 2019,
+          "score": 11
+        },
+        {
+          "tmdbId": 496243,
+          "title": "Parasite",
+          "year": 2019,
+          "score": 9
+        },
+        {
+          "tmdbId": 1100466,
+          "title": "Sealed Video 44: Parasite",
+          "year": 2019,
+          "score": 6
+        },
+        {
+          "tmdbId": 1309516,
+          "title": "More Animated Worker and Parasite",
+          "year": null,
+          "score": 6
+        }
+      ],
+      "reviewedByHuman": true
+    },
+    "the-menu": {
+      "slug": "the-menu",
+      "curatedTitle": "The Menu",
+      "curatedYear": 2022,
+      "curatedRuntime": 107,
+      "tmdbId": 593643,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Menu",
+      "tmdbOriginalTitle": "The Menu",
+      "tmdbYear": 2022,
+      "tmdbRuntime": 107,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 593643,
+          "title": "The Menu",
+          "year": 2022,
+          "score": 15
+        },
+        {
+          "tmdbId": 728204,
+          "title": "Romance on the Menu",
+          "year": 2020,
+          "score": 6
+        },
+        {
+          "tmdbId": 844819,
+          "title": "A Christmas to Savour",
+          "year": 2021,
+          "score": 2
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-grandmaster": {
+      "slug": "the-grandmaster",
+      "curatedTitle": "The Grandmaster",
+      "curatedYear": 2013,
+      "curatedRuntime": 130,
+      "tmdbId": 44865,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Grandmaster",
+      "tmdbOriginalTitle": "一代宗師",
+      "tmdbYear": 2013,
+      "tmdbRuntime": 130,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 44865,
+          "title": "The Grandmaster",
+          "year": 2013,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-secret-in-their-eyes": {
+      "slug": "the-secret-in-their-eyes",
+      "curatedTitle": "The Secret in Their Eyes",
+      "curatedYear": 2009,
+      "curatedRuntime": 129,
+      "tmdbId": 25376,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Secret in Their Eyes",
+      "tmdbOriginalTitle": "El secreto de sus ojos",
+      "tmdbYear": 2009,
+      "tmdbRuntime": 130,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 25376,
+          "title": "The Secret in Their Eyes",
+          "year": 2009,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "amadeus": {
+      "slug": "amadeus",
+      "curatedTitle": "Amadeus",
+      "curatedYear": 1984,
+      "curatedRuntime": 160,
+      "tmdbId": 279,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Amadeus",
+      "tmdbOriginalTitle": "Amadeus",
+      "tmdbYear": 1984,
+      "tmdbRuntime": 160,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 279,
+          "title": "Amadeus",
+          "year": 1984,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-lives-of-others": {
+      "slug": "the-lives-of-others",
+      "curatedTitle": "The Lives of Others",
+      "curatedYear": 2006,
+      "curatedRuntime": 137,
+      "tmdbId": 582,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Lives of Others",
+      "tmdbOriginalTitle": "Das Leben der Anderen",
+      "tmdbYear": 2006,
+      "tmdbRuntime": 137,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 582,
+          "title": "The Lives of Others",
+          "year": 2006,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "the-worst-person-in-the-world": {
+      "slug": "the-worst-person-in-the-world",
+      "curatedTitle": "The Worst Person in the World",
+      "curatedYear": 2021,
+      "curatedRuntime": 128,
+      "tmdbId": 660120,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "The Worst Person in the World",
+      "tmdbOriginalTitle": "Verdens verste menneske",
+      "tmdbYear": 2021,
+      "tmdbRuntime": 128,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 660120,
+          "title": "The Worst Person in the World",
+          "year": 2021,
+          "score": 9
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "perfect-days": {
+      "slug": "perfect-days",
+      "curatedTitle": "Perfect Days",
+      "curatedYear": 2023,
+      "curatedRuntime": 123,
+      "tmdbId": 976893,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Perfect Days",
+      "tmdbOriginalTitle": "PERFECT DAYS",
+      "tmdbYear": 2023,
+      "tmdbRuntime": 124,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 976893,
+          "title": "Perfect Days",
+          "year": 2023,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "lost-in-translation": {
+      "slug": "lost-in-translation",
+      "curatedTitle": "Lost in Translation",
+      "curatedYear": 2003,
+      "curatedRuntime": 102,
+      "tmdbId": 153,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Lost in Translation",
+      "tmdbOriginalTitle": "Lost in Translation",
+      "tmdbYear": 2003,
+      "tmdbRuntime": 102,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 153,
+          "title": "Lost in Translation",
+          "year": 2003,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "moonrise-kingdom": {
+      "slug": "moonrise-kingdom",
+      "curatedTitle": "Moonrise Kingdom",
+      "curatedYear": 2012,
+      "curatedRuntime": 94,
+      "tmdbId": 83666,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Moonrise Kingdom",
+      "tmdbOriginalTitle": "Moonrise Kingdom",
+      "tmdbYear": 2012,
+      "tmdbRuntime": 94,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 83666,
+          "title": "Moonrise Kingdom",
+          "year": 2012,
+          "score": 15
+        },
+        {
+          "tmdbId": 542609,
+          "title": "Do You Like to Read?",
+          "year": 2012,
+          "score": 3
+        }
+      ],
+      "reviewedByHuman": false
+    },
+    "isle-of-dogs": {
+      "slug": "isle-of-dogs",
+      "curatedTitle": "Isle of Dogs",
+      "curatedYear": 2018,
+      "curatedRuntime": 101,
+      "tmdbId": 399174,
+      "confidence": "exact",
+      "matchMethod": "title_year_search",
+      "tmdbTitle": "Isle of Dogs",
+      "tmdbOriginalTitle": "Isle of Dogs",
+      "tmdbYear": 2018,
+      "tmdbRuntime": 101,
+      "runtimeVerified": true,
+      "needsReview": false,
+      "candidates": [
+        {
+          "tmdbId": 399174,
+          "title": "Isle of Dogs",
+          "year": 2018,
+          "score": 15
+        }
+      ],
+      "reviewedByHuman": false
+    }
+  },
+  "titleOverrides": {}
+}
