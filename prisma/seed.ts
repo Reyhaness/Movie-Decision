@@ -1,9 +1,21 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { PrismaClient } from "@prisma/client";
 import type { ScoredMood, SituationPreference } from "@prisma/client";
 import { validateTestMovies } from "../src/services/catalog/testMovies";
+import { tmdbEnrichmentFromMatch } from "../src/services/catalog/tmdbMerge";
+import type { TmdbMatchFile } from "../src/services/catalog/tmdbMerge";
 import { testMovies } from "./seed-data/test-movies";
 
 const prisma = new PrismaClient();
+
+// Approved TMDB enrichment artifact (source of truth for TMDB-owned fields
+// only). Read from disk; no TMDB API client is imported and no network calls
+// are made during seeding.
+function loadTmdbMatches(): TmdbMatchFile {
+  const raw = readFileSync(resolve(__dirname, "seed-data", "tmdb-matches.json"), "utf-8");
+  return JSON.parse(raw) as TmdbMatchFile;
+}
 
 interface SeedArgs {
   checkOnly: boolean;
@@ -48,7 +60,22 @@ async function main(): Promise<void> {
   };
   console.log("Runtime bucket coverage:", runtimeBuckets);
 
+  const matchFile = loadTmdbMatches();
+  const withTmdbId = movies.filter((m) => {
+    const rec = matchFile.matches[m.slug];
+    return rec && !rec.needsReview && typeof rec.tmdbId === "number" && rec.tmdbId > 0;
+  }).length;
+  const missingTmdb = movies.filter((m) => {
+    const rec = matchFile.matches[m.slug];
+    return !rec || rec.needsReview || !rec.tmdbId;
+  }).map((m) => m.slug);
+  console.log(`TMDB enrichment: ${withTmdbId}/${movies.length} movies with approved tmdbId`);
+  if (missingTmdb.length > 0) {
+    console.warn(`TMDB enrichment: no approved match for ${missingTmdb.length}: ${missingTmdb.join(", ")}`);
+  }
+
   for (const movie of movies) {
+    const { tmdbId, ...optionalTmdb } = tmdbEnrichmentFromMatch(matchFile.matches[movie.slug]);
     const data = {
       slug: movie.slug,
       title: movie.title,
@@ -56,14 +83,14 @@ async function main(): Promise<void> {
       releaseYear: movie.releaseYear,
       genres: movie.genres ?? [],
       overview: movie.overview ?? "",
-      tmdbId: movie.tmdbId ?? null,
+      tmdbId,
       isValidated: true,
       isActive: true,
     };
     const saved = await prisma.movie.upsert({
       where: { slug: movie.slug },
-      update: { ...data, updatedAt: new Date() },
-      create: data,
+      update: { ...data, ...optionalTmdb, updatedAt: new Date() },
+      create: { ...data, ...optionalTmdb },
     });
 
     for (const [mood, score] of Object.entries(movie.moodScores)) {
