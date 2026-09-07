@@ -1,5 +1,6 @@
-import { standardStrategy } from "../scoring";
+import { standardStrategy, scoreAndRank } from "../scoring";
 import { buildCandidate } from "../filters";
+import { RECOMMENDATION_CONFIG } from "@/lib/constants";
 import type { MovieCandidate, RecommendationContext } from "../types";
 
 const ctx: RecommendationContext = {
@@ -68,5 +69,24 @@ describe("standard strategy (Strategy V1)", () => {
       if (result.movie) winners.add(result.movie.movieId);
     }
     expect(winners.size).toBeGreaterThan(1);
+  });
+
+  it("throws error when scoreAndRank is invoked with mood 'surprise_me'", () => {
+    expect(() =>
+      scoreAndRank([withScores("a", 5, 5)], { ...ctx, mood: "surprise_me" })
+    ).toThrow("surprise_me must use the Surprise Me strategy");
+  });
+
+  it("returns no_strong_match when minAllowedDistance threshold is exceeded", () => {
+    const originalThreshold = RECOMMENDATION_CONFIG.minAllowedDistance;
+    try {
+      (RECOMMENDATION_CONFIG as { minAllowedDistance: number | null }).minAllowedDistance = 1; // max distance allowed is 1
+      // Distance for 3/3 is (5-3)^2 + (5-3)^2 = 4 + 4 = 8 > 1
+      const result = standardStrategy.select([withScores("bad-fit", 3, 3)], ctx);
+      expect(result.status).toBe("no_strong_match");
+      expect(result.reason).toContain("No candidate meets the minimum contextual fit threshold");
+    } finally {
+      (RECOMMENDATION_CONFIG as { minAllowedDistance: number | null }).minAllowedDistance = originalThreshold;
+    }
   });
 });

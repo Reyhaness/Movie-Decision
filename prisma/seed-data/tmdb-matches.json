@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T19:31:46.958Z",
+  "generatedAt": "2026-09-07T04:09:03.704Z",
   "matches": {
     "paddington-2": {
       "slug": "paddington-2",
@@ -23,7 +23,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/1OJ9vkD5xPt3skC6KguyXAgagRZ.jpg",
+      "tmdbBackdropPath": "/kRVUMsXFzhuXjr20JcCGc6TapxA.jpg",
+      "tmdbReleaseDate": "2017-11-09"
     },
     "the-grand-budapest-hotel": {
       "slug": "the-grand-budapest-hotel",
@@ -47,7 +50,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+      "tmdbBackdropPath": "/jK65srQczOKTpW62wPxwwKztGgE.jpg",
+      "tmdbReleaseDate": "2014-02-26"
     },
     "superbad": {
       "slug": "superbad",
@@ -71,7 +77,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg",
+      "tmdbBackdropPath": "/coru98UcFBzJIU7bxZguxaePgu0.jpg",
+      "tmdbReleaseDate": "2007-08-17"
     },
     "school-of-rock": {
       "slug": "school-of-rock",
@@ -95,7 +104,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/zXLXaepIBvFVLU25DH3wv4IPSbe.jpg",
+      "tmdbBackdropPath": "/k5MTAtE9CCi5TWA84qaFMYv3ajB.jpg",
+      "tmdbReleaseDate": "2003-10-03"
     },
     "chef": {
       "slug": "chef",
@@ -143,7 +155,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/hyp8EXDmO4dSC8V6Q5jU7gD1kcg.jpg",
+      "tmdbBackdropPath": "/igVNCpS132rOqrnDsrVYW5HCIsM.jpg",
+      "tmdbReleaseDate": "2014-05-08"
     },
     "little-miss-sunshine": {
       "slug": "little-miss-sunshine",
@@ -167,7 +182,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/niNdhTpPHSgw22tK0PLjQMV640v.jpg",
+      "tmdbBackdropPath": "/twdtjJm31AExNx73DXaD4KRNU9c.jpg",
+      "tmdbReleaseDate": "2006-07-26"
     },
     "about-time": {
       "slug": "about-time",
@@ -197,7 +215,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": true
+      "reviewedByHuman": true,
+      "tmdbPosterPath": "/ls6zswrOZVhCXQBh96DlbnLBajM.jpg",
+      "tmdbBackdropPath": "/einbto9qLXFx9QXxEHylaxDbKPx.jpg",
+      "tmdbReleaseDate": "2013-09-04"
     },
     "before-sunrise": {
       "slug": "before-sunrise",
@@ -221,7 +242,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
+      "tmdbBackdropPath": "/qA2TyqPldTtoTVY3LKrNIG5g6bH.jpg",
+      "tmdbReleaseDate": "1995-01-27"
     },
     "the-social-network": {
       "slug": "the-social-network",
@@ -245,7 +269,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+      "tmdbBackdropPath": "/1PXwh3nJzgRkkYnqfWInJNypeL4.jpg",
+      "tmdbReleaseDate": "2010-10-01"
     },
     "arrival": {
       "slug": "arrival",
@@ -293,7 +320,10 @@
           "score": 2
         }
       ],
-      "reviewedByHuman": true
+      "reviewedByHuman": true,
+      "tmdbPosterPath": "/pEzNVQfdzYDzVK0XqxERIw2x2se.jpg",
+      "tmdbBackdropPath": "/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
+      "tmdbReleaseDate": "2016-11-10"
     },
     "eternal-sunshine-of-the-spotless-mind": {
       "slug": "eternal-sunshine-of-the-spotless-mind",
@@ -323,7 +353,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+      "tmdbBackdropPath": "/W1ffLQGHoxfAOq0ZYdPtJlvAdb.jpg",
+      "tmdbReleaseDate": "2004-03-19"
     },
     "her": {
       "slug": "her",
@@ -371,7 +404,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
+      "tmdbBackdropPath": "/1YnZchmaGc8dchgRPDpR1KGrixA.jpg",
+      "tmdbReleaseDate": "2013-12-18"
     },
     "the-truman-show": {
       "slug": "the-truman-show",
@@ -401,7 +437,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+      "tmdbBackdropPath": "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+      "tmdbReleaseDate": "1998-06-04"
     },
     "get-out": {
       "slug": "get-out",
@@ -437,7 +476,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
+      "tmdbBackdropPath": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+      "tmdbReleaseDate": "2017-02-24"
     },
     "a-quiet-place": {
       "slug": "a-quiet-place",
@@ -461,7 +503,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+      "tmdbBackdropPath": "/nHRUtBwFNnNN70vcQ7lAsjc2T6S.jpg",
+      "tmdbReleaseDate": "2018-04-03"
     },
     "mad-max-fury-road": {
       "slug": "mad-max-fury-road",
@@ -485,7 +530,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg",
+      "tmdbBackdropPath": "/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+      "tmdbReleaseDate": "2015-05-13"
     },
     "edge-of-tomorrow": {
       "slug": "edge-of-tomorrow",
@@ -509,7 +557,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/nBM9MMa2WCwvMG4IJ3eiGUdbPe6.jpg",
+      "tmdbBackdropPath": "/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg",
+      "tmdbReleaseDate": "2014-05-27"
     },
     "the-dark-knight": {
       "slug": "the-dark-knight",
@@ -545,7 +596,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "tmdbBackdropPath": "/9FE5eD92WfVCiivM9Pq9GVSrlWk.jpg",
+      "tmdbReleaseDate": "2008-07-16"
     },
     "interstellar": {
       "slug": "interstellar",
@@ -587,7 +641,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+      "tmdbBackdropPath": "/5XNQBqnBwPA9yT0jZ0p3s8bbLh0.jpg",
+      "tmdbReleaseDate": "2014-11-05"
     },
     "the-lord-of-the-rings-the-fellowship-of-the-ring": {
       "slug": "the-lord-of-the-rings-the-fellowship-of-the-ring",
@@ -617,7 +674,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "tmdbBackdropPath": "/oiwc338EoBgS4sEI2ixAny4KQKg.jpg",
+      "tmdbReleaseDate": "2001-12-18"
     },
     "spirited-away": {
       "slug": "spirited-away",
@@ -647,7 +707,10 @@
           "score": 6
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+      "tmdbBackdropPath": "/dyJvKsNs2KP8qQnAXbRwDjblViy.jpg",
+      "tmdbReleaseDate": "2001-07-20"
     },
     "the-incredibles": {
       "slug": "the-incredibles",
@@ -671,7 +734,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+      "tmdbBackdropPath": "/lxwzY9vNwjDgxWKt3zZ6zcU6rEJ.jpg",
+      "tmdbReleaseDate": "2004-10-27"
     },
     "the-shawshank-redemption": {
       "slug": "the-shawshank-redemption",
@@ -695,7 +761,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+      "tmdbBackdropPath": "/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+      "tmdbReleaseDate": "1994-09-23"
     },
     "the-princess-bride": {
       "slug": "the-princess-bride",
@@ -719,7 +788,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
+      "tmdbBackdropPath": "/2CisgvF2HcIVnbMZbSjASCtSgEb.jpg",
+      "tmdbReleaseDate": "1987-09-25"
     },
     "forrest-gump": {
       "slug": "forrest-gump",
@@ -749,7 +821,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg",
+      "tmdbBackdropPath": "/66Kn4XWhkuPkJxOJyPEx4U2CUfN.jpg",
+      "tmdbReleaseDate": "1994-06-23"
     },
     "good-will-hunting": {
       "slug": "good-will-hunting",
@@ -773,7 +848,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
+      "tmdbBackdropPath": "/xj1Sv1xm4Y0ydBueGuf10Y9qM0O.jpg",
+      "tmdbReleaseDate": "1997-12-05"
     },
     "dead-poets-society": {
       "slug": "dead-poets-society",
@@ -797,7 +875,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/tNvKkSnnn4Z6RCBThyK1gfCSSvv.jpg",
+      "tmdbBackdropPath": "/lFIXZpwwlF9hg8NM3RazaIJDuaj.jpg",
+      "tmdbReleaseDate": "1989-06-02"
     },
     "the-pursuit-of-happyness": {
       "slug": "the-pursuit-of-happyness",
@@ -821,7 +902,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/lBYOKAMcxIvuk9s9hMuecB9dPBV.jpg",
+      "tmdbBackdropPath": "/5jhG1lTgV0MS6tDkBMQSSitttTT.jpg",
+      "tmdbReleaseDate": "2006-12-14"
     },
     "the-green-mile": {
       "slug": "the-green-mile",
@@ -845,7 +929,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg",
+      "tmdbBackdropPath": "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+      "tmdbReleaseDate": "1999-12-10"
     },
     "whiplash": {
       "slug": "whiplash",
@@ -869,7 +956,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+      "tmdbBackdropPath": "/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg",
+      "tmdbReleaseDate": "2014-10-10"
     },
     "black-swan": {
       "slug": "black-swan",
@@ -893,7 +983,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/viWheBd44bouiLCHgNMvahLThqx.jpg",
+      "tmdbBackdropPath": "/eDLp4uFdqP1gpy9oMrutwH6Q64I.jpg",
+      "tmdbReleaseDate": "2010-12-03"
     },
     "gone-girl": {
       "slug": "gone-girl",
@@ -917,7 +1010,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ts996lKsxvjkO2yiYG0ht4qAicO.jpg",
+      "tmdbBackdropPath": "/iWak7wT0j6ycCc8lKr4NBz9c7n5.jpg",
+      "tmdbReleaseDate": "2014-10-01"
     },
     "prisoners": {
       "slug": "prisoners",
@@ -965,7 +1061,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/uhviyknTT5cEQXbn6vWIqfM4vGm.jpg",
+      "tmdbBackdropPath": "/3RFmTz5h2UuFWEV4oH00XICBR9y.jpg",
+      "tmdbReleaseDate": "2013-09-19"
     },
     "se7en": {
       "slug": "se7en",
@@ -989,7 +1088,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
+      "tmdbBackdropPath": "/i5H7zusQGsysGQ8i6P361Vnr0n2.jpg",
+      "tmdbReleaseDate": "1995-09-22"
     },
     "zodiac": {
       "slug": "zodiac",
@@ -1019,7 +1121,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/6YmeO4pB7XTh8P8F960O1uA14JO.jpg",
+      "tmdbBackdropPath": "/3zCPI4JFc54xvLaJ71oI2KoP3az.jpg",
+      "tmdbReleaseDate": "2007-03-02"
     },
     "the-prestige": {
       "slug": "the-prestige",
@@ -1043,7 +1148,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+      "tmdbBackdropPath": "/z3br1ub7spqGMkxgjgJSdM4DC21.jpg",
+      "tmdbReleaseDate": "2006-10-19"
     },
     "inception": {
       "slug": "inception",
@@ -1079,7 +1187,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+      "tmdbBackdropPath": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+      "tmdbReleaseDate": "2010-07-15"
     },
     "the-matrix": {
       "slug": "the-matrix",
@@ -1115,7 +1226,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+      "tmdbBackdropPath": "/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+      "tmdbReleaseDate": "1999-03-31"
     },
     "blade-runner-2049": {
       "slug": "blade-runner-2049",
@@ -1151,7 +1265,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+      "tmdbBackdropPath": "/gNdLJU9TxrpGx4dkZidjys3fyy0.jpg",
+      "tmdbReleaseDate": "2017-10-04"
     },
     "ex-machina": {
       "slug": "ex-machina",
@@ -1175,7 +1292,10 @@
           "score": 14
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
+      "tmdbBackdropPath": "/uqOuJ50EtTj7kkDIXP8LCg7G45D.jpg",
+      "tmdbReleaseDate": "2015-01-21"
     },
     "coherence": {
       "slug": "coherence",
@@ -1199,7 +1319,10 @@
           "score": 14
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ezUtb9m5DeLwL2gxi4gktzNCvQv.jpg",
+      "tmdbBackdropPath": "/cvGE73s935bXEAVt2W0zADPPegG.jpg",
+      "tmdbReleaseDate": "2014-04-06"
     },
     "moon": {
       "slug": "moon",
@@ -1247,7 +1370,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/35IU0Mq0zFsN1mYwDGts5mKc77n.jpg",
+      "tmdbBackdropPath": "/mvUAo9ACgmLpS4Ofc2IwD4n7WCt.jpg",
+      "tmdbReleaseDate": "2009-06-12"
     },
     "the-big-lebowski": {
       "slug": "the-big-lebowski",
@@ -1277,7 +1403,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/3bv6WAp6BSxxYvB5ozKFUYuRA8C.jpg",
+      "tmdbBackdropPath": "/77ElMccPnTMPouRxSdbJ4nEjf69.jpg",
+      "tmdbReleaseDate": "1998-03-06"
     },
     "groundhog-day": {
       "slug": "groundhog-day",
@@ -1301,7 +1430,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/gCgt1WARPZaXnq523ySQEUKinCs.jpg",
+      "tmdbBackdropPath": "/4W6RYDNe4OByNryOCvJprrutm9h.jpg",
+      "tmdbReleaseDate": "1993-02-11"
     },
     "when-harry-met-sally": {
       "slug": "when-harry-met-sally",
@@ -1325,7 +1457,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/rFOiFUhTMtDetqCGClC9PIgnC1P.jpg",
+      "tmdbBackdropPath": "/orq7v7J0Esq9TWpKitCXPbevOdW.jpg",
+      "tmdbReleaseDate": "1989-07-12"
     },
     "10-things-i-hate-about-you": {
       "slug": "10-things-i-hate-about-you",
@@ -1349,7 +1484,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg",
+      "tmdbBackdropPath": "/yvPbncYhMu9FfTjDhq0N5lgnVkO.jpg",
+      "tmdbReleaseDate": "1999-03-30"
     },
     "crazy-rich-asians": {
       "slug": "crazy-rich-asians",
@@ -1373,7 +1511,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg",
+      "tmdbBackdropPath": "/zeHB7aP46Xs3u4aFLuAq2GFeUGb.jpg",
+      "tmdbReleaseDate": "2018-08-15"
     },
     "the-holiday": {
       "slug": "the-holiday",
@@ -1403,7 +1544,10 @@
           "score": 6
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/h1ITOpvJN3Tw4Sy60w2QTfYMvdd.jpg",
+      "tmdbBackdropPath": "/9Ebn8atCcGk5OZrx4xmoTobAxoh.jpg",
+      "tmdbReleaseDate": "2006-12-05"
     },
     "sing-street": {
       "slug": "sing-street",
@@ -1427,7 +1571,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/sUWpVlrvzU2SJbnVZqIeKulPKwk.jpg",
+      "tmdbBackdropPath": "/zArKQrtZRb4lqjYXepBMLdegiDz.jpg",
+      "tmdbReleaseDate": "2016-03-11"
     },
     "the-secret-life-of-walter-mitty": {
       "slug": "the-secret-life-of-walter-mitty",
@@ -1451,7 +1598,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/iAo1hlzsPV9XpYcLQp6Ud065tGO.jpg",
+      "tmdbBackdropPath": "/8hSjOHRY4OUEpqxszYbMdem8z9C.jpg",
+      "tmdbReleaseDate": "2013-12-18"
     },
     "the-terminal": {
       "slug": "the-terminal",
@@ -1475,7 +1625,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/cPB3ZMM4UdsSAhNdS4c7ps5nypY.jpg",
+      "tmdbBackdropPath": "/zywtNiaZ9r7azrcNdl2j0jOgrkw.jpg",
+      "tmdbReleaseDate": "2004-06-17"
     },
     "the-intouchables": {
       "slug": "the-intouchables",
@@ -1499,7 +1652,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/1QU7HKgsQbGpzsJbJK4pAVQV9F5.jpg",
+      "tmdbBackdropPath": "/q6OGlZ1KMEb14AC8KbPCxyNOal6.jpg",
+      "tmdbReleaseDate": "2011-11-02"
     },
     "jojo-rabbit": {
       "slug": "jojo-rabbit",
@@ -1523,7 +1679,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/1mqL7VG4Ix8wmxwypmCA1HTHBky.jpg",
+      "tmdbBackdropPath": "/lTyikzfGgRX5ZqIfVeT26APYfRL.jpg",
+      "tmdbReleaseDate": "2019-10-18"
     },
     "knives-out": {
       "slug": "knives-out",
@@ -1547,7 +1706,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+      "tmdbBackdropPath": "/4HWAQu28e2yaWrtupFPGFkdNU7V.jpg",
+      "tmdbReleaseDate": "2019-11-27"
     },
     "game-night": {
       "slug": "game-night",
@@ -1583,7 +1745,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
+      "tmdbBackdropPath": "/aKPCZwkSZy2ASLo0QKeYmcoplfA.jpg",
+      "tmdbReleaseDate": "2018-02-15"
     },
     "booksmart": {
       "slug": "booksmart",
@@ -1607,7 +1772,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/2aSxRDmisJP90H3S0aocyuQIe4z.jpg",
+      "tmdbBackdropPath": "/cheDSO3mYmsAFQlRM91o7MK6Wcc.jpg",
+      "tmdbReleaseDate": "2019-05-24"
     },
     "hot-fuzz": {
       "slug": "hot-fuzz",
@@ -1637,7 +1805,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/zPib4ukTSdXvHP9pxGkFCe34f3y.jpg",
+      "tmdbBackdropPath": "/9rMSCFH9zhv1vILpEZQlUJs9iUm.jpg",
+      "tmdbReleaseDate": "2007-02-14"
     },
     "what-we-do-in-the-shadows": {
       "slug": "what-we-do-in-the-shadows",
@@ -1661,7 +1832,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/a2rD3i3DBMeYbA34rBv6z3B9S3a.jpg",
+      "tmdbBackdropPath": "/utjThRtcnsj0GrDwNudjGdfmHfq.jpg",
+      "tmdbReleaseDate": "2014-06-19"
     },
     "airplane": {
       "slug": "airplane",
@@ -1685,7 +1859,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/7Q3efxd3AF1vQjlSxnlerSA7RzN.jpg",
+      "tmdbBackdropPath": "/wQyvrsNSTzFVEGgarZbFkFyIciy.jpg",
+      "tmdbReleaseDate": "1980-06-27"
     },
     "ferris-buellers-day-off": {
       "slug": "ferris-buellers-day-off",
@@ -1709,7 +1886,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg",
+      "tmdbBackdropPath": "/jehzP4JKiFzgTWIaASLFOJocJke.jpg",
+      "tmdbReleaseDate": "1986-06-11"
     },
     "home-alone": {
       "slug": "home-alone",
@@ -1733,7 +1913,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/onTSipZ8R3bliBdKfPtsDuHTdlL.jpg",
+      "tmdbBackdropPath": "/ih2xVgeMS8R5WUetYE8Mr9hVTlB.jpg",
+      "tmdbReleaseDate": "1990-11-16"
     },
     "toy-story": {
       "slug": "toy-story",
@@ -1763,7 +1946,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+      "tmdbBackdropPath": "/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+      "tmdbReleaseDate": "1995-11-22"
     },
     "ratatouille": {
       "slug": "ratatouille",
@@ -1787,7 +1973,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg",
+      "tmdbBackdropPath": "/qxGmHvmjlBlH5WZOhdHEHAjHaMB.jpg",
+      "tmdbReleaseDate": "2007-06-28"
     },
     "up": {
       "slug": "up",
@@ -1835,7 +2024,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg",
+      "tmdbBackdropPath": "/hGGC9gKo7CFE3fW07RA587e5kol.jpg",
+      "tmdbReleaseDate": "2009-05-28"
     },
     "coco": {
       "slug": "coco",
@@ -1883,7 +2075,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg",
+      "tmdbBackdropPath": "/g7CHF8gTLGooTbP4GznIGwaqAGL.jpg",
+      "tmdbReleaseDate": "2017-10-27"
     },
     "wall-e": {
       "slug": "wall-e",
@@ -1925,7 +2120,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+      "tmdbBackdropPath": "/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+      "tmdbReleaseDate": "2008-06-26"
     },
     "how-to-train-your-dragon": {
       "slug": "how-to-train-your-dragon",
@@ -1967,7 +2165,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ygGmAO60t8GyqUo9xYeYxSZAR3b.jpg",
+      "tmdbBackdropPath": "/59vDC1BuEQvti24OMr0ZvtAK6R1.jpg",
+      "tmdbReleaseDate": "2010-03-18"
     },
     "the-lion-king": {
       "slug": "the-lion-king",
@@ -2015,7 +2216,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+      "tmdbBackdropPath": "/q00H8EqULYSK74lgevMkhmGGLHn.jpg",
+      "tmdbReleaseDate": "1994-06-15"
     },
     "shrek": {
       "slug": "shrek",
@@ -2051,7 +2255,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+      "tmdbBackdropPath": "/w0eKUOEog2ImtktCHAMUZws8qif.jpg",
+      "tmdbReleaseDate": "2001-05-18"
     },
     "fantastic-mr-fox": {
       "slug": "fantastic-mr-fox",
@@ -2075,7 +2282,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/bOVr292mwn3jxr1e0NmUPM1rcjo.jpg",
+      "tmdbBackdropPath": "/xRxSLhhjPG2D8l0BXi0KdN4IvPt.jpg",
+      "tmdbReleaseDate": "2009-10-14"
     },
     "jurassic-park": {
       "slug": "jurassic-park",
@@ -2111,7 +2321,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/63viWuPfYQjRYLSZSZNq7dglJP5.jpg",
+      "tmdbBackdropPath": "/4SyDTF02R5BepqSdQmOaNCHObzF.jpg",
+      "tmdbReleaseDate": "1993-06-11"
     },
     "pirates-of-the-caribbean-the-curse-of-the-black-pearl": {
       "slug": "pirates-of-the-caribbean-the-curse-of-the-black-pearl",
@@ -2141,7 +2354,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg",
+      "tmdbBackdropPath": "/uRNgkJSkNBFbbn9fPsEjDIy8Sh3.jpg",
+      "tmdbReleaseDate": "2003-07-09"
     },
     "top-gun-maverick": {
       "slug": "top-gun-maverick",
@@ -2171,7 +2387,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
+      "tmdbBackdropPath": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+      "tmdbReleaseDate": "2022-05-21"
     },
     "mission-impossible-fallout": {
       "slug": "mission-impossible-fallout",
@@ -2195,7 +2414,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
+      "tmdbBackdropPath": "/3IzR3VhZAyhxVnuRRUHFLkfK4hT.jpg",
+      "tmdbReleaseDate": "2018-07-25"
     },
     "john-wick": {
       "slug": "john-wick",
@@ -2219,7 +2441,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+      "tmdbBackdropPath": "/ff2ti5DkA9UYLzyqhQfI2kZqEuh.jpg",
+      "tmdbReleaseDate": "2014-10-16"
     },
     "gladiator": {
       "slug": "gladiator",
@@ -2261,7 +2486,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
+      "tmdbBackdropPath": "/jhk6D8pim3yaByu1801kMoxXFaX.jpg",
+      "tmdbReleaseDate": "2000-05-04"
     },
     "braveheart": {
       "slug": "braveheart",
@@ -2285,7 +2513,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/or1gBugydmjToAEq7OZY0owwFk.jpg",
+      "tmdbBackdropPath": "/1m1c5gIWWkb1FEC9lzsoXHhhs7b.jpg",
+      "tmdbReleaseDate": "1995-05-24"
     },
     "saving-private-ryan": {
       "slug": "saving-private-ryan",
@@ -2309,7 +2540,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+      "tmdbBackdropPath": "/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
+      "tmdbReleaseDate": "1998-07-24"
     },
     "dune": {
       "slug": "dune",
@@ -2357,7 +2591,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/v1tRXZ4JtD2Iv6fjkPvT4GiwslV.jpg",
+      "tmdbBackdropPath": "/zRKQW58MBEY078AxkHxEJzUskCl.jpg",
+      "tmdbReleaseDate": "2021-09-15"
     },
     "avatar": {
       "slug": "avatar",
@@ -2405,7 +2642,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg",
+      "tmdbBackdropPath": "/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg",
+      "tmdbReleaseDate": "2009-12-16"
     },
     "star-wars-a-new-hope": {
       "slug": "star-wars-a-new-hope",
@@ -2435,7 +2675,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/fai0rspsNeJCS69wHNjOdWxcI7P.jpg",
+      "tmdbBackdropPath": "/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+      "tmdbReleaseDate": "1977-05-25"
     },
     "back-to-the-future": {
       "slug": "back-to-the-future",
@@ -2465,7 +2708,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+      "tmdbBackdropPath": "/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+      "tmdbReleaseDate": "1985-07-03"
     },
     "the-fifth-element": {
       "slug": "the-fifth-element",
@@ -2489,7 +2735,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+      "tmdbBackdropPath": "/jW21PoKwqs79wk6bfiYezox63mK.jpg",
+      "tmdbReleaseDate": "1997-05-02"
     },
     "the-wolf-of-wall-street": {
       "slug": "the-wolf-of-wall-street",
@@ -2513,7 +2762,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
+      "tmdbBackdropPath": "/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+      "tmdbReleaseDate": "2013-12-25"
     },
     "the-nice-guys": {
       "slug": "the-nice-guys",
@@ -2537,7 +2789,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
+      "tmdbBackdropPath": "/yxYUN3fBPJdTNdXC1l8L24XFPhX.jpg",
+      "tmdbReleaseDate": "2016-05-15"
     },
     "the-martian": {
       "slug": "the-martian",
@@ -2573,7 +2828,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/fASz8A0yFE3QB6LgGoOfwvFSseV.jpg",
+      "tmdbBackdropPath": "/lzMS0CI3FLQYC5EgJoWeIaEt0lm.jpg",
+      "tmdbReleaseDate": "2015-09-30"
     },
     "cast-away": {
       "slug": "cast-away",
@@ -2603,7 +2861,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/7lLJgKnAicAcR5UEuo8xhSMj18w.jpg",
+      "tmdbBackdropPath": "/oCFVYPXI4IfhtF3GapU2jkDicDI.jpg",
+      "tmdbReleaseDate": "2000-12-22"
     },
     "life-of-pi": {
       "slug": "life-of-pi",
@@ -2645,7 +2906,10 @@
           "score": 2
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/iLgRu4hhSr6V1uManX6ukDriiSc.jpg",
+      "tmdbBackdropPath": "/21YsCNMub5455NQCn3jh9SmRFyG.jpg",
+      "tmdbReleaseDate": "2012-11-20"
     },
     "the-revenant": {
       "slug": "the-revenant",
@@ -2669,7 +2933,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
+      "tmdbBackdropPath": "/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
+      "tmdbReleaseDate": "2015-12-25"
     },
     "the-shining": {
       "slug": "the-shining",
@@ -2699,7 +2966,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/uAR0AWqhQL1hQa69UDEbb2rE5Wx.jpg",
+      "tmdbBackdropPath": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+      "tmdbReleaseDate": "1980-05-23"
     },
     "alien": {
       "slug": "alien",
@@ -2747,7 +3017,10 @@
           "score": 11
         }
       ],
-      "reviewedByHuman": true
+      "reviewedByHuman": true,
+      "tmdbPosterPath": "/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+      "tmdbBackdropPath": "/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+      "tmdbReleaseDate": "1979-05-25"
     },
     "the-conjuring": {
       "slug": "the-conjuring",
@@ -2771,7 +3044,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+      "tmdbBackdropPath": "/ecKQlAEG95k62SMGhvX83oEqANK.jpg",
+      "tmdbReleaseDate": "2013-07-18"
     },
     "hereditary": {
       "slug": "hereditary",
@@ -2801,7 +3077,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
+      "tmdbBackdropPath": "/gJbTXKNTL6O7r7PzF6ZRkJGBlPp.jpg",
+      "tmdbReleaseDate": "2018-06-07"
     },
     "scream": {
       "slug": "scream",
@@ -2849,7 +3128,10 @@
           "score": 10
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/lr9ZIrmuwVmZhpZuTCW8D9g0ZJe.jpg",
+      "tmdbBackdropPath": "/4w6nQYAY0eb7B0VVRDXilXcgAUV.jpg",
+      "tmdbReleaseDate": "1996-12-20"
     },
     "train-to-busan": {
       "slug": "train-to-busan",
@@ -2873,7 +3155,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/vNVFt6dtcqnI7hqa6LFBUibuFiw.jpg",
+      "tmdbBackdropPath": "/brnfCYyz8EMbBrHgmh8sCwBi5i1.jpg",
+      "tmdbReleaseDate": "2016-07-20"
     },
     "the-father": {
       "slug": "the-father",
@@ -2921,7 +3206,10 @@
           "score": 10
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/pr3bEQ517uMb5loLvjFQi8uLAsp.jpg",
+      "tmdbBackdropPath": "/h3weAFgg06GqchI2xDfufBgSFTj.jpg",
+      "tmdbReleaseDate": "2020-12-23"
     },
     "everything-everywhere-all-at-once": {
       "slug": "everything-everywhere-all-at-once",
@@ -2951,7 +3239,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+      "tmdbBackdropPath": "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg",
+      "tmdbReleaseDate": "2022-03-24"
     },
     "parasite": {
       "slug": "parasite",
@@ -2993,7 +3284,10 @@
           "score": 6
         }
       ],
-      "reviewedByHuman": true
+      "reviewedByHuman": true,
+      "tmdbPosterPath": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+      "tmdbBackdropPath": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
+      "tmdbReleaseDate": "2019-05-30"
     },
     "the-menu": {
       "slug": "the-menu",
@@ -3029,7 +3323,10 @@
           "score": 2
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg",
+      "tmdbBackdropPath": "/4vSBj7BYsyuKCx96EJzGyp20WfY.jpg",
+      "tmdbReleaseDate": "2022-11-17"
     },
     "the-grandmaster": {
       "slug": "the-grandmaster",
@@ -3053,7 +3350,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/ydBVVIscL6TsX5hYztA5YpBCwJ3.jpg",
+      "tmdbBackdropPath": "/H4mLTEtxBpjuMRNyL0MVqw1EdN.jpg",
+      "tmdbReleaseDate": "2013-01-10"
     },
     "the-secret-in-their-eyes": {
       "slug": "the-secret-in-their-eyes",
@@ -3077,7 +3377,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/dkeAwfZzwL3WvToydE3CXiY80E0.jpg",
+      "tmdbBackdropPath": "/zaANf06OtqDJr5saqp5ymEkDPsi.jpg",
+      "tmdbReleaseDate": "2009-08-13"
     },
     "amadeus": {
       "slug": "amadeus",
@@ -3101,7 +3404,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/gQRfiyfGvr1az0quaYyMram3Aqt.jpg",
+      "tmdbBackdropPath": "/rnQyWw68dPHPRtvSWMtLSueXf05.jpg",
+      "tmdbReleaseDate": "1984-09-19"
     },
     "the-lives-of-others": {
       "slug": "the-lives-of-others",
@@ -3125,7 +3431,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/cVUDMnskSc01rdbyH0tLATTJUdP.jpg",
+      "tmdbBackdropPath": "/g11nKgir3nIhlG2gIDWIvJeR4fz.jpg",
+      "tmdbReleaseDate": "2006-03-23"
     },
     "the-worst-person-in-the-world": {
       "slug": "the-worst-person-in-the-world",
@@ -3149,7 +3458,10 @@
           "score": 9
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/1NxGNQchGBTHXJ6RShLY1IlZqWn.jpg",
+      "tmdbBackdropPath": "/woYGBHERSMhIHqmkkRCbCXp81l4.jpg",
+      "tmdbReleaseDate": "2021-10-13"
     },
     "perfect-days": {
       "slug": "perfect-days",
@@ -3173,7 +3485,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/tvUHVSTJV9ITON3oyHaWp7oaAc8.jpg",
+      "tmdbBackdropPath": "/hjWxngV6tidwDkfJDEgMjHD2KEz.jpg",
+      "tmdbReleaseDate": "2023-11-10"
     },
     "lost-in-translation": {
       "slug": "lost-in-translation",
@@ -3197,7 +3512,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg",
+      "tmdbBackdropPath": "/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg",
+      "tmdbReleaseDate": "2003-09-18"
     },
     "moonrise-kingdom": {
       "slug": "moonrise-kingdom",
@@ -3227,7 +3545,10 @@
           "score": 3
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/y4SXcbNl6CEF2t36icuzuBioj7K.jpg",
+      "tmdbBackdropPath": "/bsYv9IFIGfpAV0oUbe7YTiyxhox.jpg",
+      "tmdbReleaseDate": "2012-05-16"
     },
     "isle-of-dogs": {
       "slug": "isle-of-dogs",
@@ -3251,7 +3572,10 @@
           "score": 15
         }
       ],
-      "reviewedByHuman": false
+      "reviewedByHuman": false,
+      "tmdbPosterPath": "/c0nUX6Q1ZB0P2t1Jo6EeFSVnOGQ.jpg",
+      "tmdbBackdropPath": "/goMGTcitprGu7YD6VZS4lUUwzRA.jpg",
+      "tmdbReleaseDate": "2018-03-23"
     }
   },
   "titleOverrides": {}

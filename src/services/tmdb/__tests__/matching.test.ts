@@ -116,4 +116,29 @@ describe("demoteIfRuntimeMismatch", () => {
     const d = chooseBestMatch({ title: "arrival", releaseYear: 2016 }, [result(329865, "Arrival", "2016-11-10")]);
     expect(demoteIfRuntimeMismatch(d, false).confidence).toBe("likely");
   });
+
+  it("demotes likely to ambiguous on mismatch", () => {
+    const candidate = {
+      tmdbId: 1,
+      title: "Arrival",
+      originalTitle: null,
+      releaseYear: 2015,
+      score: 3,
+    };
+    const d = {
+      best: candidate,
+      confidence: "likely" as const,
+      candidates: [candidate],
+    };
+    expect(demoteIfRuntimeMismatch(d, false).confidence).toBe("ambiguous");
+  });
+
+  it("leaves decision untouched when best is null", () => {
+    const d = {
+      best: null,
+      confidence: "missing" as const,
+      candidates: [],
+    };
+    expect(demoteIfRuntimeMismatch(d, false).confidence).toBe("missing");
+  });
 });

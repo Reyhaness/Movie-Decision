@@ -31,8 +31,8 @@ describe("buildTmdbUrl", () => {
 });
 
 describe("tmdbGet", () => {
-  it("sends Bearer auth and parses JSON on success", async () => {
-    process.env.TMDB_API_TOKEN = "test-token";
+  it("sends Bearer auth and parses JSON on success with a v4 token", async () => {
+    process.env.TMDB_API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJ0ZXN0In0.signature";
     const mockJson = { id: 550, title: "Fight Club" };
     const mockFetch = jest.fn().mockResolvedValue(
       new Response(JSON.stringify(mockJson), { status: 200, headers: { "content-type": "application/json" } })
@@ -44,8 +44,25 @@ describe("tmdbGet", () => {
     expect(result).toEqual(mockJson);
     const [url, init] = mockFetch.mock.calls[0] as unknown as [string, RequestInit];
     expect(url).toBe("https://api.themoviedb.org/3/movie/550");
-    expect(init.headers).toMatchObject({ Authorization: "Bearer test-token", accept: "application/json" });
+    expect(init.headers).toMatchObject({ Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJ0ZXN0In0.signature", accept: "application/json" });
     expect(init.signal).toBeInstanceOf(AbortSignal);
+  });
+
+  it("authenticates via api_key query param when a 32-character hex v3 key is provided", async () => {
+    const v3ApiKey = "1234567890abcdef1234567890abcdef";
+    process.env.TMDB_API_TOKEN = v3ApiKey;
+    const mockJson = { id: 550, title: "Fight Club" };
+    const mockFetch = jest.fn().mockResolvedValue(
+      new Response(JSON.stringify(mockJson), { status: 200, headers: { "content-type": "application/json" } })
+    );
+    global.fetch = mockFetch as unknown as typeof fetch;
+
+    const result = await tmdbGet<{ id: number; title: string }>("/movie/550");
+
+    expect(result).toEqual(mockJson);
+    const [url, init] = mockFetch.mock.calls[0] as unknown as [string, RequestInit];
+    expect(url).toBe(`https://api.themoviedb.org/3/movie/550?api_key=${v3ApiKey}`);
+    expect(init.headers).toEqual({ accept: "application/json" });
   });
 
   it("throws TmdbConfigError before any request when token is missing", async () => {
@@ -76,5 +93,16 @@ describe("tmdbGet", () => {
     process.env.TMDB_API_TOKEN = "test-token";
     global.fetch = jest.fn().mockRejectedValue(new TypeError("fetch failed")) as unknown as typeof fetch;
     await expect(tmdbGet("/movie/550")).rejects.toThrow(TmdbNetworkError);
+  });
+
+  it("handles TimeoutError specifically with timeout message", async () => {
+    process.env.TMDB_API_TOKEN = "test-token";
+    const timeoutErr = new Error("The operation was aborted due to timeout");
+    timeoutErr.name = "TimeoutError";
+    global.fetch = jest.fn().mockRejectedValue(timeoutErr) as unknown as typeof fetch;
+
+    const err = await tmdbGet("/movie/550", { timeoutMs: 1000 }).catch((e) => e);
+    expect(err).toBeInstanceOf(TmdbNetworkError);
+    expect((err as TmdbNetworkError).message).toBe("TMDB request timed out");
   });
 });

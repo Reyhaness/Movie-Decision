@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import Image from "next/image";
 import { Card, ChipGroup, PrimaryButton, SecondaryButton } from "@/components/ui";
 import { TIME_SELECTIONS, STANDARD_MOODS, SITUATION_SELECTIONS } from "@/services/recommendation/types";
 import type { StandardMood, SituationSelection, TimeSelection } from "@/services/recommendation/types";
@@ -12,6 +13,7 @@ interface MoviePayload {
   runtimeMinutes: number;
   overview: string;
   genres: string[];
+  posterPath?: string | null;
 }
 
 type MoodChoice = StandardMood | "surprise_me";
@@ -176,22 +178,26 @@ export default function Home() {
 
   if (state === "result" && result) {
     return (
-      <main className="min-h-screen flex items-center justify-center p-6">
-        <Card className="max-w-lg w-full p-8">
+      <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
+        <Card className="max-w-xl w-full p-5 sm:p-8">
           <p className="text-xs font-bold uppercase tracking-widest text-muted mb-4">Your pick</p>
-          <div className="flex gap-5">
-            <PosterFallback title={result.title} />
-            <div className="min-w-0">
-              <h1 className="text-2xl font-extrabold leading-tight mb-1">{result.title}</h1>
-              <p className="text-muted text-sm mb-3">
+          <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 mb-6">
+            <div className="w-full sm:w-auto flex justify-center sm:block shrink-0">
+              <MoviePoster title={result.title} posterPath={result.posterPath} />
+            </div>
+            <div className="min-w-0 flex-1 flex flex-col justify-start">
+              <h1 className="text-2xl sm:text-3xl font-extrabold leading-tight mb-1.5">{result.title}</h1>
+              <p className="text-muted text-sm mb-2 font-medium">
                 {result.releaseYear ?? "Year unknown"} · {result.runtimeMinutes} min
               </p>
               {result.genres.length > 0 && (
-                <p className="text-xs text-muted mb-3">{result.genres.join(" · ")}</p>
+                <p className="text-xs text-muted tracking-wide mb-3">{result.genres.join(" · ")}</p>
+              )}
+              {result.overview && (
+                <p className="text-sm leading-relaxed text-muted-foreground">{result.overview}</p>
               )}
             </div>
           </div>
-          {result.overview && <p className="text-sm leading-relaxed mt-4 mb-6">{result.overview}</p>}
           <div className="flex flex-col gap-3">
             <PrimaryButton onClick={accept}>This works</PrimaryButton>
             <div className="flex gap-3 justify-center">
@@ -302,6 +308,37 @@ export default function Home() {
   );
 }
 
+function MoviePoster({ title, posterPath }: { title: string; posterPath?: string | null }) {
+  const [imageError, setImageError] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  if (!posterPath || imageError) {
+    return <PosterFallback title={title} />;
+  }
+
+  const imageUrl = `https://image.tmdb.org/t/p/w500${posterPath.startsWith("/") ? posterPath : `/${posterPath}`}`;
+
+  return (
+    <div className="relative w-full max-w-[280px] sm:max-w-none sm:w-48 aspect-[2/3] rounded-2xl overflow-hidden border-2 border-line bg-surface-raised shadow-md">
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-surface-raised animate-pulse flex items-center justify-center">
+          <span className="text-xs text-muted">...</span>
+        </div>
+      )}
+      <Image
+        src={imageUrl}
+        alt={`Poster for ${title}`}
+        fill
+        sizes="(max-width: 640px) 280px, 192px"
+        className={`object-cover transition-opacity duration-300 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
+        onLoad={() => setImageLoaded(true)}
+        onError={() => setImageError(true)}
+        unoptimized
+      />
+    </div>
+  );
+}
+
 function PosterFallback({ title }: { title: string }) {
   const initials = title
     .split(" ")
@@ -312,9 +349,9 @@ function PosterFallback({ title }: { title: string }) {
   return (
     <div
       aria-hidden="true"
-      className="shrink-0 w-24 h-36 rounded-xl border-2 border-line bg-surface-raised flex items-center justify-center"
+      className="w-full max-w-[280px] sm:max-w-none sm:w-48 aspect-[2/3] rounded-2xl border-2 border-line bg-surface-raised flex items-center justify-center"
     >
-      <span className="text-2xl font-extrabold text-muted">{initials}</span>
+      <span className="text-3xl sm:text-4xl font-extrabold text-muted">{initials}</span>
     </div>
   );
 }
