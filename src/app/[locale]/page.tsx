@@ -2,16 +2,19 @@
 
 import { useCallback, useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Card, ChipGroup, PrimaryButton, SecondaryButton } from "@/components/ui";
 import { TIME_SELECTIONS, STANDARD_MOODS, SITUATION_SELECTIONS } from "@/services/recommendation/types";
 import type { SituationSelection, TimeSelection } from "@/services/recommendation/types";
 import { useFlowStore } from "@/lib/sessionStore";
 import type { MoodChoice } from "@/lib/sessionStore";
+import { formatLocalizedNumber } from "@/lib/format";
+import { getMovieOverview } from "@/lib/movieTranslations";
 
 const RELAX_ORDER: TimeSelection[] = ["under_90", "90_to_120", "over_120"];
 
 export default function Home() {
+  const locale = useLocale();
   const tLanding = useTranslations("landing");
   const tPref = useTranslations("preferences");
   const tTime = useTranslations("time");
@@ -19,6 +22,7 @@ export default function Home() {
   const tSituation = useTranslations("situation");
   const tLoading = useTranslations("loading");
   const tResult = useTranslations("result");
+  const tGenres = useTranslations("genres");
   const tAccepted = useTranslations("accepted");
   const tNoMatch = useTranslations("no_match");
   const tError = useTranslations("error");
@@ -139,6 +143,16 @@ export default function Home() {
   }
 
   if (flow.state === "result" && flow.result) {
+    const formattedYear = flow.result.releaseYear
+      ? formatLocalizedNumber(flow.result.releaseYear, locale)
+      : null;
+    const formattedRuntime = formatLocalizedNumber(flow.result.runtimeMinutes, locale);
+    const localizedGenres = flow.result.genres.map((g) => {
+      const genreKey = g as Parameters<typeof tGenres>[0];
+      return tGenres.has(genreKey) ? tGenres(genreKey) : g;
+    });
+    const localizedOverview = getMovieOverview(flow.result, locale);
+
     return (
       <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
         <Card className="max-w-xl w-full p-5 sm:p-8">
@@ -152,13 +166,13 @@ export default function Home() {
             <div className="min-w-0 flex-1 flex flex-col justify-start">
               <h1 className="text-2xl sm:text-3xl font-extrabold leading-tight mb-1.5">{flow.result.title}</h1>
               <p className="text-muted text-sm mb-2 font-medium">
-                {flow.result.releaseYear ?? tResult("yearUnknown")} · {flow.result.runtimeMinutes} {tResult("min")}
+                {formattedYear ?? tResult("yearUnknown")} · {formattedRuntime} {tResult("min")}
               </p>
-              {flow.result.genres.length > 0 && (
-                <p className="text-xs text-muted tracking-wide mb-3">{flow.result.genres.join(" · ")}</p>
+              {localizedGenres.length > 0 && (
+                <p className="text-xs text-muted tracking-wide mb-3">{localizedGenres.join(" · ")}</p>
               )}
-              {flow.result.overview && (
-                <p className="text-sm leading-relaxed text-muted-foreground">{flow.result.overview}</p>
+              {localizedOverview && (
+                <p className="text-sm leading-relaxed text-muted-foreground">{localizedOverview}</p>
               )}
             </div>
           </div>

@@ -108,4 +108,33 @@ describe("i18n messages parity and integrity", () => {
     expect(fa.switcher.fa).toContain("🇮🇷");
     expect(fa.switcher.fa).toContain("فا");
   });
+
+  it("covers key movie genres with valid Persian translations", () => {
+    const expectedGenres = [
+      "Action",
+      "Adventure",
+      "Animation",
+      "Comedy",
+      "Crime",
+      "Drama",
+      "Family",
+      "Fantasy",
+      "History",
+      "Horror",
+      "Music",
+      "Mystery",
+      "Romance",
+      "Science Fiction",
+      "Sci-Fi",
+      "Thriller",
+      "War",
+      "Western",
+    ];
+    for (const genre of expectedGenres) {
+      expect(en.genres[genre]).toBeDefined();
+      expect(fa.genres[genre]).toBeDefined();
+      expect(typeof fa.genres[genre]).toBe("string");
+      expect(fa.genres[genre].trim().length).toBeGreaterThan(0);
+    }
+  });
 });

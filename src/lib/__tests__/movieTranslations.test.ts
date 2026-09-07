@@ -1,0 +1,39 @@
+import { getMovieOverview } from "../movieTranslations";
+
+describe("movieTranslations", () => {
+  const sampleMovie = {
+    movieId: "chef",
+    title: "Chef",
+    overview: "A head chef quits his restaurant job and buys a food truck.",
+  };
+
+  it("returns English overview when locale is 'en'", () => {
+    const overview = getMovieOverview(sampleMovie, "en");
+    expect(overview).toBe(sampleMovie.overview);
+  });
+
+  it("returns Persian overview when locale is 'fa' and translation exists", () => {
+    const overview = getMovieOverview(sampleMovie, "fa");
+    expect(overview).toContain("سرآشپز");
+  });
+
+  it("falls back to English overview when translation is missing", () => {
+    const unknownMovie = {
+      movieId: "non-existent-movie-123",
+      title: "Non Existent Movie",
+      overview: "Original english synopsis.",
+    };
+    const overview = getMovieOverview(unknownMovie, "fa");
+    expect(overview).toBe("Original english synopsis.");
+  });
+
+  it("handles lookup by title if movieId does not match", () => {
+    const movieWithOnlyTitle = {
+      title: "Knives Out",
+      overview: "A detective investigates the death of a patriarch.",
+    };
+    const overview = getMovieOverview(movieWithOnlyTitle, "fa");
+    expect(overview).toBeTruthy();
+    expect(overview).not.toBe(movieWithOnlyTitle.overview);
+  });
+});
