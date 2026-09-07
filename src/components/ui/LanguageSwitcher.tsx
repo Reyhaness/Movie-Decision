@@ -23,7 +23,6 @@ export function LanguageSwitcher() {
         type="button"
         onClick={toggleLocale}
         aria-label={tooltipText}
-        title={tooltipText}
         className="w-10 h-10 rounded-full bg-surface-raised/90 hover:bg-surface-raised border-2 border-line hover:border-line-hover shadow-md backdrop-blur-md flex items-center justify-center text-xl cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         <span aria-hidden="true" className="select-none leading-none">
