@@ -32,14 +32,14 @@
   --color-muted: var(--mda-text-muted);
   --color-accent: var(--mda-accent);
   --color-accent-text: var(--mda-accent-text);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-geist-sans), "Estedad Variable", system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--mda-bg);
   color: var(--mda-text);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-geist-sans), "Estedad Variable", system-ui, sans-serif;
 }
 
 /* Persian / RTL Typography adjustments with Estedad */
