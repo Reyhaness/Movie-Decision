@@ -103,6 +103,8 @@
   "switcher": {
     "label": "Change language",
     "en": "🇬🇧 EN",
-    "fa": "🇮🇷 فا"
+    "fa": "🇮🇷 فا",
+    "switchToEn": "Switch to English 🇬🇧",
+    "switchToFa": "Switch to Persian 🇮🇷"
   }
 }

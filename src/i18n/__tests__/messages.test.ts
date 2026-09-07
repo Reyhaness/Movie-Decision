@@ -98,15 +98,20 @@ describe("i18n messages parity and integrity", () => {
     }
   });
 
-  it("has switcher labels for both en and fa with emoji flags and short labels", () => {
+  it("has switcher labels and tooltips for both en and fa with emoji flags", () => {
     expect(en.switcher.en).toContain("🇬🇧");
     expect(en.switcher.en).toContain("EN");
     expect(en.switcher.fa).toContain("🇮🇷");
     expect(en.switcher.fa).toContain("فا");
+    expect(en.switcher.switchToEn).toContain("🇬🇧");
+    expect(en.switcher.switchToFa).toContain("🇮🇷");
+
     expect(fa.switcher.en).toContain("🇬🇧");
     expect(fa.switcher.en).toContain("EN");
     expect(fa.switcher.fa).toContain("🇮🇷");
     expect(fa.switcher.fa).toContain("فا");
+    expect(fa.switcher.switchToEn).toContain("🇬🇧");
+    expect(fa.switcher.switchToFa).toContain("🇮🇷");
   });
 
   it("covers key movie genres with valid Persian translations", () => {
