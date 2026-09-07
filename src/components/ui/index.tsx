@@ -99,3 +99,5 @@ export function SecondaryButton({
     </button>
   );
 }
+
+export { LanguageSwitcher } from "./LanguageSwitcher";
