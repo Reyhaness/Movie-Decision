@@ -1,5 +1,4 @@
-import { filterByTime, calculateDistance } from "../filters";
-import { buildCandidate } from "../filters";
+import { filterByTime, calculateDistance, buildCandidate, getMoodScore, getSituationScore } from "../filters";
 import type { MovieCandidate } from "../types";
 
 const c = (movieId: string, runtimeMinutes: number): MovieCandidate =>
@@ -45,5 +44,22 @@ describe("distance formula", () => {
     expect(calculateDistance(3, 1)).toBe(20);
     expect(calculateDistance(5, 1)).toBe(16);
     expect(calculateDistance(5, 5)).toBe(0);
+  });
+});
+
+describe("helpers", () => {
+  it("extracts mood and situation scores correctly", () => {
+    const candidate = buildCandidate({
+      movieId: "test-helper",
+      title: "Test Helper",
+      runtimeMinutes: 95,
+      moodScores: { emotional: 5 },
+      situationScores: { partner: 4 },
+    });
+
+    expect(getMoodScore(candidate, "emotional")).toBe(5);
+    expect(getSituationScore(candidate, "partner")).toBe(4);
+    expect(candidate.genres).toEqual([]);
+    expect(candidate.releaseYear).toBeNull();
   });
 });

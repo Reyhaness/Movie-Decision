@@ -61,17 +61,25 @@ export function buildTmdbUrl(path: string, params: TmdbGetOptions["params"] = {}
   return qs.length > 0 ? `${url.toString()}?${qs}` : url.toString();
 }
 
+const IS_HEX_32 = /^[a-f0-9]{32}$/i;
+
 export async function tmdbGet<T>(path: string, options: TmdbGetOptions = {}): Promise<T> {
   const token = readTmdbToken();
-  const url = buildTmdbUrl(path, options.params);
+  const isV3ApiKey = IS_HEX_32.test(token);
+  const params = isV3ApiKey ? { ...options.params, api_key: token } : options.params;
+  const url = buildTmdbUrl(path, params);
+  const headers: Record<string, string> = {
+    accept: "application/json",
+  };
+  if (!isV3ApiKey) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
   let response: Response;
   try {
     response = await fetch(url, {
       method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        accept: "application/json",
-      },
+      headers,
       signal: AbortSignal.timeout(options.timeoutMs ?? DEFAULT_TIMEOUT_MS),
     });
   } catch (error) {

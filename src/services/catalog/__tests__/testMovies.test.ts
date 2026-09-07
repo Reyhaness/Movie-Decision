@@ -58,6 +58,28 @@ describe("test movie dataset validation", () => {
     expect(datasetWarning?.message).toContain("targets 20-30");
   });
 
+  it("rejects missing slug and missing title", () => {
+    const { issues } = validateTestMovies([
+      { ...validMovie("valid"), slug: "" },
+      { ...validMovie("valid-2"), title: "" },
+    ]);
+    expect(issues.some((i) => i.field === "slug" && i.message.includes("missing slug"))).toBe(true);
+    expect(issues.some((i) => i.slug === "valid-2" && i.field === "title")).toBe(true);
+  });
+
+  it("rejects invalid tmdbId, invalid genres, and non-object scores", () => {
+    const { issues } = validateTestMovies([
+      { ...validMovie("inv-1"), tmdbId: -1 },
+      { ...validMovie("inv-2"), genres: ["action", 123 as unknown as string] },
+      { ...validMovie("inv-3"), moodScores: "invalid" as unknown as TestMovieInput["moodScores"] },
+      { ...validMovie("inv-4"), situationScores: null as unknown as TestMovieInput["situationScores"] },
+    ]);
+    expect(issues.some((i) => i.slug === "inv-1" && i.field === "tmdbId")).toBe(true);
+    expect(issues.some((i) => i.slug === "inv-2" && i.field === "genres")).toBe(true);
+    expect(issues.some((i) => i.slug === "inv-3" && i.field === "moodScores")).toBe(true);
+    expect(issues.some((i) => i.slug === "inv-4" && i.field === "situationScores")).toBe(true);
+  });
+
   it("treats placeholder TODO titles as unscored", () => {
     const { datasetWarning } = validateTestMovies([validMovie("a", { title: "TODO" })]);
     expect(datasetWarning).toBeNull();

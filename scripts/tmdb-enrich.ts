@@ -21,6 +21,9 @@ interface MatchRecord {
   needsReview: boolean;
   candidates: Array<{ tmdbId: number; title: string; year: number | null; score: number }>;
   reviewedByHuman: boolean;
+  tmdbPosterPath?: string | null;
+  tmdbBackdropPath?: string | null;
+  tmdbReleaseDate?: string | null;
 }
 
 interface MatchFile {
@@ -77,6 +80,9 @@ async function enrichOne(
   let tmdbYear: number | null = null;
   let tmdbRuntime: number | null = null;
   let runtimeVerified = false;
+  let tmdbPosterPath: string | null = null;
+  let tmdbBackdropPath: string | null = null;
+  let tmdbReleaseDate: string | null = null;
 
   if (decision.best) {
     const details = await fetchMovieDetails(decision.best.tmdbId);
@@ -85,6 +91,9 @@ async function enrichOne(
     tmdbOriginalTitle = details.original_title || null;
     tmdbYear = details.release_date ? Number.parseInt(details.release_date.slice(0, 4), 10) : null;
     tmdbRuntime = details.runtime ?? null;
+    tmdbPosterPath = details.poster_path ?? null;
+    tmdbBackdropPath = details.backdrop_path ?? null;
+    tmdbReleaseDate = details.release_date ?? null;
     runtimeVerified = runtimeVerifies(movie.runtimeMinutes, tmdbRuntime);
     confidence = demoteIfRuntimeMismatch(decision, runtimeVerified).confidence;
     if (confidence === "likely" || confidence === "exact") {
@@ -115,6 +124,9 @@ async function enrichOne(
       score: c.score,
     })),
     reviewedByHuman: false,
+    tmdbPosterPath,
+    tmdbBackdropPath,
+    tmdbReleaseDate,
   };
 }
 
