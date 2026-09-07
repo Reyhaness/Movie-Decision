@@ -98,10 +98,14 @@ describe("i18n messages parity and integrity", () => {
     }
   });
 
-  it("has switcher labels for both en and fa with emoji flags", () => {
+  it("has switcher labels for both en and fa with emoji flags and short labels", () => {
     expect(en.switcher.en).toContain("🇬🇧");
+    expect(en.switcher.en).toContain("EN");
     expect(en.switcher.fa).toContain("🇮🇷");
+    expect(en.switcher.fa).toContain("فا");
     expect(fa.switcher.en).toContain("🇬🇧");
+    expect(fa.switcher.en).toContain("EN");
     expect(fa.switcher.fa).toContain("🇮🇷");
+    expect(fa.switcher.fa).toContain("فا");
   });
 });

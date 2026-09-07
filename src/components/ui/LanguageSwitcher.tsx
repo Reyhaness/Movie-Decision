@@ -31,20 +31,20 @@ export function LanguageSwitcher() {
         }`}
       >
         <span>🇬🇧</span>
-        <span>English</span>
+        <span>EN</span>
       </button>
       <button
         type="button"
         onClick={() => switchLocale("fa")}
         aria-pressed={currentLocale === "fa"}
-        className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+        className={`px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
           currentLocale === "fa"
             ? "bg-accent text-accent-text shadow-sm"
             : "text-muted hover:text-ink"
         }`}
       >
         <span>🇮🇷</span>
-        <span>فارسی</span>
+        <span>فا</span>
       </button>
     </div>
   );
