@@ -1,0 +1,110 @@
+{
+  "app": {
+    "title": "Movie Decision",
+    "description": "Tell us your time, mood, and who's watching — we pick one movie."
+  },
+  "landing": {
+    "title": "Don't know what to watch?",
+    "description": "Tell us how much time you have, your mood, and who's watching. We'll pick one.",
+    "helpMePick": "Help Me Pick"
+  },
+  "preferences": {
+    "title": "Don't know what to watch?",
+    "subtitle": "We'll pick the best fit — not give you another list to scroll through.",
+    "timeLegend": "Time",
+    "moodLegend": "Mood",
+    "situationLegend": "Situation",
+    "helpMePick": "Help Me Pick",
+    "startOver": "Start Over"
+  },
+  "time": {
+    "under_90": "Under 90 min",
+    "90_to_120": "90–120 min",
+    "over_120": "Over 120 min"
+  },
+  "mood": {
+    "labels": {
+      "cozy_relax": "Cozy / Relax",
+      "funny": "Fun",
+      "thrill_tense": "Thrill / Tense",
+      "emotional": "Emotional",
+      "thoughtful_mind_bending": "Thoughtful / Mind-bending",
+      "epic": "Epic",
+      "surprise_me": "Surprise Me"
+    },
+    "hints": {
+      "cozy_relax": "Warm, comforting, low-stakes",
+      "funny": "Playful, likely to create laughs",
+      "thrill_tense": "Suspenseful, exciting, tense",
+      "emotional": "Moving, emotionally engaging",
+      "thoughtful_mind_bending": "Cerebral, ambiguous, discussion-provoking",
+      "epic": "Grand, spectacular, immersive (scale, not length)",
+      "surprise_me": "Let the system choose the vibe"
+    }
+  },
+  "situation": {
+    "alone": "Alone",
+    "partner": "With Partner",
+    "friends": "With Friends",
+    "family": "With Family",
+    "kids": "Kids"
+  },
+  "loading": {
+    "title": "Picking your movie…",
+    "subtitle": "Finding the best fit for right now."
+  },
+  "result": {
+    "badge": "Your pick",
+    "yearUnknown": "Year unknown",
+    "min": "min",
+    "accept": "This works",
+    "tryAnother": "Try Another",
+    "changePreferences": "Change Preferences"
+  },
+  "accepted": {
+    "badge": "Enjoy",
+    "subtitle": "Good choice. Grab your snacks.",
+    "startOver": "Start Over"
+  },
+  "no_match": {
+    "title": "Nothing is a great fit right now.",
+    "subtitle": "We can loosen one of your preferences and try again.",
+    "relaxTime": "Relax Time",
+    "changePreferences": "Change Preferences",
+    "tryAnother": "Try Another"
+  },
+  "error": {
+    "title": "Something went wrong.",
+    "subtitle": "Please try again.",
+    "tryAgain": "Try Again",
+    "changePreferences": "Change Preferences"
+  },
+  "genres": {
+    "Action": "Action",
+    "Adventure": "Adventure",
+    "Animation": "Animation",
+    "Comedy": "Comedy",
+    "Crime": "Crime",
+    "Documentary": "Documentary",
+    "Drama": "Drama",
+    "Family": "Family",
+    "Fantasy": "Fantasy",
+    "History": "History",
+    "Horror": "Horror",
+    "Music": "Music",
+    "Mystery": "Mystery",
+    "Romance": "Romance",
+    "Science Fiction": "Science Fiction",
+    "Sci-Fi": "Sci-Fi",
+    "Thriller": "Thriller",
+    "War": "War",
+    "Western": "Western"
+  },
+  "switcher": {
+    "label": "Change language",
+    "en": "🇬🇧 EN",
+    "fa": "🇮🇷 فا",
+    "switchToEn": "Switch to English 🇬🇧",
+    "switchToFa": "تغییر به فارسی 🇮🇷"
+  }
+}

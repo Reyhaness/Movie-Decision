@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@fontsource-variable/estedad/index.css";
 
 /*
   Centralized design tokens - Neo Soft Brutalism, dark-mode-first.
@@ -31,14 +32,31 @@
   --color-muted: var(--mda-text-muted);
   --color-accent: var(--mda-accent);
   --color-accent-text: var(--mda-accent-text);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-geist-sans), "Estedad Variable", system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--mda-bg);
   color: var(--mda-text);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-geist-sans), "Estedad Variable", system-ui, sans-serif;
+}
+
+/* Persian / RTL Typography adjustments with Estedad */
+[dir="rtl"],
+[dir="rtl"] body {
+  font-family: "Estedad Variable", var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: normal !important;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] p,
+[dir="rtl"] span,
+[dir="rtl"] button,
+[dir="rtl"] legend {
+  letter-spacing: normal !important;
 }
 
 /* Reusable brutalist primitives as utility classes */
