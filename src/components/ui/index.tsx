@@ -56,6 +56,16 @@ export function Card({ children, className = "" }: { children: ReactNode; classN
   return <div className={`mda-card ${className}`}>{children}</div>;
 }
 
+export function TicketPerforation({ className = "" }: { className?: string }) {
+  return (
+    <div className={`ticket-perforation-row ${className}`} aria-hidden="true">
+      <div className="ticket-notch-left" />
+      <div className="ticket-dashed-line" />
+      <div className="ticket-notch-right" />
+    </div>
+  );
+}
+
 export function PrimaryButton({
   children,
   onClick,
@@ -101,3 +111,4 @@ export function SecondaryButton({
 }
 
 export { LanguageSwitcher } from "./LanguageSwitcher";
+export { ThemeSwitcher } from "./ThemeSwitcher";

@@ -6,7 +6,8 @@
   "landing": {
     "title": "Don't know what to watch?",
     "description": "Tell us how much time you have, your mood, and who's watching. We'll pick one.",
-    "helpMePick": "Help Me Pick"
+    "helpMePick": "Issue My Ticket 🎟️",
+    "luckyTicket": "Surprise Ticket 🎲"
   },
   "preferences": {
     "title": "Don't know what to watch?",
@@ -15,7 +16,13 @@
     "moodLegend": "Mood",
     "situationLegend": "Situation",
     "helpMePick": "Help Me Pick",
-    "startOver": "Start Over"
+    "startOver": "Start Over",
+    "stepIndicator": "Step {current} of {total}",
+    "step1": "1. Time",
+    "step2": "2. Mood",
+    "step3": "3. Company",
+    "next": "Next Step ➜",
+    "back": "Back"
   },
   "time": {
     "under_90": "Under 90 min",
@@ -59,7 +66,11 @@
     "min": "min",
     "accept": "This works",
     "tryAnother": "Try Another",
-    "changePreferences": "Change Preferences"
+    "changePreferences": "Change Preferences",
+    "admitOne": "ADMIT ONE",
+    "seat": "ROW C · SEAT 14",
+    "screen": "CINEMA 01",
+    "stamped": "APPROVED 🎬"
   },
   "accepted": {
     "badge": "Enjoy",
@@ -105,6 +116,9 @@
     "en": "🇬🇧 EN",
     "fa": "🇮🇷 فا",
     "switchToEn": "Switch to English 🇬🇧",
-    "switchToFa": "تغییر به فارسی 🇮🇷"
+    "switchToFa": "تغییر به فارسی 🇮🇷",
+    "themeToggle": "Toggle theme",
+    "switchToLight": "Switch to Light ☀️",
+    "switchToDark": "Switch to Dark 🌙"
   }
 }

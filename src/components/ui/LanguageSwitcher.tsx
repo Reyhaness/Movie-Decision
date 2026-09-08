@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <div className="fixed top-4 end-4 z-50 group">
+    <div className="relative group">
       <button
         type="button"
         onClick={toggleLocale}
@@ -37,10 +37,10 @@ export function LanguageSwitcher() {
         </span>
       </button>
 
-      {/* Floating tooltip on hover & focus */}
+      {/* Floating tooltip on hover */}
       <div
         role="tooltip"
-        className="pointer-events-none absolute top-full mt-2 end-0 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-150 transform scale-95 group-hover:scale-100 group-focus-within:scale-100 ltr:origin-top-right rtl:origin-top-left px-3 py-1.5 rounded-xl bg-surface-raised border border-line text-xs font-semibold text-ink shadow-lg whitespace-nowrap z-50 font-sans"
+        className="pointer-events-none absolute top-full mt-2 end-0 hidden sm:block opacity-0 group-hover:opacity-100 transition-all duration-150 transform scale-95 group-hover:scale-100 ltr:origin-top-right rtl:origin-top-left px-3 py-1.5 rounded-xl bg-surface-raised border border-line text-xs font-semibold text-ink shadow-lg whitespace-nowrap z-50 font-sans"
         style={{
           fontFamily: !isFa
             ? '"Estedad Variable", var(--font-geist-sans), system-ui, sans-serif'
