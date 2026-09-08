@@ -40,15 +40,14 @@ export function LanguageSwitcher() {
       {/* Floating tooltip on hover & focus */}
       <div
         role="tooltip"
-        dir={isFa ? "ltr" : "rtl"}
-        className="pointer-events-none absolute top-full mt-2 end-0 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-150 transform scale-95 group-hover:scale-100 group-focus-within:scale-100 px-3 py-1.5 rounded-xl bg-surface-raised border border-line text-xs font-semibold text-ink shadow-lg whitespace-nowrap z-50 font-sans"
+        className="pointer-events-none absolute top-full mt-2 end-0 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-150 transform scale-95 group-hover:scale-100 group-focus-within:scale-100 ltr:origin-top-right rtl:origin-top-left px-3 py-1.5 rounded-xl bg-surface-raised border border-line text-xs font-semibold text-ink shadow-lg whitespace-nowrap z-50 font-sans"
         style={{
           fontFamily: !isFa
             ? '"Estedad Variable", var(--font-geist-sans), system-ui, sans-serif'
             : 'var(--font-geist-sans), "Estedad Variable", system-ui, sans-serif',
         }}
       >
-        {tooltipText}
+        <span dir={isFa ? "ltr" : "rtl"}>{tooltipText}</span>
       </div>
     </div>
   );
