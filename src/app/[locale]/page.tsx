@@ -326,6 +326,7 @@ function MoviePoster({ title, posterPath }: { title: string; posterPath?: string
         src={imageUrl}
         alt={`Poster for ${title}`}
         fill
+        priority
         sizes="(max-width: 640px) 280px, 192px"
         className={`object-cover transition-opacity duration-300 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
         onLoad={() => setImageLoaded(true)}

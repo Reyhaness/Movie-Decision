@@ -62,8 +62,12 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col relative">
+      <body
+        className="min-h-full flex flex-col relative"
+        suppressHydrationWarning
+      >
         <NextIntlClientProvider messages={messages}>
           <LanguageSwitcher />
           {children}
