@@ -79,3 +79,6 @@ vite.config.ts.timestamp-*
 
 # Misc
 *.tgz
+
+# Superpowers Brainstorming
+.superpowers/

@@ -6,16 +6,27 @@
   "landing": {
     "title": "نمیدونی چی ببینی؟",
     "description": "بگو چقدر وقت داری، حال‌وهوات چطوریه و با کی هستی؛ ما بهترین فیلم رو برات انتخاب می‌کنیم.",
-    "helpMePick": "کمکم کن انتخاب کنم"
+    "helpMePick": "صدور بلیت فیلم 🎟️",
+    "luckyTicket": "بلیت بخت‌آزمایی 🎲"
   },
   "preferences": {
     "title": "نمیدونی چی ببینی؟",
-    "subtitle": "بهترین گزینه رو برات انتخاب می‌کنیم — نه اینکه یه لیست طولانی جلوت بذاریم تا سردرگم بشی.",
+    "subtitle": "چقد وقت داری برای دیدن فیلم؟",
+    "step1Subtitle": "چقد وقت داری برای دیدن فیلم؟",
+    "step2Subtitle": "الان حس و حالت چطوریه؟",
+    "step3Subtitle": "امشب با کی فیلم می‌بینی؟",
     "timeLegend": "مدت زمان",
     "moodLegend": "حال‌وهوا",
     "situationLegend": "با کی می‌بینی؟",
     "helpMePick": "کمکم کن انتخاب کنم",
-    "startOver": "از اول"
+    "startOver": "از اول",
+    "stepIndicator": "مرحله {current} از {total}",
+    "yourChoices": "انتخاب‌های شما:",
+    "step1": "۱. مدت زمان",
+    "step2": "۲. حال‌وهوا",
+    "step3": "۳. همراهان",
+    "next": "مرحله بعد ←",
+    "back": "بازگشت"
   },
   "time": {
     "under_90": "کمتر از ۹۰ دقیقه",
@@ -54,12 +65,16 @@
     "subtitle": "پیدا کردن بهترین فیلم متناسب با حال‌وهوای الان تو."
   },
   "result": {
-    "badge": "پیشنهاد ما برای تو",
+    "badge": "فیلم پیشنهادی",
     "yearUnknown": "سال نامشخص",
     "min": "دقیقه",
     "accept": "همین عالیه",
     "tryAnother": "یکی دیگه پیشنهاد بده",
-    "changePreferences": "تغییر انتخاب‌ها"
+    "changePreferences": "تغییر انتخاب‌ها",
+    "admitOne": "ورود یک نفر",
+    "seat": "ردیف ۳ · صندلی ۰۷",
+    "screen": "سالن سینما ۱",
+    "stamped": "رزرو شد 🎬"
   },
   "accepted": {
     "badge": "تماشا کن و لذت ببر!",
@@ -105,6 +120,9 @@
     "en": "🇬🇧 EN",
     "fa": "🇮🇷 فا",
     "switchToEn": "Switch to English 🇬🇧",
-    "switchToFa": "تغییر به فارسی 🇮🇷"
+    "switchToFa": "تغییر به فارسی 🇮🇷",
+    "themeToggle": "تغییر تم",
+    "switchToLight": "حالت روشن ☀️",
+    "switchToDark": "حالت تاریک 🌙"
   }
 }

@@ -6,21 +6,46 @@
   Visual direction is a hypothesis (UX_SPEC §12); all visual properties
   live here so the look can be replaced without touching product logic.
 */
-:root {
-  --mda-bg: #131318;
-  --mda-surface: #1b1b23;
-  --mda-surface-raised: #23232e;
-  --mda-border: #34344a;
-  --mda-text: #f2f2f7;
-  --mda-text-muted: #a3a3b8;
+/*
+  Centralized design tokens - Cinema Ticket Neobrutalism (Dark & Light support)
+*/
+:root,
+[data-theme="dark"],
+.dark {
+  --mda-bg: #0d0e14;
+  --mda-surface: #171822;
+  --mda-surface-raised: #212230;
+  --mda-border: #38394e;
+  --mda-text: #f3f4f6;
+  --mda-text-muted: #9ca3af;
   --mda-accent: #ffd166;
-  --mda-accent-text: #1a1a10;
-  --mda-focus: #8f8fff;
+  --mda-accent-text: #121217;
+  --mda-focus: #818cf8;
 
   --radius-card: 1.25rem;
-  --radius-chip: 0.9rem;
-  --shadow-offset: 4px 4px 0 0 rgba(0, 0, 0, 0.55);
+  --radius-chip: 0.75rem;
+  --shadow-offset: 4px 4px 0 0 #000000;
+  --shadow-offset-lg: 6px 6px 0 0 #000000;
   --shadow-offset-accent: 4px 4px 0 0 var(--mda-accent);
+}
+
+[data-theme="light"],
+.light {
+  --mda-bg: #f4efe4;
+  --mda-surface: #ffffff;
+  --mda-surface-raised: #faf6ee;
+  --mda-border: #141419;
+  --mda-text: #121217;
+  --mda-text-muted: #5a5a70;
+  --mda-accent: #f59e0b;
+  --mda-accent-text: #000000;
+  --mda-focus: #4f46e5;
+
+  --radius-card: 1.25rem;
+  --radius-chip: 0.75rem;
+  --shadow-offset: 4px 4px 0 0 #141419;
+  --shadow-offset-lg: 6px 6px 0 0 #141419;
+  --shadow-offset-accent: 4px 4px 0 0 #141419;
 }
 
 @theme inline {
@@ -40,6 +65,7 @@ body {
   background: var(--mda-bg);
   color: var(--mda-text);
   font-family: var(--font-geist-sans), "Estedad Variable", system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Persian / RTL Typography adjustments with Estedad */
@@ -59,61 +85,279 @@ body {
   letter-spacing: normal !important;
 }
 
-/* Reusable brutalist primitives as utility classes */
+/* Reusable brutalist ticket primitives as utility classes */
 .mda-card {
   background: var(--color-surface);
-  border: 2px solid var(--color-border);
+  border: 3px solid var(--color-line);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-offset);
 }
 
+.mda-ticket {
+  --ticket-pad: 1.15rem;
+  background: var(--color-surface);
+  border: 3px solid var(--color-line);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-offset-lg);
+  position: relative;
+  overflow: visible;
+  padding: var(--ticket-pad);
+}
+
+@media (min-width: 480px) {
+  .mda-ticket {
+    --ticket-pad: 1.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .mda-ticket {
+    --ticket-pad: 2rem;
+  }
+}
+
+/* Perfect Cinema Ticket Perforation Row with Inward Notches */
+.ticket-perforation-row {
+  position: relative;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  margin-left: calc(-1 * var(--ticket-pad) - 3px);
+  margin-right: calc(-1 * var(--ticket-pad) - 3px);
+  width: calc(100% + (2 * var(--ticket-pad)) + 6px);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .ticket-perforation-row {
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+.ticket-notch-left-svg {
+  position: absolute;
+  left: -10px;
+  top: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ticket-notch-right-svg {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ticket-dashed-line {
+  flex: 1;
+  width: auto;
+  border-top: 2px dashed var(--color-line);
+  margin: 0 20px;
+  opacity: 0.85;
+}
+
+/* Authentic Cinema Barcode */
+.mda-barcode {
+  display: flex;
+  align-items: stretch;
+  height: 34px;
+  gap: 2px;
+  padding: 2px 4px;
+  opacity: 0.85;
+}
+
+.mda-barcode-bar {
+  background-color: var(--color-ink);
+  border-radius: 1px;
+}
+
+/* Rubber Stamp for Accept */
+.mda-stamp {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg) scale(0);
+  border: 4px dashed #ef4444;
+  color: #ef4444;
+  font-weight: 900;
+  font-size: 1.25rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(239, 68, 68, 0.15);
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0;
+  white-space: nowrap;
+  max-width: 90%;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .mda-stamp {
+    font-size: 1.75rem;
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+.mda-stamp.active {
+  transform: translate(-50%, -50%) rotate(-12deg) scale(1);
+  opacity: 1;
+}
+
 .mda-chip {
-  border: 2px solid var(--color-border);
+  border: 2px solid var(--color-line);
   border-radius: var(--radius-chip);
   background: var(--color-surface);
+  box-shadow: 2px 2px 0 0 var(--color-line);
   transition: transform 0.05s ease, box-shadow 0.05s ease, border-color 0.1s ease;
 }
 
 .mda-chip:hover {
-  border-color: var(--color-text-muted);
+  border-color: var(--color-accent);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 0 var(--color-line);
+}
+
+.mda-chip:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 0 var(--color-line);
 }
 
 .mda-chip[data-selected="true"] {
-  border-color: var(--mda-accent);
-  background: var(--mda-surface-raised);
-  box-shadow: var(--shadow-offset-accent);
+  border-color: var(--color-line);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  box-shadow: 3px 3px 0 0 var(--color-line);
+  font-weight: 700;
+}
+
+@keyframes chipBlink {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.94);
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+    box-shadow: 0 0 0 0 var(--color-line);
+  }
+  100% {
+    transform: scale(1.02);
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+    box-shadow: 3px 3px 0 0 var(--color-line);
+  }
+}
+
+.mda-chip-blink {
+  animation: chipBlink 0.24s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  background: var(--color-accent) !important;
+  color: var(--color-accent-text) !important;
+  border-color: var(--color-line) !important;
+  box-shadow: 3px 3px 0 0 var(--color-line) !important;
+  font-weight: 700;
+}
+
+.mda-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 2px solid var(--color-line);
+  border-radius: 9999px;
+  background: var(--color-surface-raised);
+  color: var(--color-ink);
+  box-shadow: 2px 2px 0 0 var(--color-line);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.mda-badge:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 0 var(--color-line);
+}
+
+.mda-badge:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 0 0 var(--color-line);
+}
+
+.mda-badge-active {
+  border-color: var(--color-line);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .mda-btn-primary {
   background: var(--color-accent);
   color: var(--color-accent-text);
-  border: 2px solid var(--color-border);
+  border: 3px solid var(--color-line);
   border-radius: var(--radius-chip);
   box-shadow: var(--shadow-offset);
-  font-weight: 700;
+  font-weight: 800;
   transition: transform 0.05s ease, box-shadow 0.05s ease;
 }
 
 .mda-btn-primary:hover:not(:disabled) {
-  transform: translate(-1px, -1px);
-  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.55);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--color-line);
 }
 
 .mda-btn-primary:active:not(:disabled) {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.55);
+  box-shadow: 1px 1px 0 0 var(--color-line);
 }
 
 .mda-btn-secondary {
   background: var(--color-surface-raised);
-  color: var(--color-text);
-  border: 2px solid var(--color-border);
+  color: var(--color-ink);
+  border: 2px solid var(--color-line);
   border-radius: var(--radius-chip);
-  font-weight: 600;
+  box-shadow: 2px 2px 0 0 var(--color-line);
+  font-weight: 700;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
 }
 
 .mda-btn-secondary:hover:not(:disabled) {
-  border-color: var(--color-text-muted);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 0 var(--color-line);
+}
+
+.mda-btn-secondary:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 0 var(--color-line);
+}
+
+.mda-btn-lucky {
+  background: var(--color-surface-raised);
+  color: var(--color-ink);
+  border: 3px solid var(--color-line);
+  border-radius: var(--radius-chip);
+  box-shadow: var(--shadow-offset);
+  font-weight: 800;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+.mda-btn-lucky:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 0 var(--color-line);
+}
+
+.mda-btn-lucky:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 0 var(--color-line);
 }
 
 .mda-focus:focus-visible {
@@ -123,7 +367,10 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .mda-chip,
-  .mda-btn-primary {
+  .mda-btn-primary,
+  .mda-btn-secondary,
+  .mda-btn-lucky,
+  .mda-stamp {
     transition: none;
   }
 }
