@@ -2,12 +2,23 @@ import type { ReactNode } from "react";
 
 interface ChipOptionProps {
   label: string;
+  emoji?: string;
   selected: boolean;
+  blinking?: boolean;
   onSelect: () => void;
   hint?: string;
+  colSpan?: string;
 }
 
-export function ChipOption({ label, selected, onSelect, hint }: ChipOptionProps) {
+export function ChipOption({
+  label,
+  emoji,
+  selected,
+  blinking,
+  onSelect,
+  hint,
+  colSpan = "",
+}: ChipOptionProps) {
   return (
     <button
       type="button"
@@ -16,9 +27,12 @@ export function ChipOption({ label, selected, onSelect, hint }: ChipOptionProps)
       data-selected={selected}
       onClick={onSelect}
       title={hint}
-      className="mda-chip mda-focus px-4 py-2.5 text-sm font-medium text-ink cursor-pointer"
+      className={`mda-chip mda-focus w-full py-3 px-2 sm:px-4 text-xs sm:text-sm font-bold text-ink cursor-pointer flex items-center justify-center gap-2 text-center transition-all leading-normal ${
+        blinking ? "mda-chip-blink" : ""
+      } ${colSpan}`}
     >
-      {label}
+      {emoji && <span className="text-base sm:text-lg shrink-0 select-none">{emoji}</span>}
+      <span className="line-clamp-1">{label}</span>
     </button>
   );
 }
@@ -27,23 +41,28 @@ export function ChipGroup({
   legend,
   options,
   value,
+  blinkingValue,
   onChange,
 }: {
   legend: string;
-  options: Array<{ value: string; label: string; hint?: string }>;
+  options: Array<{ value: string; label: string; emoji?: string; hint?: string; colSpan?: string }>;
   value: string | null;
+  blinkingValue?: string | null;
   onChange: (value: string) => void;
 }) {
   return (
     <fieldset>
-      <legend className="text-xs font-bold uppercase tracking-widest text-muted mb-2">{legend}</legend>
-      <div role="radiogroup" aria-label={legend} className="flex flex-wrap gap-2">
+      <legend className="text-xs font-bold uppercase tracking-widest text-muted mb-2.5">{legend}</legend>
+      <div role="radiogroup" aria-label={legend} className="grid grid-cols-2 gap-2.5 sm:gap-3">
         {options.map((opt) => (
           <ChipOption
             key={opt.value}
             label={opt.label}
+            emoji={opt.emoji}
             hint={opt.hint}
             selected={value === opt.value}
+            blinking={blinkingValue === opt.value}
+            colSpan={opt.colSpan}
             onSelect={() => onChange(opt.value)}
           />
         ))}
@@ -71,18 +90,20 @@ export function PrimaryButton({
   onClick,
   disabled = false,
   busy = false,
+  className = "",
 }: {
   children: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
   busy?: boolean;
+  className?: string;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
       disabled={disabled || busy}
-      className="mda-btn-primary mda-focus px-6 py-3 text-base cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+      className={`mda-btn-primary mda-focus px-6 py-3 text-sm sm:text-base cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
     >
       {busy ? "Picking…" : children}
     </button>
@@ -93,17 +114,19 @@ export function SecondaryButton({
   children,
   onClick,
   disabled = false,
+  className = "",
 }: {
   children: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
+  className?: string;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="mda-btn-secondary mda-focus px-5 py-2.5 text-sm cursor-pointer disabled:opacity-50"
+      className={`mda-btn-secondary mda-focus px-4 sm:px-5 py-2.5 text-xs sm:text-sm cursor-pointer disabled:opacity-50 ${className}`}
     >
       {children}
     </button>

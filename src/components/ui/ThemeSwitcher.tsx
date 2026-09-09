@@ -52,9 +52,9 @@ export function ThemeSwitcher() {
         type="button"
         onClick={toggleTheme}
         aria-label={label}
-        className="w-10 h-10 rounded-full bg-surface-raised/90 hover:bg-surface-raised border-2 border-line hover:border-accent shadow-md backdrop-blur-md flex items-center justify-center cursor-pointer transition-all duration-150 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary p-0 m-0"
+        className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-raised hover:bg-surface-raised border-2 border-line hover:border-accent shadow-sm sm:shadow-md flex items-center justify-center cursor-pointer transition-all duration-150 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary p-0 m-0"
       >
-        <span aria-hidden="true" className="text-lg select-none">
+        <span aria-hidden="true" className="text-base sm:text-lg select-none">
           {isDark ? "☀️" : "🌙"}
         </span>
       </button>

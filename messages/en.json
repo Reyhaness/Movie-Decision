@@ -11,13 +11,17 @@
   },
   "preferences": {
     "title": "Don't know what to watch?",
-    "subtitle": "We'll pick the best fit — not give you another list to scroll through.",
+    "subtitle": "How much time do you have?",
+    "step1Subtitle": "How much time do you have?",
+    "step2Subtitle": "What vibe are you in the mood for?",
+    "step3Subtitle": "Who are you watching with?",
     "timeLegend": "Time",
     "moodLegend": "Mood",
     "situationLegend": "Situation",
     "helpMePick": "Help Me Pick",
     "startOver": "Start Over",
     "stepIndicator": "Step {current} of {total}",
+    "yourChoices": "Your choices:",
     "step1": "1. Time",
     "step2": "2. Mood",
     "step3": "3. Company",
@@ -61,7 +65,7 @@
     "subtitle": "Finding the best fit for right now."
   },
   "result": {
-    "badge": "Your pick",
+    "badge": "Recommended Movie",
     "yearUnknown": "Year unknown",
     "min": "min",
     "accept": "This works",

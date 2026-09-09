@@ -6,6 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { LanguageSwitcher, ThemeSwitcher } from "@/components/ui";
+import "@fontsource-variable/estedad";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -69,7 +70,7 @@ export default async function LocaleLayout({
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>
-          <div className="fixed top-4 end-4 z-50 flex items-center gap-2">
+          <div className="fixed top-3 end-3 sm:top-5 sm:end-5 z-50 flex items-center gap-1.5 sm:gap-2">
             <ThemeSwitcher />
             <LanguageSwitcher />
           </div>

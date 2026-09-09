@@ -94,7 +94,7 @@ body {
 }
 
 .mda-ticket {
-  --ticket-pad: 1.5rem;
+  --ticket-pad: 1.15rem;
   background: var(--color-surface);
   border: 3px solid var(--color-line);
   border-radius: 1.25rem;
@@ -102,6 +102,12 @@ body {
   position: relative;
   overflow: visible;
   padding: var(--ticket-pad);
+}
+
+@media (min-width: 480px) {
+  .mda-ticket {
+    --ticket-pad: 1.5rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -175,8 +181,8 @@ body {
   border: 4px dashed #ef4444;
   color: #ef4444;
   font-weight: 900;
-  font-size: 1.75rem;
-  padding: 0.5rem 1.25rem;
+  font-size: 1.25rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -184,8 +190,18 @@ body {
   pointer-events: none;
   z-index: 30;
   opacity: 0;
+  white-space: nowrap;
+  max-width: 90%;
   transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
 }
+
+@media (min-width: 640px) {
+  .mda-stamp {
+    font-size: 1.75rem;
+    padding: 0.5rem 1.25rem;
+  }
+}
+
 .mda-stamp.active {
   transform: translate(-50%, -50%) rotate(-12deg) scale(1);
   opacity: 1;
@@ -216,6 +232,68 @@ body {
   color: var(--color-accent-text);
   box-shadow: 3px 3px 0 0 var(--color-line);
   font-weight: 700;
+}
+
+@keyframes chipBlink {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.94);
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+    box-shadow: 0 0 0 0 var(--color-line);
+  }
+  100% {
+    transform: scale(1.02);
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+    box-shadow: 3px 3px 0 0 var(--color-line);
+  }
+}
+
+.mda-chip-blink {
+  animation: chipBlink 0.24s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  background: var(--color-accent) !important;
+  color: var(--color-accent-text) !important;
+  border-color: var(--color-line) !important;
+  box-shadow: 3px 3px 0 0 var(--color-line) !important;
+  font-weight: 700;
+}
+
+.mda-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 2px solid var(--color-line);
+  border-radius: 9999px;
+  background: var(--color-surface-raised);
+  color: var(--color-ink);
+  box-shadow: 2px 2px 0 0 var(--color-line);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.mda-badge:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 0 var(--color-line);
+}
+
+.mda-badge:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 0 0 var(--color-line);
+}
+
+.mda-badge-active {
+  border-color: var(--color-line);
+  background: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .mda-btn-primary {

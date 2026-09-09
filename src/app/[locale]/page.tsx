@@ -31,6 +31,29 @@ export default function Home() {
   const [busy, setBusy] = useState(false);
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [stamped, setStamped] = useState(false);
+  const [blinkingKey, setBlinkingKey] = useState<string | null>(null);
+
+  const handleTimeSelect = (val: string) => {
+    setBlinkingKey(val);
+    setTimeout(() => {
+      updateFlow({ time: val as TimeSelection });
+      setBlinkingKey(null);
+      setStep(2);
+    }, 240);
+  };
+
+  const handleMoodSelect = (val: string) => {
+    setBlinkingKey(val);
+    setTimeout(() => {
+      updateFlow({ mood: val as MoodChoice });
+      setBlinkingKey(null);
+      setStep(3);
+    }, 240);
+  };
+
+  const handleSituationSelect = (val: string) => {
+    updateFlow({ situation: val as SituationSelection });
+  };
 
   const fetchRecommendation = useCallback(
     async (overrideParams?: {
@@ -155,33 +178,36 @@ export default function Home() {
   /* ---------------------------------------------------- */
   if (flow.state === "landing") {
     return (
-      <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
-        <div className="mda-ticket max-w-lg w-full text-center relative">
-          <div className="flex items-center justify-between font-mono text-xs font-bold text-muted uppercase tracking-wider mb-6 pb-2.5 border-b-2 border-line">
+      <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
+        <div className="mda-ticket my-auto max-w-lg w-full text-center relative">
+          <div className="flex items-center justify-between font-mono text-[11px] sm:text-xs font-bold text-muted uppercase tracking-wider mb-5 sm:mb-6 pb-2.5 border-b-2 border-line">
             <span>🎟️ ADMIT ONE</span>
             <span>NO. 4829</span>
           </div>
 
-          <div className="text-5xl mb-4" aria-hidden="true">
+          <div className="text-4xl sm:text-5xl mb-3 sm:mb-4" aria-hidden="true">
             🎬
           </div>
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight mb-3">
+          <h1 className="text-2xl sm:text-4xl font-black tracking-tight mb-2.5 sm:mb-3">
             {tLanding("title")}
           </h1>
-          <p className="text-muted mb-6 leading-relaxed text-sm sm:text-base">
+          <p className="text-muted mb-5 sm:mb-6 leading-relaxed text-xs sm:text-base">
             {tLanding("description")}
           </p>
 
           <TicketPerforation />
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch pt-2">
-            <PrimaryButton onClick={() => updateFlow({ state: "preferences" })}>
+          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 justify-center items-stretch pt-2">
+            <PrimaryButton
+              className="w-full sm:w-auto"
+              onClick={() => updateFlow({ state: "preferences" })}
+            >
               {tLanding("helpMePick")}
             </PrimaryButton>
             <button
               type="button"
               onClick={handleSurpriseMe}
-              className="mda-btn-lucky px-5 py-3 text-sm sm:text-base cursor-pointer flex items-center justify-center gap-2"
+              className="mda-btn-lucky w-full sm:w-auto px-5 py-3 text-sm sm:text-base cursor-pointer flex items-center justify-center gap-2"
             >
               <span>{tLanding("luckyTicket")}</span>
             </button>
@@ -196,8 +222,11 @@ export default function Home() {
   /* ---------------------------------------------------- */
   if (flow.state === "loading") {
     return (
-      <main className="min-h-screen flex items-center justify-center p-6" aria-live="polite">
-        <div className="mda-ticket max-w-md w-full text-center relative">
+      <main
+        className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12"
+        aria-live="polite"
+      >
+        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
           <div className="text-4xl mb-4 animate-bounce">🎟️</div>
           <p className="text-lg font-extrabold mb-2">{tLoading("title")}</p>
           <p className="text-muted text-sm">{tLoading("subtitle")}</p>
@@ -226,34 +255,34 @@ export default function Home() {
     const localizedOverview = getMovieOverview(flow.result, locale);
 
     return (
-      <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
-        <div className="mda-ticket max-w-xl w-full relative">
+      <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
+        <div className="mda-ticket my-auto max-w-xl w-full relative">
           {/* Rubber Stamp */}
           <div className={`mda-stamp ${stamped ? "active" : ""}`} aria-hidden="true">
             {tResult("stamped")}
           </div>
 
           {/* Header Ticket Bar */}
-          <div className="flex items-center justify-between font-mono text-xs font-bold text-muted uppercase tracking-wider pb-3 mb-5 border-b-2 border-line">
-            <span className="text-accent font-extrabold flex items-center gap-1">
+          <div className="flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap font-mono text-[10px] sm:text-xs font-bold text-muted uppercase tracking-wider pb-3 mb-4 sm:mb-5 border-b-2 border-line">
+            <span className="text-accent font-extrabold flex items-center gap-1 shrink-0">
               <span>★</span> {tResult("badge")}
             </span>
-            <span>{tResult("admitOne")} // NO. 9482</span>
+            <span className="shrink-0">{tResult("admitOne")} // NO. 9482</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 mb-4">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-4 items-center sm:items-start">
             <div className="w-full sm:w-auto flex justify-center sm:block shrink-0">
               <MoviePoster title={flow.result.title} posterPath={flow.result.posterPath} />
             </div>
-            <div className="min-w-0 flex-1 flex flex-col justify-start">
-              <h1 className="text-2xl sm:text-3xl font-extrabold leading-tight mb-2">
+            <div className="min-w-0 flex-1 flex flex-col justify-start text-center sm:text-start">
+              <h1 className="text-xl sm:text-3xl font-extrabold leading-tight mb-1.5 sm:mb-2">
                 {flow.result.title}
               </h1>
-              <p className="text-muted text-xs sm:text-sm mb-2 font-mono font-semibold">
+              <p className="text-muted text-xs sm:text-sm mb-2 font-semibold">
                 {formattedYear ?? tResult("yearUnknown")} · {formattedRuntime} {tResult("min")}
               </p>
               {localizedGenres.length > 0 && (
-                <div className="flex flex-wrap gap-1.5 mb-3">
+                <div className="flex flex-wrap gap-1.5 mb-3 justify-center sm:justify-start">
                   {localizedGenres.map((genre) => (
                     <span
                       key={genre}
@@ -265,7 +294,7 @@ export default function Home() {
                 </div>
               )}
               {localizedOverview && (
-                <p className="text-sm leading-relaxed text-muted mt-1">{localizedOverview}</p>
+                <p className="text-xs sm:text-sm leading-relaxed text-muted mt-1">{localizedOverview}</p>
               )}
             </div>
           </div>
@@ -273,18 +302,20 @@ export default function Home() {
           <TicketPerforation />
 
           {/* Ticket Footer with Barcode & Seat info */}
-          <div className="flex items-center justify-between font-mono text-[11px] text-muted mb-5">
-            <span className="tracking-widest">||| |||| || | ||||| |</span>
-            <span>{tResult("seat")}</span>
+          <div className="flex items-center justify-between gap-2 font-mono text-[10px] sm:text-[11px] text-muted mb-5 select-none">
+            <span className="tracking-wider sm:tracking-widest shrink-0">||| |||| || | ||||| |</span>
+            <span className="shrink-0">{tResult("seat")}</span>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <PrimaryButton onClick={accept}>{tResult("accept")}</PrimaryButton>
-            <div className="flex gap-3 justify-center">
-              <SecondaryButton onClick={tryAnother} disabled={busy}>
+          <div className="flex flex-col gap-2.5 sm:gap-3">
+            <PrimaryButton className="w-full" onClick={accept}>
+              {tResult("accept")}
+            </PrimaryButton>
+            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 justify-center">
+              <SecondaryButton className="w-full sm:w-auto" onClick={tryAnother} disabled={busy}>
                 {tResult("tryAnother")}
               </SecondaryButton>
-              <SecondaryButton onClick={backToPreferences}>
+              <SecondaryButton className="w-full sm:w-auto" onClick={backToPreferences}>
                 {tResult("changePreferences")}
               </SecondaryButton>
             </div>
@@ -299,8 +330,8 @@ export default function Home() {
   /* ---------------------------------------------------- */
   if (flow.state === "accepted") {
     return (
-      <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
-        <div className="mda-ticket max-w-md w-full text-center relative">
+      <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
+        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
           <div className="text-5xl mb-4" aria-hidden="true">
             🍿
           </div>
@@ -312,7 +343,9 @@ export default function Home() {
             {tAccepted("subtitle")}
           </p>
           <TicketPerforation />
-          <PrimaryButton onClick={resetFlow}>{tAccepted("startOver")}</PrimaryButton>
+          <PrimaryButton className="w-full sm:w-auto" onClick={resetFlow}>
+            {tAccepted("startOver")}
+          </PrimaryButton>
         </div>
       </main>
     );
@@ -323,14 +356,15 @@ export default function Home() {
   /* ---------------------------------------------------- */
   if (flow.state === "no_match") {
     return (
-      <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
-        <div className="mda-ticket max-w-md w-full text-center relative">
+      <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
+        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
           <h1 className="text-2xl font-extrabold mb-2 leading-tight">{tNoMatch("title")}</h1>
           <p className="text-muted mb-6 leading-relaxed text-sm">{tNoMatch("subtitle")}</p>
           <TicketPerforation />
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-stretch sm:items-center gap-2.5 sm:gap-3">
             {flow.time !== "over_120" && (
               <PrimaryButton
+                className="w-full sm:w-auto"
                 onClick={() => {
                   relaxTime();
                   updateFlow({ state: "preferences" });
@@ -339,10 +373,10 @@ export default function Home() {
                 {tNoMatch("relaxTime")}
               </PrimaryButton>
             )}
-            <SecondaryButton onClick={backToPreferences}>
+            <SecondaryButton className="w-full sm:w-auto" onClick={backToPreferences}>
               {tNoMatch("changePreferences")}
             </SecondaryButton>
-            <SecondaryButton onClick={tryAnother} disabled={busy}>
+            <SecondaryButton className="w-full sm:w-auto" onClick={tryAnother} disabled={busy}>
               {tNoMatch("tryAnother")}
             </SecondaryButton>
           </div>
@@ -356,14 +390,16 @@ export default function Home() {
   /* ---------------------------------------------------- */
   if (flow.state === "error") {
     return (
-      <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
-        <div className="mda-ticket max-w-md w-full text-center relative">
+      <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
+        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
           <h1 className="text-2xl font-extrabold mb-2">{tError("title")}</h1>
           <p className="text-muted mb-6 text-sm">{tError("subtitle")}</p>
           <TicketPerforation />
-          <div className="flex flex-col items-center gap-3">
-            <PrimaryButton onClick={() => fetchRecommendation()}>{tError("tryAgain")}</PrimaryButton>
-            <SecondaryButton onClick={backToPreferences}>
+          <div className="flex flex-col items-stretch sm:items-center gap-2.5 sm:gap-3">
+            <PrimaryButton className="w-full sm:w-auto" onClick={() => fetchRecommendation()}>
+              {tError("tryAgain")}
+            </PrimaryButton>
+            <SecondaryButton className="w-full sm:w-auto" onClick={backToPreferences}>
               {tError("changePreferences")}
             </SecondaryButton>
           </div>
@@ -375,130 +411,194 @@ export default function Home() {
   /* ---------------------------------------------------- */
   /* PREFERENCES VIEW: STEP-BY-STEP PUNCH WIZARD          */
   /* ---------------------------------------------------- */
+  const timeOptions = [
+    { value: "under_90", label: tTime("under_90"), emoji: "⚡" },
+    { value: "90_to_120", label: tTime("90_to_120"), emoji: "☕" },
+    { value: "over_120", label: tTime("over_120"), emoji: "🛋️", colSpan: "col-span-2" },
+  ];
+
+  const moodEmojiMap: Record<string, string> = {
+    cozy_relax: "☕",
+    funny: "😂",
+    thrill_tense: "⚡",
+    emotional: "🥺",
+    thoughtful_mind_bending: "🧠",
+    epic: "⚔️",
+  };
+
+  const moodOptions = [
+    ...STANDARD_MOODS.map((m) => ({
+      value: m,
+      label: tMood(`labels.${m}`),
+      hint: tMood(`hints.${m}`),
+      emoji: moodEmojiMap[m] ?? "🎬",
+    })),
+    {
+      value: "surprise_me",
+      label: tMood("labels.surprise_me"),
+      hint: tMood("hints.surprise_me"),
+      emoji: "🎲",
+      colSpan: "col-span-2",
+    },
+  ];
+
+  const situationOptions = [
+    { value: "alone", label: tSituation("alone"), emoji: "🧘" },
+    { value: "partner", label: tSituation("partner"), emoji: "💑" },
+    { value: "friends", label: tSituation("friends"), emoji: "🍕" },
+    { value: "family", label: tSituation("family"), emoji: "🏠" },
+    { value: "kids", label: tSituation("kids"), emoji: "🎈", colSpan: "col-span-2" },
+  ];
+
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 sm:p-6">
-      <div className="mda-ticket max-w-xl w-full relative">
-        {/* Wizard Punch Progress Bar */}
-        <div className="flex items-center justify-between font-mono text-xs font-bold text-muted uppercase tracking-wider pb-3 mb-6 border-b-2 border-line">
-          <div className="flex items-center gap-2">
-            <span>PUNCH CARD</span>
-            <div className="flex items-center gap-1.5" aria-hidden="true">
-              <span
-                className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
-                  flow.time ? "bg-accent scale-110 shadow-sm" : "bg-surface-raised"
-                }`}
-              />
-              <span
-                className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
-                  flow.mood ? "bg-accent scale-110 shadow-sm" : "bg-surface-raised"
-                }`}
-              />
-              <span
-                className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
-                  flow.situation ? "bg-accent scale-110 shadow-sm" : "bg-surface-raised"
-                }`}
-              />
+    <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
+      <div className="mda-ticket my-auto max-w-xl w-full relative">
+        {/* Wizard Punch Progress Bar & Clickable Badges */}
+        <div className="pb-3 mb-5 sm:mb-6 border-b-2 border-line space-y-2.5">
+          <div className="flex items-center justify-between gap-2 font-mono text-[11px] sm:text-xs font-bold text-muted uppercase tracking-wider">
+            <div className="flex items-center gap-2">
+              <span>PUNCH CARD</span>
+              <div className="flex items-center gap-1.5" aria-hidden="true">
+                <span
+                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
+                    flow.time ? "bg-accent scale-110 shadow-sm" : "bg-surface-raised"
+                  }`}
+                />
+                <span
+                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
+                    flow.mood ? "bg-accent scale-110 shadow-sm" : "bg-surface-raised"
+                  }`}
+                />
+                <span
+                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
+                    flow.situation ? "bg-accent scale-110 shadow-sm" : "bg-surface-raised"
+                  }`}
+                />
+              </div>
             </div>
+            <span className="text-accent font-extrabold shrink-0">
+              {tPref("stepIndicator", { current: step, total: 3 })}
+            </span>
           </div>
-          <span className="text-accent font-extrabold">
-            {tPref("stepIndicator", { current: step, total: 3 })}
-          </span>
+
+          {/* Clickable Badges for chosen preferences */}
+          {(flow.time || flow.mood || flow.situation) && (
+            <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-line/40">
+              <span className="text-[10px] sm:text-[11px] font-bold text-muted select-none me-1">
+                {tPref("yourChoices")}
+              </span>
+              {flow.time && (
+                <button
+                  type="button"
+                  onClick={() => setStep(1)}
+                  className={`mda-badge ${step === 1 ? "mda-badge-active" : ""}`}
+                  title={locale === "fa" ? "ویرایش مدت زمان" : "Edit time"}
+                >
+                  <span>⚡</span>
+                  <span>{tTime(flow.time)}</span>
+                  <span className="text-[9px] opacity-70">✏️</span>
+                </button>
+              )}
+              {flow.mood && (
+                <button
+                  type="button"
+                  onClick={() => setStep(2)}
+                  className={`mda-badge ${step === 2 ? "mda-badge-active" : ""}`}
+                  title={locale === "fa" ? "ویرایش حال‌وهوا" : "Edit mood"}
+                >
+                  <span>🎭</span>
+                  <span>{tMood(`labels.${flow.mood}`)}</span>
+                  <span className="text-[9px] opacity-70">✏️</span>
+                </button>
+              )}
+              {flow.situation && (
+                <button
+                  type="button"
+                  onClick={() => setStep(3)}
+                  className={`mda-badge ${step === 3 ? "mda-badge-active" : ""}`}
+                  title={locale === "fa" ? "ویرایش همراهان" : "Edit company"}
+                >
+                  <span>🍿</span>
+                  <span>{tSituation(flow.situation)}</span>
+                  <span className="text-[9px] opacity-70">✏️</span>
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Step 1: Time */}
         {step === 1 && (
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <div>
               <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight mb-1">
                 ⏱️ {tPref("step1")}
               </h2>
-              <p className="text-muted text-sm">{tPref("subtitle")}</p>
+              <p className="text-muted text-xs sm:text-sm">{tPref("step1Subtitle")}</p>
             </div>
 
             <ChipGroup
               legend={tPref("timeLegend")}
-              options={TIME_SELECTIONS.map((t) => ({ value: t, label: tTime(t) }))}
+              options={timeOptions}
               value={flow.time}
-              onChange={(v) => {
-                updateFlow({ time: v as TimeSelection });
-              }}
+              blinkingValue={blinkingKey}
+              onChange={handleTimeSelect}
             />
 
             <TicketPerforation />
 
-            <div className="flex justify-between items-center pt-2">
+            <div className="flex justify-between items-center gap-3 pt-2">
               <SecondaryButton onClick={resetFlow}>{tPref("startOver")}</SecondaryButton>
-              <PrimaryButton disabled={!flow.time} onClick={() => setStep(2)}>
-                {tPref("next")}
-              </PrimaryButton>
             </div>
           </div>
         )}
 
         {/* Step 2: Mood */}
         {step === 2 && (
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <div>
               <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight mb-1">
                 🎭 {tPref("step2")}
               </h2>
-              <p className="text-muted text-sm">{tPref("subtitle")}</p>
+              <p className="text-muted text-xs sm:text-sm">{tPref("step2Subtitle")}</p>
             </div>
 
             <ChipGroup
               legend={tPref("moodLegend")}
-              options={[
-                ...STANDARD_MOODS.map((m) => ({
-                  value: m,
-                  label: tMood(`labels.${m}`),
-                  hint: tMood(`hints.${m}`),
-                })),
-                {
-                  value: "surprise_me",
-                  label: tMood("labels.surprise_me"),
-                  hint: tMood("hints.surprise_me"),
-                },
-              ]}
+              options={moodOptions}
               value={flow.mood}
-              onChange={(v) => {
-                updateFlow({ mood: v as MoodChoice });
-              }}
+              blinkingValue={blinkingKey}
+              onChange={handleMoodSelect}
             />
 
             <TicketPerforation />
 
-            <div className="flex justify-between items-center pt-2">
+            <div className="flex justify-between items-center gap-3 pt-2">
               <SecondaryButton onClick={() => setStep(1)}>{tPref("back")}</SecondaryButton>
-              <PrimaryButton disabled={!flow.mood} onClick={() => setStep(3)}>
-                {tPref("next")}
-              </PrimaryButton>
             </div>
           </div>
         )}
 
         {/* Step 3: Situation */}
         {step === 3 && (
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <div>
               <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight mb-1">
                 🍿 {tPref("step3")}
               </h2>
-              <p className="text-muted text-sm">{tPref("subtitle")}</p>
+              <p className="text-muted text-xs sm:text-sm">{tPref("step3Subtitle")}</p>
             </div>
 
             <ChipGroup
               legend={tPref("situationLegend")}
-              options={SITUATION_SELECTIONS.map((s) => ({
-                value: s,
-                label: tSituation(s),
-              }))}
+              options={situationOptions}
               value={flow.situation}
-              onChange={(v) => updateFlow({ situation: v as SituationSelection })}
+              onChange={handleSituationSelect}
             />
 
             <TicketPerforation />
 
-            <div className="flex justify-between items-center pt-2">
+            <div className="flex justify-between items-center gap-3 pt-2">
               <SecondaryButton onClick={() => setStep(2)}>{tPref("back")}</SecondaryButton>
               <PrimaryButton
                 disabled={!flow.time || !flow.mood || !flow.situation}
@@ -527,7 +627,7 @@ function MoviePoster({ title, posterPath }: { title: string; posterPath?: string
   }`;
 
   return (
-    <div className="relative w-full max-w-[240px] sm:max-w-none sm:w-44 aspect-[2/3] rounded-xl overflow-hidden border-3 border-line bg-surface-raised shadow-md">
+    <div className="relative w-36 xs:w-40 sm:w-44 max-w-full aspect-[2/3] rounded-xl overflow-hidden border-3 border-line bg-surface-raised shadow-md shrink-0">
       {!imageLoaded && (
         <div className="absolute inset-0 bg-surface-raised animate-pulse flex items-center justify-center">
           <span className="text-xs text-muted">...</span>
@@ -538,7 +638,7 @@ function MoviePoster({ title, posterPath }: { title: string; posterPath?: string
         alt={`Poster for ${title}`}
         fill
         priority
-        sizes="(max-width: 640px) 240px, 176px"
+        sizes="(max-width: 640px) 160px, 176px"
         className={`object-cover transition-opacity duration-300 ${
           imageLoaded ? "opacity-100" : "opacity-0"
         }`}
@@ -560,7 +660,7 @@ function PosterFallback({ title }: { title: string }) {
   return (
     <div
       aria-hidden="true"
-      className="w-full max-w-[240px] sm:max-w-none sm:w-44 aspect-[2/3] rounded-xl border-3 border-line bg-surface-raised flex items-center justify-center"
+      className="w-36 xs:w-40 sm:w-44 max-w-full aspect-[2/3] rounded-xl border-3 border-line bg-surface-raised flex items-center justify-center shrink-0"
     >
       <span className="text-3xl sm:text-4xl font-extrabold text-muted">{initials}</span>
     </div>
