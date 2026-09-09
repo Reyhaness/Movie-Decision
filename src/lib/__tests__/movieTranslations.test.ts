@@ -1,4 +1,4 @@
-import { getMovieOverview } from "../movieTranslations";
+import { getMovieOverview, getMovieTitle } from "../movieTranslations";
 
 describe("movieTranslations", () => {
   const sampleMovie = {
@@ -35,5 +35,23 @@ describe("movieTranslations", () => {
     const overview = getMovieOverview(movieWithOnlyTitle, "fa");
     expect(overview).toBeTruthy();
     expect(overview).not.toBe(movieWithOnlyTitle.overview);
+  });
+
+  it("returns English primaryTitle when locale is 'en'", () => {
+    const res = getMovieTitle({ movieId: "hot-fuzz", title: "Hot Fuzz" }, "en");
+    expect(res.primaryTitle).toBe("Hot Fuzz");
+    expect(res.originalTitle).toBeUndefined();
+  });
+
+  it("returns Persian primaryTitle and originalTitle when locale is 'fa'", () => {
+    const res = getMovieTitle({ movieId: "hot-fuzz", title: "Hot Fuzz" }, "fa");
+    expect(res.primaryTitle).toContain("پلیس خفن");
+    expect(res.originalTitle).toBe("Hot Fuzz");
+  });
+
+  it("falls back to English title if no Persian title mapping is found", () => {
+    const res = getMovieTitle({ movieId: "unknown-movie-999", title: "Unknown Title" }, "fa");
+    expect(res.primaryTitle).toBe("Unknown Title");
+    expect(res.originalTitle).toBeUndefined();
   });
 });
