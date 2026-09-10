@@ -124,5 +124,22 @@
     "themeToggle": "تغییر تم",
     "switchToLight": "حالت روشن ☀️",
     "switchToDark": "حالت تاریک 🌙"
+  },
+  "watchlist": {
+    "navLabel": "واچ‌لیست",
+    "title": "واچ‌لیست",
+    "subtitle": "فیلم‌هایی که می‌خوای بعداً ببینی.",
+    "saveForLater": "بعداً می‌بینم",
+    "saved": "ذخیره شد",
+    "addToWatchlist": "افزودن به واچ‌لیست",
+    "removeFromWatchlist": "حذف از واچ‌لیست",
+    "saveFailed": "ذخیره نشد. دوباره امتحان کن.",
+    "loadFailed": "واچ‌لیست لود نشد.",
+    "retry": "تلاش دوباره",
+    "remove": "حذف",
+    "emptyTitle": "واچ‌لیستت خالیه",
+    "emptySubtitle": "فیلم‌هایی که می‌خوای بعداً ببینی رو اینجا ذخیره کن.",
+    "suggestMovie": "فیلم پیشنهاد بده",
+    "itemCount": "{count, plural, one {# فیلم ذخیره شد} other {# فیلم ذخیره شد}}"
   }
 }

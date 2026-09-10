@@ -1,10 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import Image from "next/image";
 import confetti from "canvas-confetti";
 import { useLocale, useTranslations } from "next-intl";
-import { Barcode, ChipGroup, PrimaryButton, SecondaryButton, TicketPerforation } from "@/components/ui";
+import { Barcode, ChipGroup, PrimaryButton, SecondaryButton, TicketPerforation, MoviePoster, WatchlistButton } from "@/components/ui";
 import { TIME_SELECTIONS, STANDARD_MOODS, SITUATION_SELECTIONS } from "@/services/recommendation/types";
 import type { SituationSelection, TimeSelection } from "@/services/recommendation/types";
 import { useFlowStore } from "@/lib/sessionStore";
@@ -84,6 +83,7 @@ export default function Home() {
   const tAccepted = useTranslations("accepted");
   const tNoMatch = useTranslations("no_match");
   const tError = useTranslations("error");
+  const tWatchlist = useTranslations("watchlist");
 
   type HistoryEntry =
     | { state: "landing" }
@@ -256,6 +256,67 @@ export default function Home() {
     const next = RELAX_ORDER[Math.min(idx + 1, RELAX_ORDER.length - 1)];
     updateFlow({ time: next });
   };
+
+  // --- Watchlist (independent capability; never touches recommendation flow) ---
+  const [savedMovieIds, setSavedMovieIds] = useState<Set<string>>(new Set());
+  const [savingState, setSavingState] = useState<"idle" | "saving" | "error">("idle");
+
+  // Load saved state when a recommendation is shown, so the bookmark
+  // reflects the guest's existing watchlist (idempotent sync, failure-tolerant).
+  useEffect(() => {
+    if (flow.state !== "result" || !flow.result) return;
+    let cancelled = false;
+    fetch("/api/watchlist")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { items?: Array<{ movieId: string }> } | null) => {
+        if (!cancelled && data?.items) {
+          setSavedMovieIds(new Set(data.items.map((i) => i.movieId)));
+        }
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [flow.state, flow.result]);
+
+  const toggleSave = useCallback(async () => {
+    const movie = flow.result;
+    if (!movie || savingState === "saving") return;
+    const wasSaved = savedMovieIds.has(movie.movieId);
+    setSavingState("saving");
+    try {
+      if (wasSaved) {
+        const res = await fetch(`/api/watchlist/${encodeURIComponent(movie.movieId)}`, {
+          method: "DELETE",
+        });
+        if (!res.ok) throw new Error("remove failed");
+        setSavedMovieIds((prev) => {
+          const next = new Set(prev);
+          next.delete(movie.movieId);
+          return next;
+        });
+      } else {
+        const res = await fetch("/api/watchlist", {
+          method: "POST",
+          body: JSON.stringify({ movieId: movie.movieId }),
+          headers: { "Content-Type": "application/json" },
+        });
+        if (!res.ok) throw new Error("save failed");
+        setSavedMovieIds((prev) => new Set(prev).add(movie.movieId));
+      }
+      setSavingState("idle");
+    } catch {
+      // Non-critical feature: never block the recommendation flow.
+      setSavingState("error");
+    }
+  }, [flow.result, savingState, savedMovieIds]);
+
+  // Transient inline error: auto-dismiss so the card returns to normal.
+  useEffect(() => {
+    if (savingState !== "error") return;
+    const timer = setTimeout(() => setSavingState("idle"), 3500);
+    return () => clearTimeout(timer);
+  }, [savingState]);
 
   const jumpToStep = (targetStep: 1 | 2 | 3) => {
     setStamped(false);
@@ -480,7 +541,15 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-4 items-center sm:items-start">
             <div className="w-full sm:w-auto flex justify-center sm:block shrink-0">
-              <MoviePoster title={flow.result.title} posterPath={flow.result.posterPath} />
+              <div className="inline-flex flex-col gap-2.5">
+                <MoviePoster title={flow.result.title} posterPath={flow.result.posterPath} />
+                <WatchlistButton
+                  saved={flow.result ? savedMovieIds.has(flow.result.movieId) : false}
+                  disabled={savingState === "saving"}
+                  onToggle={toggleSave}
+                  className="w-full justify-center"
+                />
+              </div>
             </div>
             <div className="min-w-0 flex-1 flex flex-col justify-start text-center sm:text-start">
               <h1 className="text-xl sm:text-3xl font-extrabold leading-tight mb-1">
@@ -534,6 +603,11 @@ export default function Home() {
                 {tResult("changePreferences")}
               </SecondaryButton>
             </div>
+            {savingState === "error" && (
+              <p role="status" className="text-xs font-semibold text-accent text-center pt-1">
+                {tWatchlist("saveFailed")}
+              </p>
+            )}
           </div>
         </div>
       </main>
@@ -856,72 +930,5 @@ export default function Home() {
         )}
       </div>
     </main>
-  );
-}
-
-function MoviePoster({
-  title,
-  posterPath,
-  className,
-}: {
-  title: string;
-  posterPath?: string | null;
-  className?: string;
-}) {
-  const [imageError, setImageError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  if (!posterPath || imageError) {
-    return <PosterFallback title={title} className={className} />;
-  }
-
-  const imageUrl = `https://image.tmdb.org/t/p/w500${
-    posterPath.startsWith("/") ? posterPath : `/${posterPath}`
-  }`;
-
-  return (
-    <div
-      className={`relative w-36 xs:w-40 sm:w-44 max-w-full aspect-[2/3] rounded-xl overflow-hidden border-3 border-line bg-surface-raised shadow-md shrink-0 ${
-        className ?? ""
-      }`}
-    >
-      {!imageLoaded && (
-        <div className="absolute inset-0 bg-surface-raised animate-pulse flex items-center justify-center">
-          <span className="text-xs text-muted">...</span>
-        </div>
-      )}
-      <Image
-        src={imageUrl}
-        alt={`Poster for ${title}`}
-        fill
-        priority
-        sizes="(max-width: 640px) 160px, 176px"
-        className={`object-cover transition-opacity duration-300 ${
-          imageLoaded ? "opacity-100" : "opacity-0"
-        }`}
-        onLoad={() => setImageLoaded(true)}
-        onError={() => setImageError(true)}
-        unoptimized
-      />
-    </div>
-  );
-}
-
-function PosterFallback({ title, className }: { title: string; className?: string }) {
-  const initials = title
-    .split(" ")
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((w) => w[0]?.toUpperCase())
-    .join("");
-  return (
-    <div
-      aria-hidden="true"
-      className={`w-36 xs:w-40 sm:w-44 max-w-full aspect-[2/3] rounded-xl border-3 border-line bg-surface-raised flex items-center justify-center shrink-0 ${
-        className ?? ""
-      }`}
-    >
-      <span className="text-3xl sm:text-4xl font-extrabold text-muted">{initials}</span>
-    </div>
   );
 }

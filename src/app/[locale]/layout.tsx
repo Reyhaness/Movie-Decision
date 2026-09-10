@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { LanguageSwitcher, ThemeSwitcher } from "@/components/ui";
+import { LanguageSwitcher, ThemeSwitcher, WatchlistNav } from "@/components/ui";
 import "@fontsource-variable/estedad";
 import "../globals.css";
 
@@ -71,8 +71,9 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <div className="fixed top-3 end-3 sm:top-5 sm:end-5 z-50 flex items-center gap-1.5 sm:gap-2">
-            <ThemeSwitcher />
+            <WatchlistNav />
             <LanguageSwitcher />
+            <ThemeSwitcher />
           </div>
           {children}
         </NextIntlClientProvider>

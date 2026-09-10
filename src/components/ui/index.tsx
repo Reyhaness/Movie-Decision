@@ -195,3 +195,6 @@ export function SecondaryButton({
 
 export { LanguageSwitcher } from "./LanguageSwitcher";
 export { ThemeSwitcher } from "./ThemeSwitcher";
+export { WatchlistButton } from "./WatchlistButton";
+export { WatchlistNav } from "./WatchlistNav";
+export { MoviePoster, PosterFallback } from "./MoviePoster";
