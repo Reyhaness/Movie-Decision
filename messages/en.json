@@ -124,5 +124,22 @@
     "themeToggle": "Toggle theme",
     "switchToLight": "Switch to Light ☀️",
     "switchToDark": "Switch to Dark 🌙"
+  },
+  "watchlist": {
+    "navLabel": "Watchlist",
+    "title": "Watchlist",
+    "subtitle": "Movies you want to watch later.",
+    "saveForLater": "Watch later",
+    "saved": "Saved",
+    "addToWatchlist": "Add to watchlist",
+    "removeFromWatchlist": "Remove from watchlist",
+    "saveFailed": "Couldn't save. Try again.",
+    "loadFailed": "Couldn't load your watchlist.",
+    "retry": "Try again",
+    "remove": "Remove",
+    "emptyTitle": "Your watchlist is empty",
+    "emptySubtitle": "Save movies you want to watch later, right from your recommendation.",
+    "suggestMovie": "Pick a movie",
+    "itemCount": "{count, plural, one {# movie} other {# movies}} saved"
   }
 }
