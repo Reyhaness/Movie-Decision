@@ -27,7 +27,7 @@ export function ChipOption({
       data-selected={selected}
       onClick={onSelect}
       title={hint}
-      className={`mda-chip mda-focus w-full py-3 px-2 sm:px-4 text-xs sm:text-sm font-bold text-ink cursor-pointer flex items-center justify-center gap-2 text-center transition-all leading-normal ${
+      className={`mda-chip mda-focus w-full py-3 px-2 sm:px-4 text-xs sm:text-sm font-bold text-ink cursor-pointer flex items-center justify-center gap-2 text-center leading-normal ${
         blinking ? "mda-chip-blink" : ""
       } ${colSpan}`}
     >

@@ -373,7 +373,7 @@ export default function Home() {
   if (flow.state === "landing") {
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket my-auto max-w-lg w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-lg w-full text-center relative">
           <div className="flex items-center justify-between font-mono text-[11px] sm:text-xs font-bold text-muted uppercase tracking-wider mb-5 sm:mb-6 pb-2.5 border-b-2 border-line">
             <span>🎟️ ADMIT ONE</span>
             <span>NO. 4829</span>
@@ -455,7 +455,7 @@ export default function Home() {
 
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket my-auto max-w-xl w-full relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-xl w-full relative">
           {/* Rubber Stamp */}
           <div className={`mda-stamp ${stamped ? "active" : ""}`} aria-hidden="true">
             {tResult("stamped")}
@@ -468,7 +468,7 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="w-8 h-8 rounded-lg border-2 border-line bg-surface hover:bg-surface-raised active:scale-95 flex items-center justify-center font-bold text-ink shadow-[2px_2px_0px_0px_var(--color-line)] transition-all cursor-pointer shrink-0"
+                  className="w-8 h-8 rounded-lg border-2 border-line bg-surface hover:bg-surface-raised active:scale-95 flex items-center justify-center font-bold text-ink shadow-[2px_2px_0px_0px_var(--color-line)] transition-[transform,background-color,border-color,box-shadow] duration-150 cursor-pointer shrink-0"
                   title={tPref("back")}
                   aria-label={tPref("back")}
                 >
@@ -624,7 +624,7 @@ export default function Home() {
 
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-md w-full text-center relative">
           <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 flex items-center justify-center gap-1.5">
             <span>🍿</span>
             <span>{tAccepted("badge")}</span>
@@ -666,7 +666,7 @@ export default function Home() {
   if (flow.state === "no_match") {
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-md w-full text-center relative">
           <h1 className="text-2xl font-extrabold mb-2 leading-tight">{tNoMatch("title")}</h1>
           <p className="text-muted mb-6 leading-relaxed text-sm">{tNoMatch("subtitle")}</p>
           <TicketPerforation />
@@ -752,14 +752,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-      <div className="mda-ticket my-auto max-w-xl w-full relative">
+      <div className="mda-ticket mda-ticket-enter my-auto max-w-xl w-full relative">
         {/* Wizard Punch Progress Bar & Clickable Badges */}
         <div className="pb-3 mb-5 sm:mb-6 border-b-2 border-line space-y-2.5">
           <div className="flex items-center justify-between gap-3 text-muted">
             <button
               type="button"
               onClick={handleBack}
-              className="w-8 h-8 rounded-lg border-2 border-line bg-surface hover:bg-surface-raised active:scale-95 flex items-center justify-center font-bold text-ink shadow-[2px_2px_0px_0px_var(--color-line)] transition-all cursor-pointer shrink-0"
+              className="w-8 h-8 rounded-lg border-2 border-line bg-surface hover:bg-surface-raised active:scale-95 flex items-center justify-center font-bold text-ink shadow-[2px_2px_0px_0px_var(--color-line)] transition-[transform,background-color,border-color,box-shadow] duration-150 cursor-pointer shrink-0"
               title={tPref("back")}
               aria-label={tPref("back")}
             >
@@ -777,17 +777,17 @@ export default function Home() {
             <div className="flex items-center gap-2.5">
               <div className="flex items-center gap-1.5" aria-hidden="true">
                 <span
-                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
+                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-[transform,background-color,box-shadow] duration-200 ${
                     flow.time ? "bg-accent scale-105 shadow-sm" : "bg-surface-raised"
                   }`}
                 />
                 <span
-                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
+                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-[transform,background-color,box-shadow] duration-200 ${
                     flow.mood ? "bg-accent scale-105 shadow-sm" : "bg-surface-raised"
                   }`}
                 />
                 <span
-                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-all ${
+                  className={`w-3.5 h-3.5 rounded-full border-2 border-line transition-[transform,background-color,box-shadow] duration-200 ${
                     flow.situation ? "bg-accent scale-105 shadow-sm" : "bg-surface-raised"
                   }`}
                 />
@@ -806,13 +806,11 @@ export default function Home() {
             <button
               type="button"
               onClick={handleRollDice}
-              className={`mda-badge cursor-pointer select-none text-base px-2.5 py-1 transition-all ${
-                rollingDice ? "animate-spin scale-110" : "hover:scale-105 active:scale-95"
-              }`}
+              className="mda-badge cursor-pointer select-none text-base px-2.5 py-1"
               title={locale === "fa" ? "انتخاب تصادفی همه فیلترها 🎲" : "Randomize all filters 🎲"}
               aria-label={locale === "fa" ? "انتخاب تصادفی همه فیلترها" : "Randomize all filters"}
             >
-              🎲
+              <span className={rollingDice ? "mda-dice-spinning" : ""}>🎲</span>
             </button>
 
             {flow.time && (

@@ -27,6 +27,15 @@
   --shadow-offset: 4px 4px 0 0 #000000;
   --shadow-offset-lg: 6px 6px 0 0 #000000;
   --shadow-offset-accent: 4px 4px 0 0 var(--mda-accent);
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-stamp: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-press: 120ms;
+  --duration-hover: 150ms;
+  --duration-enter: 240ms;
 }
 
 [data-theme="light"],
@@ -46,6 +55,15 @@
   --shadow-offset: 4px 4px 0 0 #141419;
   --shadow-offset-lg: 6px 6px 0 0 #141419;
   --shadow-offset-accent: 4px 4px 0 0 #141419;
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-stamp: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-press: 120ms;
+  --duration-hover: 150ms;
+  --duration-enter: 240ms;
 }
 
 @theme inline {
@@ -180,7 +198,7 @@ body {
   position: absolute;
   top: 45%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-12deg) scale(0);
+  transform: translate(-50%, -50%) rotate(-14deg) scale(1.22);
   border: 4px dashed #ef4444;
   color: #ef4444;
   font-weight: 900;
@@ -195,7 +213,7 @@ body {
   opacity: 0;
   white-space: nowrap;
   max-width: 90%;
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s ease;
+  transition: transform 0.28s var(--ease-stamp), opacity 0.18s var(--ease-out);
 }
 
 @media (min-width: 640px) {
@@ -215,13 +233,15 @@ body {
   border-radius: var(--radius-chip);
   background: var(--color-surface);
   box-shadow: 2px 2px 0 0 var(--color-line);
-  transition: transform 0.05s ease, box-shadow 0.05s ease, border-color 0.1s ease;
+  transition: transform var(--duration-press) var(--ease-out), box-shadow var(--duration-press) var(--ease-out), border-color var(--duration-hover) var(--ease-out), background-color var(--duration-hover) var(--ease-out), color var(--duration-hover) var(--ease-out);
 }
 
-.mda-chip:hover {
-  border-color: var(--color-accent);
-  transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0 0 var(--color-line);
+@media (hover: hover) and (pointer: fine) {
+  .mda-chip:hover {
+    border-color: var(--color-accent);
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 0 var(--color-line);
+  }
 }
 
 .mda-chip:active {
@@ -277,15 +297,17 @@ body {
   color: var(--color-ink);
   box-shadow: 2px 2px 0 0 var(--color-line);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: transform var(--duration-hover) var(--ease-out), background-color var(--duration-hover) var(--ease-out), color var(--duration-hover) var(--ease-out), border-color var(--duration-hover) var(--ease-out), box-shadow var(--duration-hover) var(--ease-out);
   user-select: none;
 }
 
-.mda-badge:hover {
-  background: var(--color-accent);
-  color: var(--color-accent-text);
-  transform: translateY(-1px);
-  box-shadow: 3px 3px 0 0 var(--color-line);
+@media (hover: hover) and (pointer: fine) {
+  .mda-badge:hover {
+    background: var(--color-accent);
+    color: var(--color-accent-text);
+    transform: translateY(-1px);
+    box-shadow: 3px 3px 0 0 var(--color-line);
+  }
 }
 
 .mda-badge:active {
@@ -306,12 +328,14 @@ body {
   border-radius: var(--radius-chip);
   box-shadow: var(--shadow-offset);
   font-weight: 800;
-  transition: transform 0.05s ease, box-shadow 0.05s ease;
+  transition: transform var(--duration-press) var(--ease-out), box-shadow var(--duration-press) var(--ease-out), border-color var(--duration-hover) var(--ease-out);
 }
 
-.mda-btn-primary:hover:not(:disabled) {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 0 var(--color-line);
+@media (hover: hover) and (pointer: fine) {
+  .mda-btn-primary:hover:not(:disabled) {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 var(--color-line);
+  }
 }
 
 .mda-btn-primary:active:not(:disabled) {
@@ -326,12 +350,14 @@ body {
   border-radius: var(--radius-chip);
   box-shadow: 2px 2px 0 0 var(--color-line);
   font-weight: 700;
-  transition: transform 0.05s ease, box-shadow 0.05s ease;
+  transition: transform var(--duration-press) var(--ease-out), box-shadow var(--duration-press) var(--ease-out), border-color var(--duration-hover) var(--ease-out);
 }
 
-.mda-btn-secondary:hover:not(:disabled) {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 0 var(--color-line);
+@media (hover: hover) and (pointer: fine) {
+  .mda-btn-secondary:hover:not(:disabled) {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 var(--color-line);
+  }
 }
 
 .mda-btn-secondary:active:not(:disabled) {
@@ -346,13 +372,15 @@ body {
   border-radius: var(--radius-chip);
   box-shadow: var(--shadow-offset);
   font-weight: 800;
-  transition: transform 0.05s ease, box-shadow 0.05s ease;
+  transition: transform var(--duration-press) var(--ease-out), box-shadow var(--duration-press) var(--ease-out), border-color var(--duration-hover) var(--ease-out);
 }
 
-.mda-btn-lucky:hover:not(:disabled) {
-  border-color: var(--color-accent);
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 0 var(--color-line);
+@media (hover: hover) and (pointer: fine) {
+  .mda-btn-lucky:hover:not(:disabled) {
+    border-color: var(--color-accent);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 var(--color-line);
+  }
 }
 
 .mda-btn-lucky:active:not(:disabled) {
@@ -365,12 +393,58 @@ body {
   outline-offset: 2px;
 }
 
+/* Dispensed Ticket Entrance Animation */
+@keyframes ticketDispense {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.mda-ticket-enter {
+  animation: ticketDispense var(--duration-enter) var(--ease-out) forwards;
+}
+
+/* Playful 360-degree Dice Tumble Animation */
+@keyframes diceTumble {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  40% {
+    transform: rotate(180deg) scale(1.18);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.mda-dice-spinning {
+  display: inline-block;
+  animation: diceTumble 0.4s var(--ease-spring) forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .mda-chip,
   .mda-btn-primary,
   .mda-btn-secondary,
-  .mda-btn-lucky,
+  .mda-btn-lucky {
+    transform: none !important;
+    transition: background-color var(--duration-hover) ease, color var(--duration-hover) ease, border-color var(--duration-hover) ease;
+  }
   .mda-stamp {
-    transition: none;
+    transform: translate(-50%, -50%) rotate(-12deg) scale(1) !important;
+    transition: opacity var(--duration-hover) ease;
+  }
+  .mda-ticket-enter {
+    animation: none !important;
+    transform: none !important;
+  }
+  .mda-dice-spinning {
+    animation: none !important;
+    transform: none !important;
   }
 }

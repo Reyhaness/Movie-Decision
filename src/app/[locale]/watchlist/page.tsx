@@ -70,7 +70,7 @@ export default function WatchlistPage() {
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-      <div className="mda-ticket my-auto max-w-3xl w-full relative">
+      <div className="mda-ticket mda-ticket-enter my-auto max-w-3xl w-full relative">
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-1">
           🔖 {t("title")}
         </h1>
@@ -161,7 +161,7 @@ function WatchlistItemCard({
   const { primaryTitle, originalTitle } = getMovieTitle(entry, locale);
 
   return (
-    <li className="mda-ticket p-4 flex gap-3 sm:gap-4 items-start">
+    <li className="mda-ticket p-4 flex gap-3 sm:gap-4 items-start transition-[opacity,transform] duration-200">
       <div className="relative shrink-0">
         <MoviePoster title={entry.title} posterPath={entry.posterPath} />
         <button
@@ -170,7 +170,7 @@ function WatchlistItemCard({
           disabled={removing}
           aria-label={`${t("remove")}: ${entry.title}`}
           title={t("remove")}
-          className="absolute top-1.5 end-1.5 w-7 h-7 rounded-full border-2 border-line bg-surface text-ink hover:bg-accent hover:text-accent-text active:scale-95 flex items-center justify-center font-bold text-xs cursor-pointer transition-all disabled:opacity-50 mda-focus"
+          className="absolute top-1.5 end-1.5 w-7 h-7 rounded-full border-2 border-line bg-surface text-ink hover:bg-accent hover:text-accent-text active:scale-95 flex items-center justify-center font-bold text-xs cursor-pointer transition-[transform,background-color,color] duration-150 disabled:opacity-50 mda-focus"
         >
           {removing ? "…" : "✕"}
         </button>

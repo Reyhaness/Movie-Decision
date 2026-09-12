@@ -23,7 +23,7 @@ export function WatchlistButton({
       aria-pressed={saved}
       aria-label={saved ? t("removeFromWatchlist") : t("addToWatchlist")}
       title={saved ? t("removeFromWatchlist") : t("addToWatchlist")}
-      className={`mda-focus inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border-2 font-bold text-[11px] sm:text-xs cursor-pointer transition-all duration-150 active:scale-95 disabled:opacity-60 ${
+      className={`mda-focus inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border-2 font-bold text-[11px] sm:text-xs cursor-pointer transition-[transform,border-color,background-color,color] duration-150 active:scale-95 disabled:opacity-60 ${
         saved
           ? "border-accent bg-accent text-accent-text shadow-[2px_2px_0px_0px_var(--color-line)]"
           : "border-line bg-surface text-ink shadow-[2px_2px_0px_0px_var(--color-line)] hover:bg-surface-raised"
