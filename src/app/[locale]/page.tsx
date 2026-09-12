@@ -374,11 +374,6 @@ export default function Home() {
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
         <div className="mda-ticket mda-ticket-enter my-auto max-w-lg w-full text-center relative">
-          <div className="flex items-center justify-between font-mono text-[11px] sm:text-xs font-bold text-muted uppercase tracking-wider mb-5 sm:mb-6 pb-2.5 border-b-2 border-line">
-            <span>🎟️ ADMIT ONE</span>
-            <span>NO. 4829</span>
-          </div>
-
           <div className="text-4xl sm:text-5xl mb-3 sm:mb-4" aria-hidden="true">
             🎬
           </div>
