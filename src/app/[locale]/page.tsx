@@ -373,7 +373,7 @@ export default function Home() {
   if (flow.state === "landing") {
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket mda-ticket-enter my-auto max-w-lg w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-xl w-full text-center relative">
           <div className="text-4xl sm:text-5xl mb-3 sm:mb-4" aria-hidden="true">
             🎬
           </div>
@@ -419,7 +419,7 @@ export default function Home() {
         className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12"
         aria-live="polite"
       >
-        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-xl w-full text-center relative">
           <div className="text-4xl mb-4 animate-bounce">🎟️</div>
           <p className="text-lg font-extrabold mb-2">{tLoading("title")}</p>
           <p className="text-muted text-sm">{tLoading("subtitle")}</p>
@@ -619,7 +619,7 @@ export default function Home() {
 
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket mda-ticket-enter my-auto max-w-md w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-xl w-full text-center relative">
           <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 flex items-center justify-center gap-1.5">
             <span>🍿</span>
             <span>{tAccepted("badge")}</span>
@@ -661,7 +661,7 @@ export default function Home() {
   if (flow.state === "no_match") {
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket mda-ticket-enter my-auto max-w-md w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-xl w-full text-center relative">
           <h1 className="text-2xl font-extrabold mb-2 leading-tight">{tNoMatch("title")}</h1>
           <p className="text-muted mb-6 leading-relaxed text-sm">{tNoMatch("subtitle")}</p>
           <TicketPerforation />
@@ -695,7 +695,7 @@ export default function Home() {
   if (flow.state === "error") {
     return (
       <main className="min-h-screen flex flex-col items-center justify-start sm:justify-center p-3 pt-20 pb-8 sm:p-6 sm:py-12">
-        <div className="mda-ticket my-auto max-w-md w-full text-center relative">
+        <div className="mda-ticket mda-ticket-enter my-auto max-w-xl w-full text-center relative">
           <h1 className="text-2xl font-extrabold mb-2">{tError("title")}</h1>
           <p className="text-muted mb-6 text-sm">{tError("subtitle")}</p>
           <TicketPerforation />
