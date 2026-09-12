@@ -14,7 +14,7 @@ export function WatchlistNav() {
       aria-label={t("navLabel")}
       aria-current={active ? "page" : undefined}
       title={t("navLabel")}
-      className={`h-9 sm:h-10 px-3 sm:px-3.5 rounded-full border-2 shadow-sm sm:shadow-md flex items-center gap-1.5 text-xs sm:text-sm font-bold cursor-pointer transition-all duration-200 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
+      className={`h-9 sm:h-10 px-3 sm:px-3.5 rounded-full border-2 shadow-sm sm:shadow-md flex items-center gap-1.5 text-xs sm:text-sm font-bold cursor-pointer transition-[transform,border-color,background-color,color,box-shadow] duration-150 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
         active
           ? "border-accent bg-accent text-accent-text"
           : "border-line bg-surface-raised hover:bg-surface-raised text-ink"
